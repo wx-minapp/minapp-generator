@@ -23,6 +23,8 @@ export default async function(res: any, nodeIterator: any) {
   let nodes = rootNode.leafNodes.filter(n => !(/\.md$/.test(n.file)))
 
   async.reduce(
+    res.folder
+      ? nodes.filter(n => n.topNode.normilizedFile === res.folder) :
     res._.length
       ? nodes.filter(n => res._.indexOf(n.normilizedFile) >= 0)
       : nodes.filter(n => res.canvas ? n.isCanvas : res.noCanvas ? !n.isCanvas : true),

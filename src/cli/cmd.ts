@@ -28,6 +28,7 @@ cli({
       ...commonOpts,
       'c | canvas': '<boolean> 使用 canvas 相关的文件',
       'nc | noCanvas': '<boolean> 不使用 canvas 相关的文件',
+      'folder': '<string> 指定生成的目录',
       'p | promise': '<boolean> 生成 wxp.d.ts 文件，需要先生成 wx.d.ts',
     },
     cmd: wrapCmd('api', apiCmd)
