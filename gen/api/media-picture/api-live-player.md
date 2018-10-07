@@ -2,7 +2,7 @@
 
 ### wx.createLivePlayerContext(domId, this)
 
-> 基础库 1.7.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.7.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 操作对应的 `<live-player/>` 组件。 创建并返回 `live-player` 上下文 `LivePlayerContext` 对象。在自定义组件下，第二个参数传入组件实例this，以操作组件内 `<live-player/>` 组件
 
@@ -39,4 +39,4 @@
 
 **示例代码：**
 
-[在开发者工具中预览效果](wechatide://minicode/UzWEzmm763Y4)
+[在开发者工具中预览效果](wechatide://minicode/UzWEzmm763Y4 "在开发者工具中预览效果")

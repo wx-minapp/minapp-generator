@@ -2,7 +2,7 @@
 
 ### wx.getAvailableAudioSources(OBJECT)
 
-> 基础库 2.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 2.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 ##### OBJECT参数说明：
 

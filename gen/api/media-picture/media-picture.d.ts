@@ -124,7 +124,7 @@ export namespace wx {
     type ParamPropComplete = () => any
   }
   /**
-   * 预览图片。
+   * 预览图片。2.3.0起支持云文件ID。
    *
    * **示例代码：**
    *
@@ -210,7 +210,7 @@ export namespace wx {
     type ParamPropComplete = () => any
   }
   /**
-   * 获取图片信息
+   * 获取图片信息，倘若为网络图片，需先配置download域名才能生效。
    *
    * **示例代码：**
    *

@@ -41,7 +41,7 @@
 
 ### wx.previewImage(OBJECT)
 
-预览图片。
+预览图片。2.3.0起支持云文件ID。
 
 **OBJECT参数说明：**
 
@@ -63,7 +63,7 @@
 
 ### wx.getImageInfo(OBJECT)
 
-获取图片信息
+获取图片信息，倘若为网络图片，需先配置download域名才能生效。
 
 **OBJECT参数说明：**
 
@@ -124,7 +124,7 @@
 
 ### wx.saveImageToPhotosAlbum(OBJECT)
 
-> 基础库 1.2.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.2.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 保存图片到系统相册。需要[用户授权](https://developers.weixin.qq.com/miniprogram/dev/api/authorize-index.html) scope.writePhotosAlbum
 

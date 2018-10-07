@@ -2,7 +2,7 @@
 
 ### wx.getUpdateManager()
 
-> 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 获取**全局唯一**的版本更新管理器，用于管理小程序更新。
 
@@ -59,7 +59,7 @@
           }
         }
       })
-    
+      
     })
     
     updateManager.onUpdateFailed(function () {

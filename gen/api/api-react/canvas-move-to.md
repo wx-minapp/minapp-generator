@@ -28,4 +28,4 @@ canvasContext.moveTo
     ctx.draw()
     
 
-![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/canvas/move-to.png)
+![](https://developers.weixin.qq.com/miniprogram/dev/image/canvas/move-to.png)

@@ -14,12 +14,12 @@
 
 开发者只在响应包中返回 MsgType 为 transfer\_customer\_service 的消息，微信服务器收到响应后就会把当次发送的消息转发至客服系统。
 
-     <xml>
-         <ToUserName><![CDATA[touser]]></ToUserName>
-         <FromUserName><![CDATA[fromuser]]></FromUserName>
-         <CreateTime>1399197672</CreateTime>
-         <MsgType><![CDATA[transfer_customer_service]]></MsgType>
-     </xml>
+     <xml>
+         <ToUserName><![CDATA[touser]]></ToUserName>
+         <FromUserName><![CDATA[fromuser]]></FromUserName>
+         <CreateTime>1399197672</CreateTime>
+         <MsgType><![CDATA[transfer_customer_service]]></MsgType>
+     </xml>
     
 
 参数说明

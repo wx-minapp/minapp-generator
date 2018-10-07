@@ -76,8 +76,8 @@ export namespace wx {
    *
    *     ```html
    *     <view class="container">
-   *         <video src="{{src}}"></video>
-   *         <button bindtap="bindButtonTap">获取视频</button>
+   *     	<video src="{{src}}"></video>
+   *     	<button bindtap="bindButtonTap">获取视频</button>
    *     </view>
    *     ```
    *
@@ -85,19 +85,19 @@ export namespace wx {
    *
    *     ```javascript
    *     Page({
-   *         bindButtonTap: function() {
-   *             var that = this
-   *             wx.chooseVideo({
-   *                 sourceType: ['album','camera'],
-   *                 maxDuration: 60,
+   *     	bindButtonTap: function() {
+   *     		var that = this
+   *     		wx.chooseVideo({
+   *     			sourceType: ['album','camera'],
+   *     			maxDuration: 60,
    *           camera: 'back',
-   *                 success: function(res) {
-   *                     that.setData({
-   *                         src: res.tempFilePath
-   *                     })
-   *                 }
-   *             })
-   *         }
+   *     			success: function(res) {
+   *     				that.setData({
+   *     					src: res.tempFilePath
+   *     				})
+   *     			}
+   *     		})
+   *     	}
    *     })
    *     ```
    * @see https://developers.weixin.qq.com/miniprogram/dev/api/media-video.html#wxchoosevideoobject

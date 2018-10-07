@@ -8,15 +8,14 @@
 
 **OBJECT参数说明：**
 
-  参数        |  类型          |  必填 |  说明                                                               | 最低版本 
---------------|----------------|-------|---------------------------------------------------------------------|----------
+  参数        |  类型          |  必填 |  说明                                    | 最低版本 
+--------------|----------------|-------|------------------------------------------|----------
   url         |  String        |  是   |开发者服务器接口地址，必须是 wss 协议，且域名必须是后台配置的合法域名|          
-  header      |  Object        |  否   |  HTTP Header , header 中不能设置 Referer                            |          
-  method      |  String        |  否   |默认是GET，有效值：OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT|          
-  protocols   |  StringArray   |  否   |  子协议数组                                                         |  1.4.0   
-  success     |  Function      |  否   |  接口调用成功的回调函数                                             |          
-  fail        |  Function      |  否   |  接口调用失败的回调函数                                             |          
-  complete    |  Function      |  否   |  接口调用结束的回调函数（调用成功、失败都会执行）                   |          
+  header      |  Object        |  否   |  HTTP Header , header 中不能设置 Referer |          
+  protocols   |  StringArray   |  否   |  子协议数组                              |  1.4.0   
+  success     |  Function      |  否   |  接口调用成功的回调函数                  |          
+  fail        |  Function      |  否   |  接口调用失败的回调函数                  |          
+  complete    |  Function      |  否   |接口调用结束的回调函数（调用成功、失败都会执行）|          
 
 **示例代码：**
 
@@ -172,7 +171,7 @@
 
 **返回值：**
 
-> 基础库 1.7.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.7.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 返回一个 [SocketTask](https://developers.weixin.qq.com/miniprogram/dev/api/socket-task.html)。
 

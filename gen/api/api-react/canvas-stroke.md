@@ -19,7 +19,7 @@ canvasContext.stroke
     ctx.draw()
     
 
-![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/canvas/stroke-line.png)
+![](https://developers.weixin.qq.com/miniprogram/dev/image/canvas/stroke-line.png)
 
     const ctx = wx.createCanvasContext('myCanvas')
     // begin path
@@ -43,4 +43,4 @@ canvasContext.stroke
     ctx.draw()
     
 
-![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/canvas/stroke-path.png)
+![](https://developers.weixin.qq.com/miniprogram/dev/image/canvas/stroke-path.png)

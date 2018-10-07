@@ -2,7 +2,7 @@
 
 #### audio
 
-**注意：1.6.0 版本开始，该组件不再维护。建议使用能力更强的 [wx.createInnerAudioContext](https://developers.weixin.qq.com/miniprogram/dev/api/createInnerAudioContext.html) 接口**
+**注意：1.6.0 版本开始，该组件不再维护。建议使用能力更强的 [wx.createInnerAudioContext](https://developers.weixin.qq.com/miniprogram/dev/api/media/audio/wx.createInnerAudioContext.html) 接口**
 
 音频。
 
@@ -32,7 +32,7 @@
 
 **示例代码：**
 
-[在开发者工具中预览效果](wechatide://minicode/NycgqcmS6KYY)
+[在开发者工具中预览效果](wechatide://minicode/NycgqcmS6KYY "在开发者工具中预览效果")
 
     <!-- audio.wxml -->
     <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop></audio>
@@ -70,6 +70,6 @@
     })
     
 
-![audio](https://mp.weixin.qq.com/debug/wxadoc/dev/image/pic/audio.png)
+![audio](https://developers.weixin.qq.com/miniprogram/dev/image/pic/audio.png)
 
-相关api：[wx.createAudioContext](https://developers.weixin.qq.com/miniprogram/dev/api/api-audio.html)
+相关api：[wx.createAudioContext](https://developers.weixin.qq.com/miniprogram/dev/api/media/audio/wx.createAudioContext.html)

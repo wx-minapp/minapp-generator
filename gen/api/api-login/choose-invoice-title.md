@@ -2,7 +2,7 @@
 
 ### wx.chooseInvoiceTitle(OBJECT)
 
-> 基础库 1.5.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.5.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 选择用户的发票抬头。
 

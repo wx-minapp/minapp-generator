@@ -2,7 +2,7 @@
 
 ### wx.createInnerAudioContext()
 
-> 基础库 1.6.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.6.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 创建并返回内部 audio 上下文 `innerAudioContext` 对象。_本接口是 `wx.createAudioContext` 升级版。_
 
@@ -12,7 +12,7 @@
 
   属性             |  类型      |  说明                                                     |  只读 |  最低版本 
 -------------------|------------|-----------------------------------------------------------|-------|-----------
-  src              |  String    |  音频的数据链接，用于直接播放。                           |  否   |           
+  src              |  String    |  音频的数据链接，用于直接播放。支持云文件ID（2.2.3起）。  |  否   |           
   startTime        |  Number    |  开始播放的位置（单位：s），默认 0                        |  否   |           
   autoplay         |  Boolean   |  是否自动开始播放，默认 false                             |  否   |           
   loop             |  Boolean   |  是否循环播放，默认 false                                 |  否   |           

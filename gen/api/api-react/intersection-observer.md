@@ -56,7 +56,7 @@ WXML节点布局相交状态
 wx.createIntersectionObserver(\[this\], \[options\])
 ----------------------------------------------------
 
-> 基础库 1.9.3 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.9.3 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 创建并返回一个 IntersectionObserver 对象实例。在自定义组件中，可以使用 `this.createIntersectionObserver([options])` 来代替。
 

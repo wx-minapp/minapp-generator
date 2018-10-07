@@ -52,7 +52,7 @@
 
 ### wx.reLaunch(OBJECT)
 
-> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 关闭所有页面，打开到应用内的某个页面。
 
@@ -115,7 +115,7 @@
 
 ### wx.navigateBack(OBJECT)
 
-关闭当前页面，返回上一页面或多级页面。可通过 [`getCurrentPages()`](https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/page.html#getCurrentPages()) 获取当前的页面栈，决定需要返回几层。
+关闭当前页面，返回上一页面或多级页面。可通过 [`getCurrentPages()`](https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/page.html#getcurrentpages) 获取当前的页面栈，决定需要返回几层。
 
 **OBJECT 参数说明：**
 

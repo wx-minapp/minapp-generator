@@ -40,8 +40,8 @@
 **示例代码**
 
     try {
-        wx.setStorageSync('key', 'value')
-    } catch (e) {    
+    	wx.setStorageSync('key', 'value')
+    } catch (e) {	
     }
     
 
@@ -69,7 +69,7 @@
     wx.getStorage({
       key: 'key',
       success: function(res) {
-          console.log(res.data)
+      	console.log(res.data)
       } 
     })
     
@@ -89,7 +89,7 @@
     try {
       var value = wx.getStorageSync('key')
       if (value) {
-          // Do something with return value
+      	// Do something with return value
       }
     } catch (e) {
       // Do something when catch error
@@ -141,6 +141,7 @@
     } catch (e) {
       // Do something when catch error
     }
+    
     
 
 ### wx.removeStorage(OBJECT)
@@ -201,7 +202,7 @@
 **示例代码：**
 
     try {
-        wx.clearStorageSync()
+    	wx.clearStorageSync()
     } catch(e) {
       // Do something when catch error
     }

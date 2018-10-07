@@ -51,4 +51,4 @@ canvasContext.setLineCap
     ctx.draw()
     
 
-![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/canvas/line-cap.png)
+![](https://developers.weixin.qq.com/miniprogram/dev/image/canvas/line-cap.png)

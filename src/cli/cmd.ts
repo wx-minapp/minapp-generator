@@ -91,5 +91,7 @@ function makeNodeReduceIterator(res: any, key: string) {
     } catch (e) {
       console.log(e)
     }
+
+    return allResult
   }
 }

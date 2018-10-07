@@ -33,4 +33,4 @@ canvasContext.createLinearGradient
     ctx.draw()
     
 
-![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/canvas/linear-gradient.png)
+![](https://developers.weixin.qq.com/miniprogram/dev/image/canvas/linear-gradient.png)

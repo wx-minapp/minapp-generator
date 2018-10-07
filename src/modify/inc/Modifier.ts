@@ -61,6 +61,7 @@ export class Modifier {
         // 'movable-area',
         // 'cover-view',
         'picker-view-column',
+        'official-account',
       ],
       func: {
         canIUse: {returns: 'boolean'},

@@ -95,7 +95,7 @@ class CanvasContext {
    */
   setShadow(offsetX: number, offsetY: number, blur: number, color: string): void
   /**
-   * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+   * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
    *
    * **定义：**
    *
@@ -109,7 +109,7 @@ class CanvasContext {
    */
   shadowBlur(): void
   /**
-   * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+   * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
    *
    * **定义：**
    *
@@ -123,7 +123,7 @@ class CanvasContext {
    */
   shadowColor(): void
   /**
-   * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+   * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
    *
    * **定义：**
    *
@@ -137,7 +137,7 @@ class CanvasContext {
    */
   shadowOffsetX(): void
   /**
-   * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+   * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
    *
    * **定义：**
    *
@@ -419,11 +419,11 @@ class CanvasContext {
    */
   setLineJoin(lineJoin: string): void
   /**
-   * > 基础库 1.6.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+   * > 基础库 1.6.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
    *
    * **定义：**
    *
-   * 设置线条的宽度。
+   * 设置虚线样式的方法。
    *
    * **参数：**
    *
@@ -1093,7 +1093,7 @@ class CanvasContext {
    * -----------|-----------|-----------------------------------------------------
    *   rotate   |  Number   |旋转角度，以弧度计(degrees * Math.PI/180；degrees范围为0~360)
    *
-   * ![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/canvas/rotate.png)
+   * ![](https://developers.weixin.qq.com/miniprogram/dev/image/canvas/rotate.png)
    *
    * **参数：**
    *
@@ -1139,7 +1139,7 @@ class CanvasContext {
    */
   translate(x: number, y: number): void
   /**
-   * > 基础库 1.6.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+   * > 基础库 1.6.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
    *
    * **定义：**
    *
@@ -1153,13 +1153,13 @@ class CanvasContext {
    *     wx.downloadFile({
    *       url: 'http://is5.mzstatic.com/image/thumb/Purple128/v4/75/3b/90/753b907c-b7fb-5877-215a-759bd73691a4/source/50x50bb.jpg',
    *       success: function(res) {
-   *           ctx.save()
-   *           ctx.beginPath()
-   *           ctx.arc(50, 50, 25, 0, 2*Math.PI)
-   *           ctx.clip()
-   *           ctx.drawImage(res.tempFilePath, 25, 25)
-   *           ctx.restore()
-   *           ctx.draw()
+   *       	ctx.save()
+   *       	ctx.beginPath()
+   *       	ctx.arc(50, 50, 25, 0, 2*Math.PI)
+   *       	ctx.clip()
+   *       	ctx.drawImage(res.tempFilePath, 25, 25)
+   *       	ctx.restore()
+   *       	ctx.draw()
    *       }
    *     })
    *     ```
@@ -1224,7 +1224,7 @@ class CanvasContext {
    */
   fillText(text: string, x: number, y: number, maxWidth: number): void
   /**
-   * > 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+   * > 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
    *
    * **定义：**
    *
@@ -1268,7 +1268,7 @@ class CanvasContext {
    */
   setTextAlign(align: string): void
   /**
-   * > 基础库 1.4.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+   * > 基础库 1.4.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
    *
    * **定义：**
    *
@@ -1329,10 +1329,10 @@ class CanvasContext {
    *   dx              |  Number   |图像的左上角在目标canvas上 X 轴的位置
    *   dy              |  Number   |图像的左上角在目标canvas上 Y 轴的位置
    *   dWidth          |  Number   |在目标画布上绘制图像的宽度，允许对绘制的图像进行缩放
-   *   dHeigt          |  Number   |在目标画布上绘制图像的高度，允许对绘制的图像进行缩放
+   *   dHeight         |  Number   |在目标画布上绘制图像的高度，允许对绘制的图像进行缩放
    *   sx              |  Number   |源图像的矩形选择框的左上角 X 坐标
    *   sy              |  Number   |源图像的矩形选择框的左上角 Y 坐标
-   *   sWidth          |  Number   |  源图像的矩形选择框的高度     
+   *   sWidth          |  Number   |  源图像的矩形选择框的宽度     
    *   sHeight         |  Number   |  源图像的矩形选择框的高度     
    *
    * **有三个版本的写法：**
@@ -1369,10 +1369,10 @@ class CanvasContext {
    *   dx              |  Number   |图像的左上角在目标canvas上 X 轴的位置
    *   dy              |  Number   |图像的左上角在目标canvas上 Y 轴的位置
    *   dWidth          |  Number   |在目标画布上绘制图像的宽度，允许对绘制的图像进行缩放
-   *   dHeigt          |  Number   |在目标画布上绘制图像的高度，允许对绘制的图像进行缩放
+   *   dHeight         |  Number   |在目标画布上绘制图像的高度，允许对绘制的图像进行缩放
    *   sx              |  Number   |源图像的矩形选择框的左上角 X 坐标
    *   sy              |  Number   |源图像的矩形选择框的左上角 Y 坐标
-   *   sWidth          |  Number   |  源图像的矩形选择框的高度     
+   *   sWidth          |  Number   |  源图像的矩形选择框的宽度     
    *   sHeight         |  Number   |  源图像的矩形选择框的高度     
    *
    * **有三个版本的写法：**
@@ -1394,7 +1394,7 @@ class CanvasContext {
    *     })
    *     ```
    */
-  drawImage(dx: number, dy: number, dWidth: number, dHeight: any): void
+  drawImage(dx: number, dy: number, dWidth: number, dHeight: number): void
   /**
    *
    * **定义：**
@@ -1409,10 +1409,10 @@ class CanvasContext {
    *   dx              |  Number   |图像的左上角在目标canvas上 X 轴的位置
    *   dy              |  Number   |图像的左上角在目标canvas上 Y 轴的位置
    *   dWidth          |  Number   |在目标画布上绘制图像的宽度，允许对绘制的图像进行缩放
-   *   dHeigt          |  Number   |在目标画布上绘制图像的高度，允许对绘制的图像进行缩放
+   *   dHeight         |  Number   |在目标画布上绘制图像的高度，允许对绘制的图像进行缩放
    *   sx              |  Number   |源图像的矩形选择框的左上角 X 坐标
    *   sy              |  Number   |源图像的矩形选择框的左上角 Y 坐标
-   *   sWidth          |  Number   |  源图像的矩形选择框的高度     
+   *   sWidth          |  Number   |  源图像的矩形选择框的宽度     
    *   sHeight         |  Number   |  源图像的矩形选择框的高度     
    *
    * **有三个版本的写法：**
@@ -1434,7 +1434,7 @@ class CanvasContext {
    *     })
    *     ```
    */
-  drawImage(sx: number, sy: number, sWidth: number, sHeight: number, dx: number, dy: number, dWidth: number, dHeight: any): void
+  drawImage(sx: number, sy: number, sWidth: number, sHeight: number, dx: number, dy: number, dWidth: number, dHeight: number): void
   /**
    *
    * **定义：**
@@ -1543,7 +1543,7 @@ class CanvasContext {
    */
   draw(reserve?: boolean, callback?: CanvasContext.draw.Param1): void
   /**
-   * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+   * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
    *
    * **定义：**
    *
@@ -1574,7 +1574,7 @@ class CanvasContext {
    */
   measureText(width: number): void
   /**
-   * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+   * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
    *
    * **定义：**
    *
@@ -1603,7 +1603,7 @@ class CanvasContext {
    */
   globalCompositeOperation(): void
   /**
-   * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+   * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
    *
    * **定义：**
    *
@@ -1627,7 +1627,7 @@ class CanvasContext {
    */
   arcTo(): void
   /**
-   * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+   * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
    *
    * **定义：**
    *
@@ -1650,7 +1650,7 @@ class CanvasContext {
    */
   strokeText(): void
   /**
-   * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+   * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
    *
    * **定义：**
    *
@@ -1670,7 +1670,7 @@ class CanvasContext {
    */
   lineDashOffset(): void
   /**
-   * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+   * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
    *
    * **定义：**
    *
@@ -1701,7 +1701,7 @@ class CanvasContext {
    */
   createPattern(): void
   /**
-   * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+   * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
    *
    * **定义：**
    *
@@ -1730,7 +1730,32 @@ class CanvasContext {
    */
   font(style: any, weight: any, size: any, family: any): void
   /**
-   * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+   * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
+   *
+   * **定义：**
+   *
+   * 使用矩阵多次叠加当前变换的方法
+   *
+   * **参数：**
+   *
+   *   属性值       |  类型     |  说明   
+   * ---------------|-----------|---------
+   *   scaleX       |  Number   | 水平缩放
+   *   skewX        |  Number   | 水平倾斜
+   *   skewY        |  Number   | 垂直倾斜
+   *   scaleY       |  Number   | 垂直缩放
+   *   translateX   |  Number   | 水平移动
+   *   translateY   |  Number   | 垂直移动
+   *
+   * **语法：**
+   *
+   *     ```javascript
+   *     canvasContext.transform(scaleX, skewX, skewY, scaleY, translateX, translateY)
+   *     ```
+   */
+  transform(): void
+  /**
+   * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
    *
    * **定义：**
    *

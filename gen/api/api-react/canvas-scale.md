@@ -27,4 +27,4 @@ canvasContext.scale
     ctx.draw()
     
 
-![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/canvas/scale.png)
+![](https://developers.weixin.qq.com/miniprogram/dev/image/canvas/scale.png)

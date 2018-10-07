@@ -2,7 +2,7 @@
 
 ### wx.checkIsSoterEnrolledInDevice(OBJECT)
 
-> 基础库 1.6.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.6.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 获取设备内是否录入如指纹等生物信息的接口
 

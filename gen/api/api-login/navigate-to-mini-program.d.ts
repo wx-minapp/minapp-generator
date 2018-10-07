@@ -53,10 +53,10 @@ export namespace wx {
   }
   /**
    * @since 1.3.0
-   * > 
+   *
    * > 此接口即将废弃，请使用 [<navigator>](https://developers.weixin.qq.com/miniprogram/dev/component/navigator.html) 组件来使用此功能
    *
-   * 打开同一公众号下关联的另一个小程序。**（注：必须是同一公众号下，而非同个 open 账号下）**
+   * 打开同一公众号下关联的另一个小程序。**（注：必须是同一公众号下，而非同个 open 帐号下）**
    *
    * **Bug & Tip：**
    *

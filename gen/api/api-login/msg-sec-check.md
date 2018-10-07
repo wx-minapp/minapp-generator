@@ -11,10 +11,10 @@
 
 #### 参数
 
-  参数           |  类型     | 默认值 | 是否必填|  说明                   
------------------|-----------|--------|---------|-------------------------
-  access_token   |  string   |        |  是     |  接口调用凭证           
-  content        |  string   |        |  是     |要检测的文本内容，长度不超过 500KB
+  参数           |  类型     | 默认值 | 是否必填|  说明                              
+-----------------|-----------|--------|---------|------------------------------------
+  access_token   |  string   |        |  是     |  接口调用凭证                      
+  content        |  string   |        |  是     |要检测的文本内容，长度不超过 500KB，编码格式为utf-8
 
 #### 返回值
 
@@ -39,5 +39,14 @@
 
 #### 调用示例
 
-     curl -d '{ "content":"hello world!" }'
-     'https://api.weixin.qq.com/wxa/msg_sec_check?access_token=ACCESS_TOKEN'
+    curl -d '{ "content":"hello world!" }'
+    'https://api.weixin.qq.com/wxa/msg_sec_check?access_token=ACCESS_TOKEN'
+    
+
+#### 测试用例
+
+    特3456书yuuo莞6543李zxcz蒜7782法fgnv级     
+    完2347全dfji试3726测asad感3847知qwez到 
+    
+
+开发者可使用以上两段文本进行测试，若接口errcode返回87014(内容含有违法违规内容)，则对接成功。

@@ -16,5 +16,7 @@ export default class extends ApiModifier {
     })
 
     $target.remove()
+
+    $root.find('table tbody').eq(2).append('<tr><td>export</td><td></td><td>导出动画数据传递给组件的animation属性</td></tr>')
   }
 }

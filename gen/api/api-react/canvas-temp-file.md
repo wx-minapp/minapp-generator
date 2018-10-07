@@ -17,7 +17,7 @@ wx.canvasToTempFilePath(OBJECT, this)
   destHeight   |  Number     |  否   |  输出图片高度（默认为 height * 屏幕像素密度）                                                                |  1.2.0   
   canvasId     |  String     |  是   |画布标识，传入 [`<canvas/>`](https://developers.weixin.qq.com/miniprogram/dev/component/canvas.html) 的 canvas-id|          
   fileType     |  String     |  否   |  目标文件的类型，只支持 'jpg' 或 'png'。默认为 'png'                                                         |  1.7.0   
-  quality      |  Number     |  否   |  图片的质量，取值范围为 (0, 1]，不在范围内时当作1.0处理                                                      |  1.7.0   
+  quality      |  Number     |  否   |  图片的质量，目前仅对jpg有效。取值范围为 (0, 1]，不在范围内时当作1.0处理                                     |  1.7.0   
   success      |  Function   |  否   |  接口调用成功的回调函数                                                                                      |          
   fail         |  Function   |  否   |  接口调用失败的回调函数                                                                                      |          
   complete     |  Function   |  否   |  接口调用结束的回调函数（调用成功、失败都会执行）                                                            |          

@@ -8,7 +8,7 @@ export namespace wx {
    *
    * **示例代码：**
    *
-   * [在开发者工具中预览效果](wechatide://minicode/VBZ3Jim26zYu)
+   * [在开发者工具中预览效果](wechatide://minicode/VBZ3Jim26zYu "在开发者工具中预览效果")
    * @see https://developers.weixin.qq.com/miniprogram/dev/api/api-camera.html#wxcreatecameracontextthis
    */
   function createCameraContext(instance?: any): CameraContext

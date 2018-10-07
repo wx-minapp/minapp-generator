@@ -25,7 +25,7 @@ export namespace wx {
    *
    * **示例代码：**
    *
-   *     ```
+   *     ```js
    *     wx.onMemoryWarning(function () {
    *       console.log('onMemoryWarningReceive')
    *     })

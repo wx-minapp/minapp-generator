@@ -6,6 +6,10 @@ export namespace wx {
    *
    * 获取**全局唯一**的背景音频管理器 `backgroundAudioManager`。
    *
+   * 小程序切入后台，如果音频处于播放状态，可以继续播放。但是后台状态不能通过调用API操纵音频的播放状态。
+   *
+   * 注：从微信客户端6.7.2版本开始，若需要在小程序切后台后继续播放音频，需要在 [app.json](https://developers.weixin.qq.com/miniprogram/dev/framework/config.html) 中配置 `requiredBackgroundModes` 属性。开发版和体验版上可以直接生效，正式版还需通过审核。
+   *
    * **errcode 说明：**
    *
    *   errCode   |  说明   
@@ -51,7 +55,7 @@ export namespace wx {
      */
     paused: boolean
     /**
-     * 音频的数据源，默认为空字符串，**当设置了新的 src 时，会自动开始播放** ，目前支持的格式有 m4a, aac, mp3, wav
+     * 音频的数据源，支持云文件ID（2.2.3起），默认为空字符串，**当设置了新的 src 时，会自动开始播放** ，目前支持的格式有 m4a, aac, mp3, wav
      */
     src: string
     /**
@@ -65,7 +69,7 @@ export namespace wx {
      */
     buffered: number
     /**
-     * 音频标题，用于做原生音频播放器音频标题。原生音频播放器中的分享功能，分享出去的卡片标题，也将使用该值。
+     * 音频标题，用于做原生音频播放器音频标题（必填）。原生音频播放器中的分享功能，分享出去的卡片标题，也将使用该值。
      */
     title: string
     /**
@@ -114,6 +118,18 @@ export namespace wx {
      * 背景音频播放事件
      */
     onPlay(callback: any): any
+    /**
+     * 背景音频开始跳转操作事件
+     *
+     * @since 2.2.3
+     */
+    onSeeking(callback: any): any
+    /**
+     * 背景音频完成跳转操作事件
+     *
+     * @since 2.2.3
+     */
+    onSeeked(callback: any): any
     /**
      * 背景音频暂停事件
      */

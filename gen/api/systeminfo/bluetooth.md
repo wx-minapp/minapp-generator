@@ -3,15 +3,13 @@
 蓝牙适配器接口
 -------
 
-> 基础库版本 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
-> 
 > iOS 微信客户端 6.5.6 版本开始支持，Android 6.5.7 版本开始支持
-> 
+
 > 目前不支持在开发者工具上进行调试，需要使用真机才能正常调用小程序蓝牙接口
 
 ### wx.openBluetoothAdapter(OBJECT)
 
-> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 初始化小程序蓝牙模块，生效周期为调用`wx.openBluetoothAdapter`至调用`wx.closeBluetoothAdapter`或小程序被销毁为止。 在小程序蓝牙适配器模块生效期间，开发者可以正常调用下面的小程序API，并会收到蓝牙模块相关的on回调。
 
@@ -25,7 +23,7 @@
 
 **示例代码：**
 
-[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4)
+[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4 "在开发者工具中预览效果")
 
     wx.openBluetoothAdapter({
       success: function (res) {
@@ -36,13 +34,12 @@
 
 #### Bug & Tip
 
-1.  `tip`: 基础库版本 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
-2.  `tip`: 在没有调用`wx.openBluetoothAdapter`的情况下调用小程序其它蓝牙模块相关API，API会返回错误，错误码为`10000`
-3.  `bug`: 在用户蓝牙开关未开启或者手机不支持蓝牙功能的情况下，调用`wx.openBluetoothAdapter`会返回错误，错误码为`10001`，表示手机蓝牙功能不可用；此时小程序蓝牙模块已经初始化完成，可通过`wx.onBluetoothAdapterStateChange`监听手机蓝牙状态的改变，也可以调用蓝牙模块的所有API。
+1.  `tip`: 在没有调用`wx.openBluetoothAdapter`的情况下调用小程序其它蓝牙模块相关API，API会返回错误，错误码为`10000`
+2.  `bug`: 在用户蓝牙开关未开启或者手机不支持蓝牙功能的情况下，调用`wx.openBluetoothAdapter`会返回错误，错误码为`10001`，表示手机蓝牙功能不可用；此时小程序蓝牙模块已经初始化完成，可通过`wx.onBluetoothAdapterStateChange`监听手机蓝牙状态的改变，也可以调用蓝牙模块的所有API。
 
 ### wx.closeBluetoothAdapter(OBJECT)
 
-> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 关闭蓝牙模块，使其进入未初始化状态。调用该方法将断开所有已建立的链接并释放系统资源。建议在使用小程序蓝牙流程后调用，与`wx.openBluetoothAdapter`成对调用。
 
@@ -56,7 +53,7 @@
 
 **示例代码：**
 
-[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4)
+[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4 "在开发者工具中预览效果")
 
     wx.closeBluetoothAdapter({
       success: function (res) {
@@ -67,7 +64,7 @@
 
 ### wx.getBluetoothAdapterState(OBJECT)
 
-> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 获取本机蓝牙适配器状态
 
@@ -89,7 +86,7 @@
 
 **示例代码：**
 
-[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4)
+[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4 "在开发者工具中预览效果")
 
     wx.getBluetoothAdapterState({
       success: function (res) {
@@ -100,7 +97,7 @@
 
 ### wx.onBluetoothAdapterStateChange(CALLBACK)
 
-> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 监听蓝牙适配器状态变化事件
 
@@ -113,7 +110,7 @@
 
 **示例代码：**
 
-[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4)
+[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4 "在开发者工具中预览效果")
 
     wx.onBluetoothAdapterStateChange(function(res) {
       console.log(`adapterState changed, now is`, res)
@@ -122,7 +119,7 @@
 
 ### wx.startBluetoothDevicesDiscovery(OBJECT)
 
-> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 开始搜寻附近的蓝牙外围设备。注意，该操作比较耗费系统资源，请在搜索并连接到设备后调用 stop 方法停止搜索。
 
@@ -147,7 +144,7 @@
 
 **示例代码：**
 
-[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4)
+[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4 "在开发者工具中预览效果")
 
     // 以微信硬件平台的蓝牙智能灯为例，主服务的 UUID 是 FEE7。传入这个参数，只搜索主服务 UUID 为 FEE7 的设备
     wx.startBluetoothDevicesDiscovery({
@@ -160,7 +157,7 @@
 
 ### wx.stopBluetoothDevicesDiscovery(OBJECT)
 
-> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 停止搜寻附近的蓝牙外围设备。若已经找到需要的蓝牙设备并不需要继续搜索时，建议调用该接口停止蓝牙搜索。
 
@@ -180,7 +177,7 @@
 
 **示例代码：**
 
-[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4)
+[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4 "在开发者工具中预览效果")
 
     wx.stopBluetoothDevicesDiscovery({
       success: function (res) {
@@ -191,7 +188,7 @@
 
 ### wx.getBluetoothDevices(OBJECT)
 
-> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 获取在小程序蓝牙模块生效期间所有已发现的蓝牙设备，包括已经和本机处于连接状态的设备。
 
@@ -219,7 +216,7 @@
 
 **示例代码：**
 
-[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4)
+[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4 "在开发者工具中预览效果")
 
     // ArrayBuffer转16进度字符串示例
     function ab2hex(buffer) {
@@ -250,7 +247,7 @@
 
 ### wx.onBluetoothDeviceFound(CALLBACK)
 
-> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 监听寻找到新设备的事件
 
@@ -269,7 +266,7 @@
 
 **示例代码：**
 
-[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4)
+[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4 "在开发者工具中预览效果")
 
     // ArrayBuffer转16进度字符串示例
     function ab2hex(buffer) {
@@ -296,7 +293,7 @@
 
 ### wx.getConnectedBluetoothDevices(OBJECT)
 
-> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 根据 uuid 获取处于已连接状态的设备
 
@@ -320,7 +317,7 @@
 
 **示例代码：**
 
-[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4)
+[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4 "在开发者工具中预览效果")
 
     wx.getConnectedBluetoothDevices({
       success: function (res) {
@@ -338,7 +335,7 @@
 
 ### wx.createBLEConnection(OBJECT)
 
-> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 连接低功耗蓝牙设备。
 
@@ -362,7 +359,7 @@
 
 **示例代码：**
 
-[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4)
+[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4 "在开发者工具中预览效果")
 
     wx.createBLEConnection({
       // 这里的 deviceId 需要已经通过 createBLEConnection 与对应设备建立链接 
@@ -381,7 +378,7 @@
 
 ### wx.closeBLEConnection(OBJECT)
 
-> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 断开与低功耗蓝牙设备的连接
 
@@ -402,10 +399,10 @@
 
 **示例代码：**
 
-[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4)
+[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4 "在开发者工具中预览效果")
 
     wx.closeBLEConnection({
-      deviceId:deviceId
+      deviceId:deviceId,
       success: function (res) {
         console.log(res)
       }
@@ -414,7 +411,7 @@
 
 ### wx.onBLEConnectionStateChange(CALLBACK)
 
-> 基础库 1.1.1 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.1.1 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 监听低功耗蓝牙连接状态的改变事件，包括开发者主动连接或断开连接，设备丢失，连接异常断开等等
 
@@ -427,7 +424,7 @@
 
 **示例代码：**
 
-[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4)
+[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4 "在开发者工具中预览效果")
 
     wx.onBLEConnectionStateChange(function(res) {
       // 该方法回调中可以用于处理连接意外断开等异常情况
@@ -437,7 +434,7 @@
 
 ### wx.getBLEDeviceServices(OBJECT)
 
-> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 获取蓝牙设备所有 service（服务）
 
@@ -461,7 +458,7 @@
 
 **示例代码：**
 
-[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4)
+[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4 "在开发者工具中预览效果")
 
     wx.getBLEDeviceServices({
       // 这里的 deviceId 需要已经通过 createBLEConnection 与对应设备建立链接 
@@ -478,7 +475,7 @@
 
 ### wx.getBLEDeviceCharacteristics(OBJECT)
 
-> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 获取蓝牙设备某个服务中的所有 characteristic（特征值）
 
@@ -507,7 +504,7 @@
 
 **示例代码：**
 
-[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4)
+[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4 "在开发者工具中预览效果")
 
     wx.getBLEDeviceCharacteristics({
       // 这里的 deviceId 需要已经通过 createBLEConnection 与对应设备建立链接
@@ -527,7 +524,7 @@
 
 ### wx.readBLECharacteristicValue(OBJECT)
 
-> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 读取低功耗蓝牙设备的特征值的二进制数据值。注意：必须设备的特征值支持`read`才可以成功调用，具体参照 characteristic 的 properties 属性
 
@@ -551,7 +548,7 @@
 
 **示例代码：**
 
-[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4)
+[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4 "在开发者工具中预览效果")
 
     // 必须在这里的回调才能获取
     wx.onBLECharacteristicValueChange(function(characteristic) {
@@ -578,7 +575,7 @@
 
 ### wx.writeBLECharacteristicValue(OBJECT)
 
-> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 向低功耗蓝牙设备特征值中写入二进制数据。注意：必须设备的特征值支持`write`才可以成功调用，具体参照 characteristic 的 properties 属性
 
@@ -604,7 +601,7 @@ _tips: 并行调用多次读写接口存在读写失败的可能性_
 
 **示例代码：**
 
-[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4)
+[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4 "在开发者工具中预览效果")
 
     // 向蓝牙设备发送一个0x00的16进制数据
     let buffer = new ArrayBuffer(1)
@@ -635,7 +632,7 @@ _tips: 并行调用多次读写接口存在读写失败的可能性_
 
 ### wx.notifyBLECharacteristicValueChange(OBJECT)
 
-> 基础库 1.1.1 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.1.1 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 启用低功耗蓝牙设备特征值变化时的 notify 功能，订阅特征值。注意：必须设备的特征值支持`notify`或者`indicate`才可以成功调用，具体参照 characteristic 的 properties 属性
 
@@ -661,7 +658,7 @@ _tips: 并行调用多次读写接口存在读写失败的可能性_
 
 **示例代码：**
 
-[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4)
+[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4 "在开发者工具中预览效果")
 
     wx.notifyBLECharacteristicValueChange({
       state: true, // 启用 notify 功能
@@ -684,7 +681,7 @@ _tips: 并行调用多次读写接口存在读写失败的可能性_
 
 ### wx.onBLECharacteristicValueChange(CALLBACK)
 
-> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 监听低功耗蓝牙设备的特征值变化。必须先启用`notify`接口才能接收到设备推送的notification。
 
@@ -699,7 +696,7 @@ _tips: 并行调用多次读写接口存在读写失败的可能性_
 
 **示例代码：**
 
-[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4)
+[在开发者工具中预览效果](wechatide://minicode/OF4Y9Gme6rZ4 "在开发者工具中预览效果")
 
     // ArrayBuffer转16进度字符串示例
     function ab2hex(buffer) {

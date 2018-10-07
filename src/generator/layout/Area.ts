@@ -42,7 +42,7 @@ export class Area {
     return this.$area.find('pre code').toArray().map(el => {
       let $el = $(el)
       let code = $el.text()
-      let lang = ($el.attr('class') || '').replace(/^lang-/, '')
+      let lang = ($el.attr('class') || '').replace(/^(lang|language)-/, '')
 
       // 将 code 中的 /* */ 结构替换成 //
       code = code.replace(/\/\*([\s\S]*?)\*\//g, (raw, content: string) => {
@@ -333,7 +333,7 @@ export class ComponentArea extends Area {
         let remove = true
         if (nodes.length === 2 && /相关\s*api/i.test(text)) {
           component.relateApis.push(link)
-        } else if (nodes.length === 2 && /基础库 ([\d\.]+) 开始支持，低版本需做/.test(text)) {
+        } else if (/基础库 ([\d\.]+) 开始支持，低版本需做/.test(text)) {
           component.since = RegExp.$1
         } else if (nodes.length === 3 && /需要用户授权\s*(scope.[、 \.\w]+)/.test(text)) {
           component.authorize = new ComponentLink(RegExp.$1, link.link)

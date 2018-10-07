@@ -16,10 +16,13 @@ launchApp(OBJECT)
 
 *   当小程序从 1036（App 分享消息卡片） 打开时，该状态置为 true。
 *   当小程序从 1069（App 打开小程序） 打开时，该状态置为 true。
-*   当小程序从 1089（微信聊天主界面下拉）或 1090（长按小程序右上角菜单唤出最近使用历史）的场景打开时，该状态不变，即保持上一次打开小程序时该状态的值。
-*   当小程序从非 1036/1069/1089/1090 的场景打开，该状态置为 false。
+*   当小程序从以下场景打开时， 该状态不变，即保持上一次打开小程序时该状态的值：
+    *   1038（从小程序返回，基础库 2.2.4 及以上版本支持）
+    *   1089（微信聊天主界面下拉）
+    *   1090（长按小程序右上角菜单唤出最近使用历史）
+*   当小程序从非以上陈列的场景打开时，该状态置为 false。
 
-![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/launch-app.png)
+![](https://developers.weixin.qq.com/miniprogram/dev/image/launch-app.png)
 
 使用方法
 ----
@@ -30,19 +33,25 @@ launchApp(OBJECT)
 
 ### app 端
 
-Android 第三方 app 需要处理 `ShowMessageFromWX.req` 的微信回调，iOS 则需要将 appId 添加到第三方 app 工程所属的 plist 文件 URL types 字段。 `app-parameter` 的获取方法，请参考 [Android SDKSample](https://open.weixin.qq.com/zh_CN/htmledition/res/dev/download/sdk/WeChatSDK_sample_Android.zip) 中 WXEntryActivity 中的 onReq 方法以及 [iOS SDKSample](https://open.weixin.qq.com/zh_CN/htmledition/res/dev/download/sdk/WeChatSDK_sample_iOS_1.4.2.1.zip) 中 WXApiDelegate 中的 onReq 方法。
+APP 需要接入 OpenSDK。
+
+iOS 参考文档 [https://open.weixin.qq.com/cgi-bin/showdocument?action=dir\_list&t=resource/res\_list&verify=1&id=1417694084&token=&lang=zh_CN](https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&id=1417694084&token=&lang=zh_CN)
+
+Android 参考文档 [https://open.weixin.qq.com/cgi-bin/showdocument?action=dir\_list&t=resource/res\_list&verify=1&id=1417751808&token=&lang=zh_CN](https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&id=1417751808&token=&lang=zh_CN)
+
+Android 第三方 app 需要处理 `ShowMessageFromWX.req` 的微信回调，iOS 则需要将 appId 添加到第三方 app 工程所属的 plist 文件 URL types 字段。 `app-parameter` 的获取方法，请参考 [Android SDKSample](https://open.weixin.qq.com/zh_CN/htmledition/res/dev/download/sdk/WeChatSDK_sample_Android.zip) 中 WXEntryActivity 中的 onResp 方法以及 [iOS SDKSample](https://open.weixin.qq.com/zh_CN/htmledition/res/dev/download/sdk/WeChatSDK_sample_iOS_1.4.2.1.zip) 中 WXApiDelegate 中的 onResp 方法。
 
 例子
 --
 
-    <button open-type="launchApp" app-parameter="wechat" binderror="launchAppError">打开APP</button>
+    <button open-type="launchApp" app-parameter="wechat" binderror="launchAppError">打开APP</button> 
     
 
     Page({ 
         launchAppError: function(e) { 
             console.log(e.detail.errMsg) 
         } 
-    })
+    }) 
     
 
 error 事件参数说明

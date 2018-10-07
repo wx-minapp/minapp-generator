@@ -60,13 +60,13 @@ export namespace wx {
    *
    *     ```javascript
    *     wx.getBackgroundAudioPlayerState({
-   *         success: function(res) {
-   *             var status = res.status
-   *             var dataUrl = res.dataUrl
-   *             var currentPosition = res.currentPosition
-   *             var duration = res.duration
-   *             var downloadPercent = res.downloadPercent
-   *         }
+   *     	success: function(res) {
+   *     		var status = res.status
+   *     		var dataUrl = res.dataUrl
+   *     		var currentPosition = res.currentPosition
+   *     		var duration = res.duration
+   *     		var downloadPercent = res.downloadPercent
+   *     	}
    *     })
    *     ```
    * @see https://developers.weixin.qq.com/miniprogram/dev/api/media-background-audio.html#wxgetbackgroundaudioplayerstateobject
@@ -114,7 +114,7 @@ export namespace wx {
     type ParamPropComplete = () => any
   }
   /**
-   * 使用后台播放器播放音乐，对于微信客户端来说，只能同时有一个后台音乐在播放。当用户离开小程序后，音乐将暂停播放；当用户点击“显示在聊天顶部”时，音乐不会暂停播放；当用户在其他小程序占用了音乐播放器，原有小程序内的音乐将停止播放。
+   * 使用后台播放器播放音乐，对于微信客户端来说，只能同时有一个后台音乐在播放。当用户离开小程序后，音乐将暂停播放；当用户在其他小程序占用了音乐播放器，原有小程序内的音乐将停止播放。
    *
    * **OBJECT参数说明：**
    *

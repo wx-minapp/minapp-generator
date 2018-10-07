@@ -27,12 +27,12 @@ canvasContext.setShadow
     ctx.draw()
     
 
-![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/canvas/shadow.png)
+![](https://developers.weixin.qq.com/miniprogram/dev/image/canvas/shadow.png)
 
 canvasContext.shadowBlur
 ========================
 
-> 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 ### 定义
 
@@ -46,7 +46,7 @@ canvasContext.shadowBlur
 canvasContext.shadowColor
 =========================
 
-> 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 ### 定义
 
@@ -60,7 +60,7 @@ canvasContext.shadowColor
 canvasContext.shadowOffsetX
 ===========================
 
-> 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 ### 定义
 
@@ -74,7 +74,7 @@ canvasContext.shadowOffsetX
 canvasContext.shadowOffsetY
 ===========================
 
-> 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 ### 定义
 

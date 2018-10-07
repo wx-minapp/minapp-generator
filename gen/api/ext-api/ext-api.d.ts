@@ -53,9 +53,9 @@ export namespace wx {
    *     ```javascript
    *     if(wx.getExtConfig) {
    *       wx.getExtConfig({
-   *         success: function (res) {
-   *           console.log(res.extConfig)
-   *         }
+   *     	success: function (res) {
+   *     	  console.log(res.extConfig)
+   *     	}
    *       })
    *     }
    *     ```

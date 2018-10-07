@@ -19,16 +19,16 @@
 JSON数据包如下：
 
     {
-        "touser":"OPENID",
-        "command":"Typing"
+    	"touser":"OPENID",
+    	"command":"Typing"
     }
     
 
 预期返回：
 
     {
-        "errcode":0,
-        "errmsg":"ok"
+    	"errcode":0,
+    	"errmsg":"ok"
     }
     
 

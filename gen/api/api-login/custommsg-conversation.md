@@ -6,10 +6,9 @@
 
 目前允许的动作列表如下，不同动作触发后，允许的客服接口下发消息条数和下发时限不同。下发条数达到上限后，会收到错误返回码，具体请见返回码说明页：
 
-  用户动作         |允许下发条数限制| 下发时限
--------------------|-------------|---------
-用户通过客服消息按钮进入会话|  1条        |  1分钟  
-  用户发送信息     |  5条        |  48小时 
+  用户动作 |允许下发条数限制| 下发时限
+-----------|-------------|---------
+用户发送信息|  5条        |  48小时 
 
 #### 客服接口-发消息
 
@@ -63,27 +62,27 @@
 
     {
     
-        "touser": "OPENID",
-        "msgtype": "link",
-        "link": {
-              "title": "Happy Day",
-              "description": "Is Really A Happy Day",
-              "url": "URL",
-              "thumb_url": "THUMB_URL"
-        }
+        "touser": "OPENID",
+        "msgtype": "link",
+        "link": {
+              "title": "Happy Day",
+              "description": "Is Really A Happy Day",
+              "url": "URL",
+              "thumb_url": "THUMB_URL"
+        }
     }
     
 
 ##### 发送小程序卡片
 
     {
-        "touser":"OPENID",
-        "msgtype":"miniprogrampage",
-        "miniprogrampage":{
-            "title":"title",
-            "pagepath":"pagepath",
-            "thumb_media_id":"thumb_media_id"
-        }
+    	"touser":"OPENID",
+    	"msgtype":"miniprogrampage",
+    	"miniprogrampage":{
+    		"title":"title",
+    		"pagepath":"pagepath",
+    		"thumb_media_id":"thumb_media_id"
+    	}
     }
     
 

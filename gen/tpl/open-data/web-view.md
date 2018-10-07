@@ -2,14 +2,18 @@
 
 #### web-view
 
-> 基础库 1.6.4 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.6.4 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 web-view 组件是一个可以用来承载网页的容器，会自动铺满整个小程序页面。**个人类型与海外类型的小程序暂不支持使用。**
+
+> 客户端 6.7.2 版本开始，[`navigationStyle: custom`](https://developers.weixin.qq.com/miniprogram/dev/framework/config.html#window) 对 `<web-view>` 组件无效
 
   属性名        |  类型           | 默认值 |  说明                                                                              
 ----------------|-----------------|--------|------------------------------------------------------------------------------------
   src           |  String         |        |webview 指向网页的链接。可打开关联的公众号的文章，其它网页需登录[小程序管理后台](https://mp.weixin.qq.com/)配置业务域名。
   bindmessage   |  EventHandler   |        |网页向小程序 postMessage 时，会在特定时机（小程序后退、组件销毁、分享）触发并收到消息。e.detail = { data }
+  bindload      |  EventHandler   |        |  网页加载成功时候触发此事件。e.detail = { src }                                    
+  binderror     |  EventHandler   |        |  网页加载失败的时候触发此事件。e.detail = { src }                                  
 
 **示例代码：**
 
@@ -34,7 +38,7 @@ web-view 组件是一个可以用来承载网页的容器，会自动铺满整�
 
 **示例代码：**
 
-[在开发者工具中预览效果](wechatide://minicode/aRVmcimz66Yb)
+[在开发者工具中预览效果](wechatide://minicode/aRVmcimz66Yb "在开发者工具中预览效果")
 
     <!-- html -->
     <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
@@ -113,6 +117,7 @@ web-view 组件是一个可以用来承载网页的容器，会自动铺满整�
     wx.miniProgram.getEnv(function(res) {
       console.log(res.miniprogram) // true
     })
+    
     
 
 ##### Bug & Tip

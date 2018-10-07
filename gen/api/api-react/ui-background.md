@@ -2,7 +2,7 @@
 
 ### wx.setBackgroundColor(OBJECT)
 
-> 基础库 2.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 2.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 动态设置窗口的背景色
 
@@ -28,7 +28,7 @@
 
 ### wx.setBackgroundTextStyle(OBJECT)
 
-> 基础库 2.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 2.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 动态设置下拉背景字体、loading 图的样式
 

@@ -94,6 +94,10 @@ export namespace wx {
      */
     right(length: any): any
     /**
+     * 导出动画数据传递给组件的animation属性
+     */
+    export(): any
+    /**
      * deg的范围-180~180，从原点顺时针旋转一个deg角度
      */
     rotate(deg: any): any

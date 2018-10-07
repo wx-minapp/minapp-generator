@@ -10,7 +10,7 @@ getPhoneNumber(OBJECT)
 
 因为需要用户主动触发才能发起获取手机号接口，所以该功能不由 API 来调用，需用 `<button>` 组件的点击来触发。
 
-**注意：目前该接口针对非个人开发者，且完成了认证的小程序开放。需谨慎使用，若用户举报较多或被发现在不必要场景下使用，微信有权永久回收该小程序的该接口权限。**
+**注意：目前该接口针对非个人开发者，且完成了认证的小程序开放（不包含海外主体）。需谨慎使用，若用户举报较多或被发现在不必要场景下使用，微信有权永久回收该小程序的该接口权限。**
 
 使用方法
 ----
@@ -25,16 +25,16 @@ getPhoneNumber(OBJECT)
 例子
 --
 
-    <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"> </button>
+    <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"> </button> 
     
 
     Page({ 
         getPhoneNumber: function(e) { 
-            console.log(e.detail.errMsg) 
-            console.log(e.detail.iv) 
-            console.log(e.detail.encryptedData) 
-        } 
-    })
+    		console.log(e.detail.errMsg) 
+    		console.log(e.detail.iv) 
+    		console.log(e.detail.encryptedData) 
+    	} 
+    }) 
     
 
 返回参数说明

@@ -3,7 +3,7 @@
 canvasContext.clip
 ==================
 
-> 基础库 1.6.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.6.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 ### 定义
 
@@ -16,15 +16,15 @@ clip() 方法从原始画布中剪切任意形状和尺寸。一旦剪切了某�
     wx.downloadFile({
       url: 'http://is5.mzstatic.com/image/thumb/Purple128/v4/75/3b/90/753b907c-b7fb-5877-215a-759bd73691a4/source/50x50bb.jpg',
       success: function(res) {
-          ctx.save()
-          ctx.beginPath()
-          ctx.arc(50, 50, 25, 0, 2*Math.PI)
-          ctx.clip()
-          ctx.drawImage(res.tempFilePath, 25, 25)
-          ctx.restore()
-          ctx.draw()
+      	ctx.save()
+      	ctx.beginPath()
+      	ctx.arc(50, 50, 25, 0, 2*Math.PI)
+      	ctx.clip()
+      	ctx.drawImage(res.tempFilePath, 25, 25)
+      	ctx.restore()
+      	ctx.draw()
       }
     })
     
 
-![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/canvas/clip.png)
+![](https://developers.weixin.qq.com/miniprogram/dev/image/canvas/clip.png)

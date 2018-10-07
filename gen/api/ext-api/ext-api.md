@@ -2,7 +2,7 @@
 
 ### wx.getExtConfig(OBJECT)
 
-> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 获取[第三方平台](https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/ext.html)自定义的数据字段。
 
@@ -29,16 +29,16 @@
 
     if(wx.getExtConfig) {
       wx.getExtConfig({
-        success: function (res) {
-          console.log(res.extConfig)
-        }
+    	success: function (res) {
+    	  console.log(res.extConfig)
+    	}
       })
     }
     
 
 ### wx.getExtConfigSync()
 
-> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 获取[第三方平台](https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/ext.html)自定义的数据字段的同步接口。
 

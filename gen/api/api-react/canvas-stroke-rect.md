@@ -26,4 +26,4 @@ canvasContext.strokeRect
     ctx.draw()
     
 
-![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/canvas/stroke-rect.png)
+![](https://developers.weixin.qq.com/miniprogram/dev/image/canvas/stroke-rect.png)

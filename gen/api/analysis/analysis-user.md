@@ -4,7 +4,7 @@
 
 获取小程序新增或活跃用户的画像分布数据。时间范围支持昨天、最近7天、最近30天。其中，新增用户数为时间范围内首次访问小程序的去重用户数，活跃用户数为时间范围内访问过小程序的去重用户数。画像属性包括用户年龄、性别、省份、城市、终端类型、机型。
 
-接口地址： [https://api.weixin.qq.com/datacube/getweanalysisappiduserportrait?access\_token=ACCESS\_TOKEN](https://api.weixin.qq.com/datacube/getweanalysisappiduserportrait?access_token=ACCESS_TOKEN)
+接口地址： https://api.weixin.qq.com/datacube/getweanalysisappiduserportrait?access\_token=ACCESS\_TOKEN
 
 **POST 请求参数说明：**
 

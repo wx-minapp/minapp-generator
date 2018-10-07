@@ -36,7 +36,7 @@ export namespace wx {
 
   class InnerAudioContext {
     /**
-     * 音频的数据链接，用于直接播放。
+     * 音频的数据链接，用于直接播放。支持云文件ID（2.2.3起）。
      */
     src: string
     /**

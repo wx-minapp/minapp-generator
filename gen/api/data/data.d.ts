@@ -59,8 +59,8 @@ export namespace wx {
    *
    *     ```javascript
    *     try {
-   *         wx.setStorageSync('key', 'value')
-   *     } catch (e) {    
+   *     	wx.setStorageSync('key', 'value')
+   *     } catch (e) {	
    *     }
    *     ```
    * @see https://developers.weixin.qq.com/miniprogram/dev/api/data.html#wxsetstoragesynckeydata
@@ -114,7 +114,7 @@ export namespace wx {
    *     wx.getStorage({
    *       key: 'key',
    *       success: function(res) {
-   *           console.log(res.data)
+   *       	console.log(res.data)
    *       } 
    *     })
    *     ```
@@ -131,7 +131,7 @@ export namespace wx {
    *     try {
    *       var value = wx.getStorageSync('key')
    *       if (value) {
-   *           // Do something with return value
+   *       	// Do something with return value
    *       }
    *     } catch (e) {
    *       // Do something when catch error
@@ -324,7 +324,7 @@ export namespace wx {
    *
    *     ```javascript
    *     try {
-   *         wx.clearStorageSync()
+   *     	wx.clearStorageSync()
    *     } catch(e) {
    *       // Do something when catch error
    *     }

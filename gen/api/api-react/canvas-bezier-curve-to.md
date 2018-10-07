@@ -66,7 +66,7 @@ canvasContext.bezierCurveTo
     ctx.draw()
     
 
-![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/canvas/bezier-curve.png)
+![](https://developers.weixin.qq.com/miniprogram/dev/image/canvas/bezier-curve.png)
 
 针对 `moveTo(20, 20)` `bezierCurveTo(20, 100, 200, 100, 200, 20)` 的三个关键坐标如下：
 

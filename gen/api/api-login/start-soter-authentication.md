@@ -2,7 +2,7 @@
 
 ### wx.startSoterAuthentication(OBJECT)
 
-> 基础库 1.5.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.5.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 开始 SOTER 生物认证
 
@@ -77,7 +77,7 @@
 
 ### 调用流程
 
-![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/soter.png)
+![](https://developers.weixin.qq.com/miniprogram/dev/image/soter.png)
 
 #### 流程步骤说明
 
@@ -106,7 +106,7 @@
 
 接口地址：
 
-> [http://api.weixin.qq.com/cgi-bin/soter/verify\_signature?access\_token=%access_token](http://api.weixin.qq.com/cgi-bin/soter/verify_signature?access_token=%access_token)
+> http://api.weixin.qq.com/cgi-bin/soter/verify\_signature?access\_token=%access_token
 
 post 数据内容（JSON 编码）:
 

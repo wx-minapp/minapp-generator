@@ -49,6 +49,7 @@
   left              |  length   |长度值，如果传入 Number 则默认使用 px，可传入其他自定义单位的长度值
   bottom            |  length   |长度值，如果传入 Number 则默认使用 px，可传入其他自定义单位的长度值
   right             |  length   |长度值，如果传入 Number 则默认使用 px，可传入其他自定义单位的长度值
+  export            |           |  导出动画数据传递给组件的animation属性     
 
 **animation 旋转：:**
 
@@ -111,17 +112,17 @@
       onShow: function(){
         var animation = wx.createAnimation({
           duration: 1000,
-            timingFunction: 'ease',
+      	  timingFunction: 'ease',
         })
     
         this.animation = animation
-    
+        
         animation.scale(2,2).rotate(45).step()
-    
+        
         this.setData({
           animationData:animation.export()
         })
-    
+        
         setTimeout(function() {
           animation.translate(30).step()
           this.setData({

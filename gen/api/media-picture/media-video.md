@@ -32,31 +32,31 @@
 [代码片段](wechatide://minicode/Qu4htbmu6RYo)
 
     <view class="container">
-        <video src="{{src}}"></video>
-        <button bindtap="bindButtonTap">获取视频</button>
+    	<video src="{{src}}"></video>
+    	<button bindtap="bindButtonTap">获取视频</button>
     </view>
     
 
     Page({
-        bindButtonTap: function() {
-            var that = this
-            wx.chooseVideo({
-                sourceType: ['album','camera'],
-                maxDuration: 60,
+    	bindButtonTap: function() {
+    		var that = this
+    		wx.chooseVideo({
+    			sourceType: ['album','camera'],
+    			maxDuration: 60,
           camera: 'back',
-                success: function(res) {
-                    that.setData({
-                        src: res.tempFilePath
-                    })
-                }
-            })
-        }
+    			success: function(res) {
+    				that.setData({
+    					src: res.tempFilePath
+    				})
+    			}
+    		})
+    	}
     })
     
 
 ### wx.saveVideoToPhotosAlbum(OBJECT)
 
-> 基础库 1.2.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.2.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 保存视频到系统相册。需要[用户授权](https://developers.weixin.qq.com/miniprogram/dev/api/authorize-index.html) scope.writePhotosAlbum
 

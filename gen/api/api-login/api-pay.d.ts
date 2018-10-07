@@ -12,7 +12,7 @@ export namespace wx {
        */
       nonceStr: string
       /**
-       * 统一下单接口返回的 prepay\_id 参数值，提交格式如：prepay\_id=_*_
+       * 统一下单接口返回的 prepay_id 参数值，提交格式如：prepay_id=***
        */
       package: string
       /**

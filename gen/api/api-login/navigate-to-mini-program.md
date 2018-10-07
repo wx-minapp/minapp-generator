@@ -2,11 +2,11 @@
 
 ### wx.navigateToMiniProgram(OBJECT)
 
-> 基础库 1.3.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
-> 
+> 基础库 1.3.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
+
 > 此接口即将废弃，请使用 [<navigator>](https://developers.weixin.qq.com/miniprogram/dev/component/navigator.html) 组件来使用此功能
 
-打开同一公众号下关联的另一个小程序。**（注：必须是同一公众号下，而非同个 open 账号下）**
+打开同一公众号下关联的另一个小程序。**（注：必须是同一公众号下，而非同个 open 帐号下）**
 
 **OBJECT参数说明：**
 

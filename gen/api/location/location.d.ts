@@ -4,7 +4,7 @@ export namespace wx {
   namespace getLocation {
     type Param = {
       /**
-       * 默认为 wgs84 返回 gps 坐标，gcj02 返回可用于`wx.openLocation`的坐标
+       * 默认为 wgs84 返回 GPS 坐标；gcj02 返回国测局坐标，可用于`wx.openLocation`的坐标
        */
       type?: string
       /**
@@ -76,7 +76,14 @@ export namespace wx {
     type ParamPropComplete = () => any
   }
   /**
-   * 获取当前的地理位置、速度。当用户离开小程序后，此接口无法调用；当用户点击“显示在聊天顶部”时，此接口可继续调用。
+   * 获取当前的地理位置、速度。当用户离开小程序后，此接口无法调用
+   *
+   * 需要[用户授权](https://developers.weixin.qq.com/miniprogram/dev/api/authorize-index.html) scope.userLocation
+   *
+   * **Tips：**
+   *
+   * 1.  **注：工具中定位模拟使用IP定位，可能会有一定误差。且工具目前仅支持 gcj02 坐标。**
+   * 2.  使用第三方服务进行逆地址解析时，请确认第三方服务默认的坐标系，正确进行坐标转换。
    *
    * **示例代码：**
    *
@@ -124,11 +131,11 @@ export namespace wx {
        */
       address: any
       /**
-       * 纬度，浮点数，范围为-90~90，负数表示南纬
+       * 纬度，浮点数，范围为-90~90，负数表示南纬。使用 gcj02 国测局坐标系
        */
       latitude: any
       /**
-       * 经度，浮点数，范围为-180~180，负数表示西经
+       * 经度，浮点数，范围为-180~180，负数表示西经。使用 gcj02 国测局坐标系
        */
       longitude: any
     }
@@ -152,11 +159,11 @@ export namespace wx {
   namespace openLocation {
     type Param = {
       /**
-       * 纬度，范围为-90~90，负数表示南纬
+       * 纬度，范围为-90~90，负数表示南纬。使用 gcj02 国测局坐标系
        */
       latitude: number
       /**
-       * 经度，范围为-180~180，负数表示西经
+       * 经度，范围为-180~180，负数表示西经。使用 gcj02 国测局坐标系
        */
       longitude: number
       /**

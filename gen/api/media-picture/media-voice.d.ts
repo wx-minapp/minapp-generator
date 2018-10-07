@@ -71,12 +71,12 @@ export namespace wx {
    *     wx.startRecord({
    *       success: function(res) {
    *         var tempFilePath = res.tempFilePath
-   *           wx.playVoice({
+   *       	wx.playVoice({
    *           filePath: tempFilePath
    *         })
    *
    *         setTimeout(function() {
-   *             //暂停播放
+   *       	  //暂停播放
    *           wx.pauseVoice()
    *         }, 5000)
    *       }

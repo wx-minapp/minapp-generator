@@ -282,10 +282,10 @@ export namespace wx {
    *
    * **Bug & Tip：**
    *
-   * 1.  `bug`: `Android` `6.3.30`，wx.showModal 的返回的 confirm 一直为 true；
-   * 2.  `tip`: wx.showActionSheet 点击取消或蒙层时，回调 `fail`, errMsg 为 "showActionSheet:fail cancel"；
-   * 3.  `tip`: wx.showLoading 和 wx.showToast 同时只能显示一个，但 wx.hideToast/wx.hideLoading 也应当配对使用；
-   * 4.  `tip`: `iOS` wx.showModal 点击蒙层不会关闭模态弹窗，所以尽量避免使用“取消”分支中实现业务逻辑。
+   * 1.  `tip`: wx.showLoading 和 wx.showToast 同时只能显示一个，但 wx.hideToast/wx.hideLoading 也应当配对使用；
+   * 2.  `bug`: `Android` `6.3.30`，wx.showModal 的返回的 confirm 一直为 true；
+   * 3.  `tip`: `wx.showActionSheet` `wx.showModal` 点击取消或蒙层时，回调 `fail`, errMsg 为 "fail cancel"；
+   * 4.  `tip`: `Android` `6.7.2` 及以上版本 和 `iOS` `wx.showActionSheet` `wx.showModal` 点击蒙层不会关闭模态弹窗，所以尽量避免使用“取消”分支中实现业务逻辑。
    *
    * **示例代码：**
    *

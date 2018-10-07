@@ -17,5 +17,10 @@ export default class extends TplModifier {
       let $s = this.$(s)
       if (removes.indexOf($s.data('title')) >= 0) $s.remove()
     })
+
+    let $el = this.$root.find('blockquote').eq(1)
+    if ($el.text().includes('客户端 6.7.2 版本开始，navigationStyle: custom')) {
+      $el.remove()
+    }
   }
 }

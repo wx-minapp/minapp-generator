@@ -12,7 +12,7 @@
 
 **请求方式: POST（请使用https协议）**
 
-[https://api.weixin.qq.com/wxa/plugin?access_token=TOKEN](https://api.weixin.qq.com/wxa/plugin?access_token=TOKEN)
+https://api.weixin.qq.com/wxa/plugin?access_token=TOKEN
 
 POST数据示例
 
@@ -60,7 +60,7 @@ POST数据示例
 
 **请求方式: POST（请使用https协议）**
 
-[https://api.weixin.qq.com/wxa/plugin?access_token=TOKEN](https://api.weixin.qq.com/wxa/plugin?access_token=TOKEN)
+https://api.weixin.qq.com/wxa/plugin?access_token=TOKEN
 
 POST数据示例：
 
@@ -115,7 +115,7 @@ POST数据示例：
 
 **请求方式: POST（请使用https协议）**
 
-[https://api.weixin.qq.com/wxa/plugin?access_token=TOKEN](https://api.weixin.qq.com/wxa/plugin?access_token=TOKEN)
+https://api.weixin.qq.com/wxa/plugin?access_token=TOKEN
 
 **POST数据示例**
 
@@ -152,7 +152,7 @@ POST数据示例：
 
 **请求方式: POST（请使用https协议）**
 
-[https://api.weixin.qq.com/wxa/devplugin?access_token=TOKEN](https://api.weixin.qq.com/wxa/devplugin?access_token=TOKEN)
+https://api.weixin.qq.com/wxa/devplugin?access_token=TOKEN
 
 **POST数据示例**
 
@@ -206,7 +206,7 @@ POST数据示例：
 
 **请求方式: POST（请使用https协议）**
 
-[https://api.weixin.qq.com/wxa/devplugin?access_token=TOKEN](https://api.weixin.qq.com/wxa/devplugin?access_token=TOKEN)
+https://api.weixin.qq.com/wxa/devplugin?access_token=TOKEN
 
 **POST数据示例**
 

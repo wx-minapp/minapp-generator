@@ -50,7 +50,7 @@
       "如果需要使用滚动视图，请使用 [scroll-view](https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html)"
     ],
     "demoImages": [
-      "https://mp.weixin.qq.com/debug/wxadoc/dev/image/pic/view.png"
+      "https://developers.weixin.qq.com/miniprogram/dev/image/pic/view.png"
     ],
     "name": "view",
     "docLink": "https://developers.weixin.qq.com/miniprogram/dev/component/view.html"
@@ -191,7 +191,7 @@
       "若要使用下拉刷新，请使用页面的滚动，而不是 `scroll-view` ，这样也能通过点击顶部状态栏回到页面顶部"
     ],
     "demoImages": [
-      "https://mp.weixin.qq.com/debug/wxadoc/dev/image/pic/scroll-view.png"
+      "https://developers.weixin.qq.com/miniprogram/dev/image/pic/scroll-view.png"
     ],
     "name": "scroll-view",
     "docLink": "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
@@ -629,7 +629,7 @@
   },
   {
     "desc": [
-      "覆盖在原生组件之上的文本视图，可覆盖的原生组件包括`map`、`video`、`canvas`、`camera`、`live-player`、`live-pusher`，只支持嵌套`cover-view`、`cover-image`。"
+      "覆盖在原生组件之上的文本视图，可覆盖的原生组件包括`map`、`video`、`canvas`、`camera`、`live-player`、`live-pusher`，只支持嵌套`cover-view`、`cover-image`，可在`cover-view`中使用`button`。"
     ],
     "attrs": [
       {
@@ -658,7 +658,7 @@
           "name": "string"
         },
         "desc": [
-          "图标路径，支持临时路径、网络地址（1.6.0起支持）。暂不支持base64格式。"
+          "图标路径，支持临时路径、网络地址（1.6.0起支持）、云文件ID（2.2.3起支持）。暂不支持base64格式。"
         ]
       },
       {
@@ -689,7 +689,8 @@
       }
     ],
     "tips": [
-      "基础库 2.1.0 起支持设置 `scale` `rotate` 的css样式，包括transition动画",
+      "基础库 2.2.4 起支持 touch 相关事件，也可使用 hover-class 设置点击态",
+      "基础库 2.1.0 起支持设置 `scale` `rotate` 的 css 样式，包括 transition 动画",
       "基础库 1.9.90 起 `cover-view` 支持 `overflow: scroll`，但不支持动态更新 `overflow`",
       "基础库 1.9.90 起最外层 `cover-view` 支持 `position: fixed`",
       "基础库 1.9.0 起支持插在 `view` 等标签下。在此之前只可嵌套在原生组件`map`、`video`、`canvas`、`camera`内，避免嵌套在其他组件内。",
@@ -700,6 +701,9 @@
       "只支持基本的定位、布局、文本样式。不支持设置`单边的border`、`background-image`、`shadow`、`overflow: visible`等。",
       "建议子节点不要溢出父节点",
       "默认设置的样式有：`white-space: nowrap;` `line-height: 1.2;` `display: block;`"
+    ],
+    "bugs": [
+      "自定义组件嵌套 `cover-view` 时，自定义组件的 slot 及其父节点暂不支持通过 wx:if 控制显隐，否则会导致 `cover-view` 不显示"
     ],
     "name": "cover-image",
     "docLink": "https://developers.weixin.qq.com/miniprogram/dev/component/cover-view.html",
@@ -740,7 +744,7 @@
       }
     ],
     "demoImages": [
-      "https://mp.weixin.qq.com/debug/wxadoc/dev/image/pic/icon.png"
+      "https://developers.weixin.qq.com/miniprogram/dev/image/pic/icon.png"
     ],
     "name": "icon",
     "docLink": "https://developers.weixin.qq.com/miniprogram/dev/component/icon.html"
@@ -808,7 +812,7 @@
       "基础库版本低于 `2.1.0` 时， `<text/>` 组件内嵌的 `<text/>` style 设置可能不会生效。"
     ],
     "demoImages": [
-      "https://mp.weixin.qq.com/debug/wxadoc/dev/image/pic/text.png"
+      "https://developers.weixin.qq.com/miniprogram/dev/image/pic/text.png"
     ],
     "name": "text",
     "docLink": "https://developers.weixin.qq.com/miniprogram/dev/component/text.html"
@@ -931,7 +935,7 @@
       }
     ],
     "demoImages": [
-      "https://mp.weixin.qq.com/debug/wxadoc/dev/image/pic/progress.png"
+      "https://developers.weixin.qq.com/miniprogram/dev/image/pic/progress.png"
     ],
     "name": "progress",
     "docLink": "https://developers.weixin.qq.com/miniprogram/dev/component/progress.html"
@@ -1073,7 +1077,7 @@
           },
           {
             "value": "share",
-            "desc": "触发用户转发，使用前建议先阅读[使用指引](https://developers.weixin.qq.com/miniprogram/dev/api/share.html#使用指引)",
+            "desc": "触发用户转发，使用前建议先阅读[使用指引](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/share.html#使用指引)",
             "since": "1.2.0"
           },
           {
@@ -1083,12 +1087,12 @@
           },
           {
             "value": "getPhoneNumber",
-            "desc": "获取用户手机号，可以从bindgetphonenumber回调中获取到用户信息，[具体说明](https://developers.weixin.qq.com/miniprogram/dev/api/getPhoneNumber.html)",
+            "desc": "获取用户手机号，可以从bindgetphonenumber回调中获取到用户信息，[具体说明](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/getPhoneNumber.html)",
             "since": "1.2.0"
           },
           {
             "value": "launchApp",
-            "desc": "打开APP，可以通过app-parameter属性设定向APP传的参数[具体说明](https://developers.weixin.qq.com/miniprogram/dev/api/launchApp.html)",
+            "desc": "打开APP，可以通过app-parameter属性设定向APP传的参数[具体说明](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchApp.html)",
             "since": "1.9.5"
           },
           {
@@ -1098,7 +1102,7 @@
           },
           {
             "value": "feedback",
-            "desc": "打开“意见反馈”页面，用户可提交反馈内容并上传[日志](https://developers.weixin.qq.com/miniprogram/dev/api/getLogManager.html)，开发者可以登录[小程序管理后台](https://mp.weixin.qq.com/)后进入左侧菜单“客服反馈”页面获取到反馈内容",
+            "desc": "打开“意见反馈”页面，用户可提交反馈内容并上传[日志](https://developers.weixin.qq.com/miniprogram/dev/api/debug/wx.getLogManager.html)，开发者可以登录[小程序管理后台](https://mp.weixin.qq.com/)后进入左侧菜单“客服反馈”页面获取到反馈内容",
             "since": "2.1.0"
           }
         ],
@@ -1209,7 +1213,7 @@
           }
         },
         "desc": [
-          "用户点击该按钮时，会返回获取到的用户信息，回调的detail数据与[wx.getUserInfo](https://developers.weixin.qq.com/miniprogram/dev/api/open.html#wxgetuserinfoobject)返回的一致"
+          "用户点击该按钮时，会返回获取到的用户信息，回调的detail数据与[wx.getUserInfo](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/user-info/wx.getUserInfo.html)返回的一致"
         ],
         "since": "1.3.0"
       },
@@ -1393,10 +1397,14 @@
     "notices": [
       "`button-hover` 默认为`{background-color: rgba(0, 0, 0, 0.1); opacity: 0.7;}`",
       "`bindgetphonenumber` 从1.2.0 开始支持，但是在1.5.3以下版本中无法使用`wx.canIUse`进行检测，建议使用基础库版本进行判断。",
-      "在`bindgetphonenumber` 等返回加密信息的回调中调用 `wx.login` 登录，可能会刷新登录态。此时服务器使用 code 换取的 sessionKey 不是加密时使用的 sessionKey，导致解密失败。建议开发者提前进行 `login`；或者在回调中先使用 `checkSession` 进行登录态检查，避免 `login` 刷新登录态。"
+      "在`bindgetphonenumber` 等返回加密信息的回调中调用 `wx.login` 登录，可能会刷新登录态。此时服务器使用 code 换取的 sessionKey 不是加密时使用的 sessionKey，导致解密失败。建议开发者提前进行 `login`；或者在回调中先使用 `checkSession` 进行登录态检查，避免 `login` 刷新登录态。",
+      "从 2.1.0 起，button 可作为原生组件的子节点嵌入，以便在原生组件上使用 `open-type` 的能力"
+    ],
+    "tips": [
+      "目前，设置了 `form-type` 的 `button` 只会对当前组件中的 `form` 有效。因而，将 `button` 封装在自定义组件中，而 `from` 在自定义组件外，将会使这个 `button` 的 `form-type` 失效。"
     ],
     "demoImages": [
-      "https://mp.weixin.qq.com/debug/wxadoc/dev/image/pic/button.png"
+      "https://developers.weixin.qq.com/miniprogram/dev/image/pic/button.png"
     ],
     "name": "button",
     "docLink": "https://developers.weixin.qq.com/miniprogram/dev/component/button.html"
@@ -1467,7 +1475,7 @@
       }
     ],
     "demoImages": [
-      "https://mp.weixin.qq.com/debug/wxadoc/dev/image/pic/checkbox.png"
+      "https://developers.weixin.qq.com/miniprogram/dev/image/pic/checkbox.png"
     ],
     "name": "checkbox",
     "docLink": "https://developers.weixin.qq.com/miniprogram/dev/component/checkbox.html"
@@ -1483,7 +1491,7 @@
           "name": "boolean"
         },
         "desc": [
-          "是否返回 formId 用于发送[模板消息](https://developers.weixin.qq.com/miniprogram/dev/api/notice.html)"
+          "是否返回 formId 用于发送[模板消息](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/template-message.html)"
         ]
       },
       {
@@ -1512,14 +1520,14 @@
       }
     ],
     "demoImages": [
-      "https://mp.weixin.qq.com/debug/wxadoc/dev/image/pic/form.png"
+      "https://developers.weixin.qq.com/miniprogram/dev/image/pic/form.png"
     ],
     "name": "form",
     "docLink": "https://developers.weixin.qq.com/miniprogram/dev/component/form.html"
   },
   {
     "desc": [
-      "输入框。"
+      "输入框。该组件是[原生组件](https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html)，使用时请注意相关限制。"
     ],
     "attrs": [
       {
@@ -1675,7 +1683,7 @@
           "name": "string"
         },
         "desc": [
-          "设置键盘右下角按钮的文字"
+          "设置键盘右下角按钮的文字，仅在type='text'时生效"
         ],
         "since": "1.1.0",
         "defaultValue": "done"
@@ -1783,16 +1791,21 @@
         ]
       }
     ],
+    "notices": [
+      "confirm-type的最终表现与手机输入法本身的实现有关，部分安卓系统输入法和第三方输入法可能不支持或不完全支持。"
+    ],
     "tips": [
-      "input 组件是一个 native 组件，字体是系统字体，所以无法设置 font-family；",
-      "在 input 聚焦期间，避免使用 css 动画；"
+      "请注意[原生组件使用限制](https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html#原生组件的使用限制)。",
+      "input 组件是一个原生组件，字体是系统字体，所以无法设置 font-family；",
+      "在 input 聚焦期间，避免使用 css 动画；",
+      "对于将 `input` 封装在自定义组件中、而 `from` 在自定义组件外的情况， `form` 将不能获得这个自定义组件中 `input` 的值。此时需要使用自定义组件的 [内置 behaviors](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/behaviors.html) `wx://form-field`。"
     ],
     "bugs": [
       "微信版本 `6.3.30`, focus 属性设置无效；",
       "微信版本 `6.3.30`, placeholder 在聚焦时出现重影问题；"
     ],
     "demoImages": [
-      "https://mp.weixin.qq.com/debug/wxadoc/dev/image/pic/input.png"
+      "https://developers.weixin.qq.com/miniprogram/dev/image/pic/input.png"
     ],
     "name": "input",
     "docLink": "https://developers.weixin.qq.com/miniprogram/dev/component/input.html"
@@ -1813,7 +1826,7 @@
       }
     ],
     "demoImages": [
-      "https://mp.weixin.qq.com/debug/wxadoc/dev/image/pic/label.png"
+      "https://developers.weixin.qq.com/miniprogram/dev/image/pic/label.png"
     ],
     "name": "label",
     "docLink": "https://developers.weixin.qq.com/miniprogram/dev/component/label.html"
@@ -2162,7 +2175,7 @@
                   }
                 },
                 "desc": [
-                  "value 改变时触发 change 事件，event.detail = {value: value}"
+                  "value 改变时触发 change 事件，event.detail = {value: value, code: code, postcode: postcode}，其中字段code是统计用区划代码，postcode是邮政编码"
                 ]
               },
               {
@@ -2202,7 +2215,7 @@
       }
     ],
     "demoImages": [
-      "https://mp.weixin.qq.com/debug/wxadoc/dev/image/pic/picker.png"
+      "https://developers.weixin.qq.com/miniprogram/dev/image/pic/picker.png"
     ],
     "name": "picker",
     "docLink": "https://developers.weixin.qq.com/miniprogram/dev/component/picker.html"
@@ -2287,7 +2300,7 @@
       "滚动时在iOS自带振动反馈，可在系统设置 -> 声音与触感 -> 系统触感反馈中关闭"
     ],
     "demoImages": [
-      "https://mp.weixin.qq.com/debug/wxadoc/dev/image/picker_view.png"
+      "https://developers.weixin.qq.com/miniprogram/dev/image/picker_view.png"
     ],
     "name": "picker-view-column",
     "docLink": "https://developers.weixin.qq.com/miniprogram/dev/component/picker-view.html"
@@ -2358,7 +2371,7 @@
       }
     ],
     "demoImages": [
-      "https://mp.weixin.qq.com/debug/wxadoc/dev/image/pic/radio.png"
+      "https://developers.weixin.qq.com/miniprogram/dev/image/pic/radio.png"
     ],
     "name": "radio",
     "docLink": "https://developers.weixin.qq.com/miniprogram/dev/component/radio.html"
@@ -2517,7 +2530,7 @@
       }
     ],
     "demoImages": [
-      "https://mp.weixin.qq.com/debug/wxadoc/dev/image/pic/slider.png"
+      "https://developers.weixin.qq.com/miniprogram/dev/image/pic/slider.png"
     ],
     "name": "slider",
     "docLink": "https://developers.weixin.qq.com/miniprogram/dev/component/slider.html"
@@ -2534,6 +2547,16 @@
         },
         "desc": [
           "是否选中"
+        ],
+        "defaultValue": "false"
+      },
+      {
+        "name": "disabled",
+        "type": {
+          "name": "boolean"
+        },
+        "desc": [
+          "是否禁用"
         ],
         "defaultValue": "false"
       },
@@ -2573,14 +2596,14 @@
       "switch类型切换时在iOS自带振动反馈，可在系统设置 -> 声音与触感 -> 系统触感反馈中关闭"
     ],
     "demoImages": [
-      "https://mp.weixin.qq.com/debug/wxadoc/dev/image/pic/switch.png"
+      "https://developers.weixin.qq.com/miniprogram/dev/image/pic/switch.png"
     ],
     "name": "switch",
     "docLink": "https://developers.weixin.qq.com/miniprogram/dev/component/switch.html"
   },
   {
     "desc": [
-      "多行输入框。"
+      "多行输入框。该组件是[原生组件](https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html)，使用时请注意相关限制。"
     ],
     "attrs": [
       {
@@ -2789,7 +2812,7 @@
           }
         },
         "desc": [
-          "当键盘输入时，触发 input 事件，event.detail = {value, cursor}， **bindinput 处理函数的返回值并不会反映到 textarea 上**"
+          "当键盘输入时，触发 input 事件，event.detail = {value, cursor}，**bindinput 处理函数的返回值并不会反映到 textarea 上**"
         ]
       },
       {
@@ -2806,11 +2829,9 @@
       }
     ],
     "tips": [
+      "请注意[原生组件使用限制](https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html#原生组件的使用限制)。",
       "`textarea` 的 `blur` 事件会晚于页面上的 `tap` 事件，如果需要在 `button` 的点击事件获取 `textarea`，可以使用 `form` 的 `bindsubmit`。",
-      "不建议在多行文本上对用户的输入进行修改，所以 `textarea` 的 `bindinput` 处理函数并不会将返回值反映到 `textarea` 上。",
-      "`textarea` 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。",
-      "请勿在 `scroll-view`、`swiper`、`picker-view`、`movable-view` 中使用 `textarea` 组件。",
-      "`css` 动画对 `textarea` 组件无效。"
+      "不建议在多行文本上对用户的输入进行修改，所以 `textarea` 的 `bindinput` 处理函数并不会将返回值反映到 `textarea` 上。"
     ],
     "bugs": [
       "微信版本 `6.3.30`，`textarea` 在列表渲染时，新增加的 `textarea` 在自动聚焦时的位置计算错误。"
@@ -2829,9 +2850,10 @@
           "name": "string"
         },
         "desc": [
-          "在哪个目标上发生跳转，默认当前小程序"
+          "在哪个目标上发生跳转，默认当前小程序，可选值self/miniProgram"
         ],
-        "since": "2.0.7"
+        "since": "2.0.7",
+        "defaultValue": "self"
       },
       {
         "name": "url",
@@ -2865,6 +2887,11 @@
             "value": "navigateBack",
             "desc": "对应 `wx.navigateBack` 的功能",
             "since": "1.1.0"
+          },
+          {
+            "value": "exit",
+            "desc": "退出小程序，target=\"miniProgram\"时生效",
+            "since": "2.1.0"
           }
         ],
         "name": "open-type",
@@ -2966,6 +2993,36 @@
           "手指松开后点击态保留时间，单位毫秒"
         ],
         "defaultValue": "600"
+      },
+      {
+        "name": "bindsuccess",
+        "type": {
+          "name": "string"
+        },
+        "desc": [
+          "当target=\"miniProgram\"时有效，跳转小程序成功"
+        ],
+        "since": "2.0.7"
+      },
+      {
+        "name": "bindfail",
+        "type": {
+          "name": "string"
+        },
+        "desc": [
+          "当target=\"miniProgram\"时有效，跳转小程序失败"
+        ],
+        "since": "2.0.7"
+      },
+      {
+        "name": "bindcomplete",
+        "type": {
+          "name": "string"
+        },
+        "desc": [
+          "当target=\"miniProgram\"时有效，跳转小程序完成"
+        ],
+        "since": "2.0.7"
       }
     ],
     "notices": [
@@ -2973,6 +3030,79 @@
     ],
     "name": "navigator",
     "docLink": "https://developers.weixin.qq.com/miniprogram/dev/component/navigator.html"
+  },
+  {
+    "desc": [
+      "这个组件从小程序基础库版本 [2.1.0](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html \"基础库 2.1.0 开始支持，低版本需做兼容处理。\") 开始支持。\n\n仅在插件的自定义组件中有效，用于跳转到插件功能页。"
+    ],
+    "attrs": [
+      {
+        "name": "version",
+        "type": {
+          "name": "string"
+        },
+        "desc": [
+          "跳转到的小程序版本，有效值 `develop`（开发版），`trial`（体验版），`release`（正式版）；**线上版本必须设置为 `release`**"
+        ],
+        "since": "2.1.0",
+        "defaultValue": "release"
+      },
+      {
+        "name": "name",
+        "type": {
+          "name": "string"
+        },
+        "desc": [
+          "要跳转到的功能页",
+          "目前支持的功能页和name可选值: {loginAndGetUserInfo => \"[用户信息功能页](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/functional-pages/user-info.html)\"; requestPayment => \"[支付功能页](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/functional-pages/request-payment.html)\"}"
+        ],
+        "since": "2.1.0"
+      },
+      {
+        "name": "args",
+        "type": {
+          "name": "Object"
+        },
+        "desc": [
+          "功能页参数，参数格式与具体功能页相关"
+        ],
+        "since": "2.1.0",
+        "defaultValue": "null"
+      },
+      {
+        "name": "bindsuccess",
+        "type": {
+          "name": "function",
+          "returns": {
+            "name": "any"
+          }
+        },
+        "desc": [
+          "功能页返回，且操作成功时触发， detail 格式与具体功能页相关"
+        ],
+        "since": "2.1.0"
+      },
+      {
+        "name": "bindfail",
+        "type": {
+          "name": "function",
+          "returns": {
+            "name": "any"
+          }
+        },
+        "desc": [
+          "功能页返回，且操作失败时触发， detail 格式与具体功能页相关"
+        ],
+        "since": "2.1.0"
+      }
+    ],
+    "tips": [
+      "功能页是插件所有者小程序中的一个特殊页面，开发者不能自定义这个页面的外观。",
+      "在功能页展示时，一些与界面展示相关的接口将被禁用（接口调用返回 fail ）。",
+      "这个组件本身可以在开发者工具中使用，但功能页的跳转目前不支持在开发者工具中调试，请在真机上测试。"
+    ],
+    "name": "functional-page-navigator",
+    "docLink": "https://developers.weixin.qq.com/miniprogram/dev/component/functional-page-navigator.html"
   },
   {
     "desc": [
@@ -3111,14 +3241,14 @@
     "relateApis": [
       {
         "name": "wx.createAudioContext",
-        "link": "https://developers.weixin.qq.com/miniprogram/dev/api/api-audio.html"
+        "link": "https://developers.weixin.qq.com/miniprogram/dev/api/media/audio/wx.createAudioContext.html"
       }
     ],
     "notices": [
-      "1.6.0 版本开始，该组件不再维护。建议使用能力更强的 [wx.createInnerAudioContext](https://developers.weixin.qq.com/miniprogram/dev/api/createInnerAudioContext.html) 接口"
+      "1.6.0 版本开始，该组件不再维护。建议使用能力更强的 [wx.createInnerAudioContext](https://developers.weixin.qq.com/miniprogram/dev/api/media/audio/wx.createInnerAudioContext.html) 接口"
     ],
     "demoImages": [
-      "https://mp.weixin.qq.com/debug/wxadoc/dev/image/pic/audio.png"
+      "https://developers.weixin.qq.com/miniprogram/dev/image/pic/audio.png"
     ],
     "name": "audio",
     "docLink": "https://developers.weixin.qq.com/miniprogram/dev/component/audio.html"
@@ -3134,22 +3264,22 @@
           "name": "string"
         },
         "desc": [
-          "图片资源地址"
+          "图片资源地址，支持云文件ID（2.2.3起）"
         ]
       },
       {
         "enum": [
           {
             "value": "scaleToFill",
-            "desc": "缩放: 不保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素  原图：![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/cat/0.jpg) 处理后: ![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/cat/1.png)"
+            "desc": "缩放: 不保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素  原图：![](https://developers.weixin.qq.com/miniprogram/dev/image/cat/0.jpg) 处理后: ![](https://developers.weixin.qq.com/miniprogram/dev/image/cat/1.png)"
           },
           {
             "value": "aspectFit",
-            "desc": "缩放: 保持纵横比缩放图片，使图片的长边能完全显示出来。也就是说，可以完整地将图片显示出来。  原图：![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/cat/0.jpg) 处理后: ![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/cat/2.png)"
+            "desc": "缩放: 保持纵横比缩放图片，使图片的长边能完全显示出来。也就是说，可以完整地将图片显示出来。  原图：![](https://developers.weixin.qq.com/miniprogram/dev/image/cat/0.jpg) 处理后: ![](https://developers.weixin.qq.com/miniprogram/dev/image/cat/2.png)"
           },
           {
             "value": "aspectFill",
-            "desc": "缩放: 保持纵横比缩放图片，只保证图片的短边能完全显示出来。也就是说，图片通常只在水平或垂直方向是完整的，另一个方向将会发生截取。  原图：![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/cat/0.jpg) 处理后: ![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/cat/3.png)"
+            "desc": "缩放: 保持纵横比缩放图片，只保证图片的短边能完全显示出来。也就是说，图片通常只在水平或垂直方向是完整的，另一个方向将会发生截取。  原图：![](https://developers.weixin.qq.com/miniprogram/dev/image/cat/0.jpg) 处理后: ![](https://developers.weixin.qq.com/miniprogram/dev/image/cat/3.png)"
           },
           {
             "value": "widthFix",
@@ -3157,39 +3287,39 @@
           },
           {
             "value": "top",
-            "desc": "裁剪: 不缩放图片，只显示图片的顶部区域  原图：![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/cat/0.jpg) 处理后: ![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/cat/4.png)"
+            "desc": "裁剪: 不缩放图片，只显示图片的顶部区域  原图：![](https://developers.weixin.qq.com/miniprogram/dev/image/cat/0.jpg) 处理后: ![](https://developers.weixin.qq.com/miniprogram/dev/image/cat/4.png)"
           },
           {
             "value": "bottom",
-            "desc": "裁剪: 不缩放图片，只显示图片的底部区域  原图：![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/cat/0.jpg) 处理后: ![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/cat/5.png)"
+            "desc": "裁剪: 不缩放图片，只显示图片的底部区域  原图：![](https://developers.weixin.qq.com/miniprogram/dev/image/cat/0.jpg) 处理后: ![](https://developers.weixin.qq.com/miniprogram/dev/image/cat/5.png)"
           },
           {
             "value": "center",
-            "desc": "裁剪: 不缩放图片，只显示图片的中间区域  原图：![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/cat/0.jpg) 处理后: ![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/cat/6.png)"
+            "desc": "裁剪: 不缩放图片，只显示图片的中间区域  原图：![](https://developers.weixin.qq.com/miniprogram/dev/image/cat/0.jpg) 处理后: ![](https://developers.weixin.qq.com/miniprogram/dev/image/cat/6.png)"
           },
           {
             "value": "left",
-            "desc": "裁剪: 不缩放图片，只显示图片的左边区域  原图：![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/cat/0.jpg) 处理后: ![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/cat/7.png)"
+            "desc": "裁剪: 不缩放图片，只显示图片的左边区域  原图：![](https://developers.weixin.qq.com/miniprogram/dev/image/cat/0.jpg) 处理后: ![](https://developers.weixin.qq.com/miniprogram/dev/image/cat/7.png)"
           },
           {
             "value": "right",
-            "desc": "裁剪: 不缩放图片，只显示图片的右边区域  原图：![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/cat/0.jpg) 处理后: ![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/cat/8.png)"
+            "desc": "裁剪: 不缩放图片，只显示图片的右边区域  原图：![](https://developers.weixin.qq.com/miniprogram/dev/image/cat/0.jpg) 处理后: ![](https://developers.weixin.qq.com/miniprogram/dev/image/cat/8.png)"
           },
           {
             "value": "top left",
-            "desc": "裁剪: 不缩放图片，只显示图片的左上边区域  原图：![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/cat/0.jpg) 处理后: ![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/cat/9.png)"
+            "desc": "裁剪: 不缩放图片，只显示图片的左上边区域  原图：![](https://developers.weixin.qq.com/miniprogram/dev/image/cat/0.jpg) 处理后: ![](https://developers.weixin.qq.com/miniprogram/dev/image/cat/9.png)"
           },
           {
             "value": "top right",
-            "desc": "裁剪: 不缩放图片，只显示图片的右上边区域  原图：![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/cat/0.jpg) 处理后: ![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/cat/10.png)"
+            "desc": "裁剪: 不缩放图片，只显示图片的右上边区域  原图：![](https://developers.weixin.qq.com/miniprogram/dev/image/cat/0.jpg) 处理后: ![](https://developers.weixin.qq.com/miniprogram/dev/image/cat/10.png)"
           },
           {
             "value": "bottom left",
-            "desc": "裁剪: 不缩放图片，只显示图片的左下边区域  原图：![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/cat/0.jpg) 处理后: ![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/cat/11.png)"
+            "desc": "裁剪: 不缩放图片，只显示图片的左下边区域  原图：![](https://developers.weixin.qq.com/miniprogram/dev/image/cat/0.jpg) 处理后: ![](https://developers.weixin.qq.com/miniprogram/dev/image/cat/11.png)"
           },
           {
             "value": "bottom right",
-            "desc": "裁剪: 不缩放图片，只显示图片的右下边区域  原图：![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/cat/0.jpg) 处理后: ![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/cat/12.png)"
+            "desc": "裁剪: 不缩放图片，只显示图片的右下边区域  原图：![](https://developers.weixin.qq.com/miniprogram/dev/image/cat/0.jpg) 处理后: ![](https://developers.weixin.qq.com/miniprogram/dev/image/cat/12.png)"
           }
         ],
         "name": "mode",
@@ -3238,14 +3368,14 @@
       }
     ],
     "notices": [
-      "image组件默认宽度300px、高度225px"
+      "image组件默认宽度300px、高度225px** **注2：image组件中二维码/小程序码图片不支持长按识别。仅在wx.previewImage中支持长按识别。"
     ],
     "name": "image",
     "docLink": "https://developers.weixin.qq.com/miniprogram/dev/component/image.html"
   },
   {
     "desc": [
-      "视频。\n\n`<video />` 默认宽度300px、高度225px，可通过wxss设置宽高。"
+      "视频。该组件是[原生组件](https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html)，使用时请注意相关限制。\n\n`<video />` 默认宽度300px、高度225px，可通过wxss设置宽高。"
     ],
     "attrs": [
       {
@@ -3254,7 +3384,7 @@
           "name": "string"
         },
         "desc": [
-          "要播放视频的资源地址"
+          "要播放视频的资源地址，支持云文件ID（2.2.3起）"
         ]
       },
       {
@@ -3440,7 +3570,7 @@
           "name": "string"
         },
         "desc": [
-          "视频封面的图片网络资源地址，如果 controls 属性值为 false 则设置 poster 无效"
+          "视频封面的图片网络资源地址或云文件ID（2.2.3起支持）如果 controls 属性值为 false 则设置 poster 无效"
         ]
       },
       {
@@ -3534,23 +3664,21 @@
     "relateApis": [
       {
         "name": "wx.createVideoContext",
-        "link": "https://developers.weixin.qq.com/miniprogram/dev/api/api-video.html"
+        "link": "https://developers.weixin.qq.com/miniprogram/dev/api/media/video/wx.createVideoContext.html"
       }
     ],
     "tips": [
-      "`video` 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。",
-      "请勿在 `scroll-view`、`swiper`、`picker-view`、`movable-view` 中使用 `video` 组件。",
-      "`css` 动画对 `video` 组件无效。"
+      "请注意[原生组件使用限制](https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html#原生组件的使用限制)。"
     ],
     "demoImages": [
-      "https://mp.weixin.qq.com/debug/wxadoc/dev/image/pic/video.png"
+      "https://developers.weixin.qq.com/miniprogram/dev/image/pic/video.png"
     ],
     "name": "video",
     "docLink": "https://developers.weixin.qq.com/miniprogram/dev/component/video.html"
   },
   {
     "desc": [
-      "系统相机。"
+      "系统相机。该组件是[原生组件](https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html)，使用时请注意相关限制。"
     ],
     "attrs": [
       {
@@ -3583,16 +3711,6 @@
           "闪光灯，值为auto, on, off"
         ],
         "defaultValue": "auto"
-      },
-      {
-        "name": "scan-area",
-        "type": {
-          "name": "any[]"
-        },
-        "desc": [
-          "扫码识别区域，格式为[x, y, w, h]，相对camera显示区域左上角，仅在 mode=\"scanCode\" 时生效"
-        ],
-        "since": "2.1.0"
       },
       {
         "name": "bindstop",
@@ -3635,25 +3753,24 @@
     "relateApis": [
       {
         "name": "wx.createCameraContext",
-        "link": "https://developers.weixin.qq.com/miniprogram/dev/api/api-camera.html"
+        "link": "https://developers.weixin.qq.com/miniprogram/dev/api/media/camera/wx.createCameraContext.html"
       }
     ],
     "tips": [
-      "`camera` 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。可使用 `cover-view` `cover-image`覆盖在上面。",
-      "同一页面只能插入一个 `camera` 组件。",
-      "请勿在 `scroll-view`、`swiper`、`picker-view`、`movable-view` 中使用 `camera` 组件。"
+      "请注意[原生组件使用限制](https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html#原生组件的使用限制)。",
+      "同一页面只能插入一个 `camera` 组件。"
     ],
     "name": "camera",
     "docLink": "https://developers.weixin.qq.com/miniprogram/dev/component/camera.html",
     "since": "1.6.0",
     "authorize": {
       "name": "scope.camera",
-      "link": "https://developers.weixin.qq.com/miniprogram/dev/api/authorize-index.html"
+      "link": "https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/authorize.html"
     }
   },
   {
     "desc": [
-      "实时音视频播放。\n\n暂只针对如下类目开放，需要先通过类目审核，再在小程序管理后台，“设置”-“接口设置”中自助开通该组件权限。\n\n{社交 => \"直播\"; 教育 => \"在线教育\"; 医疗 => \"互联网医院，公立医院\"; 政务民生 => \"所有二级类目\"; 金融 =\\> \"基金、信托、保险、银行、证券/期货、非金融机构自营小额贷款、征信业务、消费金融\"}"
+      "实时音视频播放。该组件是[原生组件](https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html)，使用时请注意相关限制。\n\n暂只针对国内主体如下类目的小程序开放，需要先通过类目审核，再在小程序管理后台，“设置”-“接口设置”中自助开通该组件权限。\n\n{社交 => \"直播\"; 教育 => \"在线教育\"; 医疗 => \"互联网医院，公立医院\"; 政务民生 => \"所有二级类目\"; 金融 =\\> \"基金、信托、保险、银行、证券/期货、非金融机构自营小额贷款、征信业务、消费金融\"}"
     ],
     "attrs": [
       {
@@ -3788,12 +3905,10 @@
     "notices": [
       "`<live-player />` 默认宽度300px、高度225px，可通过wxss设置宽高。",
       "开发者工具上暂不支持。",
-      "相关api：[wx.createLivePlayerContext](https://developers.weixin.qq.com/miniprogram/dev/api/api-live-player.html)"
+      "相关api：[wx.createLivePlayerContext](https://developers.weixin.qq.com/miniprogram/dev/api/media/live/wx.createLivePlayerContext.html)"
     ],
     "tips": [
-      "`live-player` 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。可使用 `cover-view` `cover-image`覆盖在上面。",
-      "请勿在 `scroll-view`、`swiper`、`picker-view`、`movable-view` 中使用 `live-player` 组件。",
-      "`css` 动画对 `live-player` 组件无效。"
+      "请注意[原生组件使用限制](https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html#原生组件的使用限制)。"
     ],
     "name": "live-player",
     "docLink": "https://developers.weixin.qq.com/miniprogram/dev/component/live-player.html",
@@ -3801,7 +3916,7 @@
   },
   {
     "desc": [
-      "实时音视频录制。\n\n暂只针对如下类目开放，需要先通过类目审核，再在小程序管理后台，“设置”-“接口设置”中自助开通该组件权限。\n\n{社交 => \"直播\"; 教育 => \"在线教育\"; 医疗 => \"互联网医院，公立医院\"; 政务民生 => \"所有二级类目\"; 金融 =\\> \"基金、信托、保险、银行、证券/期货、非金融机构自营小额贷款、征信业务、消费金融\"}"
+      "实时音视频录制。该组件是[原生组件](https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html)，使用时请注意相关限制。\n\n暂只针对国内主体如下类目的小程序开放，需要先通过类目审核，再在小程序管理后台，“设置”-“接口设置”中自助开通该组件权限。\n\n{社交 => \"直播\"; 教育 => \"在线教育\"; 医疗 => \"互联网医院，公立医院\"; 政务民生 => \"所有二级类目\"; 金融 =\\> \"基金、信托、保险、银行、证券/期货、非金融机构自营小额贷款、征信业务、消费金融\"}"
     ],
     "attrs": [
       {
@@ -3953,6 +4068,17 @@
         "defaultValue": "false"
       },
       {
+        "name": "device-position",
+        "type": {
+          "name": "string"
+        },
+        "desc": [
+          "前置或后置，值为front, back"
+        ],
+        "since": "2.3.0",
+        "defaultValue": "front"
+      },
+      {
         "name": "background-mute",
         "type": {
           "name": "boolean"
@@ -3999,32 +4125,31 @@
         },
         "desc": [
           "渲染错误事件，detail = {errMsg, errCode}",
-          "errCode: {1001 => \"用户禁止使用摄像头\"; 1002 => \"用户禁止使用录音\"}"
+          "errCode: {10001 => \"用户禁止使用摄像头\"; 10002 => \"用户禁止使用录音\"}"
         ],
         "since": "1.7.4"
       }
     ],
     "notices": [
-      "`<live-player />` 默认宽度为100%、无默认高度，请通过wxss设置宽高。",
+      "`<live-pusher />` 默认宽度为100%、无默认高度，请通过wxss设置宽高。",
       "开发者工具上暂不支持。",
-      "相关api：[wx.createLivePusherContext](https://developers.weixin.qq.com/miniprogram/dev/api/api-live-pusher.html)"
+      "相关api：[wx.createLivePusherContext](https://developers.weixin.qq.com/miniprogram/dev/api/media/live/wx.createLivePusherContext.html)"
     ],
     "tips": [
-      "`live-pusher` 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。可使用 `cover-view` `cover-image`覆盖在上面。",
-      "请勿在 `scroll-view`、`swiper`、`picker-view`、`movable-view` 中使用 `live-pusher` 组件。",
-      "`css` 动画对 `live-pusher` 组件无效。"
+      "请注意[原生组件使用限制](https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html#原生组件的使用限制)。",
+      "`waiting-image` 属性在 2.3.0 起完整支持网络路径、临时文件和包内路径。"
     ],
     "name": "live-pusher",
     "docLink": "https://developers.weixin.qq.com/miniprogram/dev/component/live-pusher.html",
     "since": "1.7.0",
     "authorize": {
       "name": "scope.camera、scope.record",
-      "link": "https://developers.weixin.qq.com/miniprogram/dev/api/authorize-index.html"
+      "link": "https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/authorize.html"
     }
   },
   {
     "desc": [
-      "地图。"
+      "地图。该组件是[原生组件](https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html)，使用时请注意相关限制。 个性化地图能力可在小程序后台“设置-开发者工具-腾讯位置服务”申请开通。 设置subkey后，小程序内的地图组件均会使用该底图效果，底图场景的切换会在后续版本提供。 详见[《小程序个性地图使用指南》](https://lbs.qq.com/product/miniapp/guide/)"
     ],
     "attrs": [
       {
@@ -4104,6 +4229,17 @@
               "required": false
             },
             {
+              "name": "zIndex",
+              "type": {
+                "name": "number"
+              },
+              "desc": [
+                "显示层级"
+              ],
+              "required": false,
+              "since": "2.3.0"
+            },
+            {
               "name": "iconPath",
               "type": {
                 "name": "string"
@@ -4112,7 +4248,7 @@
                 "显示的图标"
               ],
               "required": true,
-              "notice": "项目目录下的图片路径，支持相对路径写法，以'/'开头则表示相对小程序根目录；也支持临时路径"
+              "notice": "项目目录下的图片路径，支持相对路径写法，以'/'开头则表示相对小程序根目录；也支持临时路径和网络图片（[2.3.0](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html \"基础库 2.3.0 开始支持，低版本需做兼容处理。\")）"
             },
             {
               "name": "rotate",
@@ -4199,9 +4335,29 @@
                       "name": "number"
                     },
                     "desc": [
-                      "callout边框圆角"
+                      "边框圆角"
                     ],
                     "since": "1.2.0"
+                  },
+                  {
+                    "name": "borderWidth",
+                    "type": {
+                      "name": "number"
+                    },
+                    "desc": [
+                      "边框宽度"
+                    ],
+                    "since": "2.3.0"
+                  },
+                  {
+                    "name": "borderColor",
+                    "type": {
+                      "name": "string"
+                    },
+                    "desc": [
+                      "边框颜色"
+                    ],
+                    "since": "2.3.0"
                   },
                   {
                     "name": "bgColor",
@@ -4524,6 +4680,71 @@
         ]
       },
       {
+        "name": "polygons",
+        "type": {
+          "name": "Object",
+          "definitions": [
+            {
+              "name": "points",
+              "type": {
+                "name": "any[]"
+              },
+              "desc": [
+                "经纬度数组"
+              ],
+              "required": true,
+              "notice": "[{latitude: 0, longitude: 0}]"
+            },
+            {
+              "name": "strokeWidth",
+              "type": {
+                "name": "number"
+              },
+              "desc": [
+                "描边的宽度"
+              ],
+              "required": false
+            },
+            {
+              "name": "strokeColor",
+              "type": {
+                "name": "string"
+              },
+              "desc": [
+                "描边的颜色"
+              ],
+              "required": false,
+              "notice": "8位十六进制表示，后两位表示alpha值，如：#000000AA"
+            },
+            {
+              "name": "fillColor",
+              "type": {
+                "name": "string"
+              },
+              "desc": [
+                "填充颜色"
+              ],
+              "required": false,
+              "notice": "8位十六进制表示，后两位表示alpha值，如：#000000AA"
+            },
+            {
+              "name": "zIndex",
+              "type": {
+                "name": "number"
+              },
+              "desc": [
+                "设置多边形Z轴数值"
+              ],
+              "required": false
+            }
+          ]
+        },
+        "desc": [
+          "多边形"
+        ],
+        "since": "2.3.0"
+      },
+      {
         "name": "circles",
         "type": {
           "name": "Object",
@@ -4696,7 +4917,7 @@
           ]
         },
         "desc": [
-          "控件"
+          "控件（即将废弃，建议使用 [cover-view](https://developers.weixin.qq.com/miniprogram/dev/component/cover-view.html) 代替）"
         ]
       },
       {
@@ -4716,6 +4937,83 @@
         "desc": [
           "显示带有方向的当前定位点"
         ]
+      },
+      {
+        "name": "subkey",
+        "type": {
+          "name": "string"
+        },
+        "desc": [
+          "个性化地图使用的key，仅初始化地图时有效"
+        ],
+        "since": "2.3.0",
+        "defaultValue": "''"
+      },
+      {
+        "name": "enable-3D",
+        "type": {
+          "name": "boolean"
+        },
+        "desc": [
+          "展示3D楼块(工具暂不支持）"
+        ],
+        "since": "2.3.0",
+        "defaultValue": "false"
+      },
+      {
+        "name": "show-compass",
+        "type": {
+          "name": "boolean"
+        },
+        "desc": [
+          "显示指南针"
+        ],
+        "since": "2.3.0",
+        "defaultValue": "false"
+      },
+      {
+        "name": "enable-overlooking",
+        "type": {
+          "name": "boolean"
+        },
+        "desc": [
+          "开启俯视"
+        ],
+        "since": "2.3.0",
+        "defaultValue": "false"
+      },
+      {
+        "name": "enable-zoom",
+        "type": {
+          "name": "boolean"
+        },
+        "desc": [
+          "是否支持缩放"
+        ],
+        "since": "2.3.0",
+        "defaultValue": "true"
+      },
+      {
+        "name": "enable-scroll",
+        "type": {
+          "name": "boolean"
+        },
+        "desc": [
+          "是否支持拖动"
+        ],
+        "since": "2.3.0",
+        "defaultValue": "true"
+      },
+      {
+        "name": "enable-rotate",
+        "type": {
+          "name": "boolean"
+        },
+        "desc": [
+          "是否支持旋转"
+        ],
+        "since": "2.3.0",
+        "defaultValue": "false"
       },
       {
         "name": "bindmarkertap",
@@ -4764,7 +5062,8 @@
         },
         "desc": [
           "视野发生变化时触发"
-        ]
+        ],
+        "since": "[2.3.0](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html \"基础库 2.3.0 开始支持，低版本需做兼容处理。\")起增加`causedBy` 参数区分拖动、缩放和调用接口等来源"
       },
       {
         "name": "bindtap",
@@ -4790,21 +5089,32 @@
           "在地图渲染更新完成时触发"
         ],
         "since": "1.6.0"
+      },
+      {
+        "name": "bindpoitap",
+        "type": {
+          "name": "function",
+          "returns": {
+            "name": "any"
+          }
+        },
+        "desc": [
+          "点击地图poi点时触发"
+        ],
+        "since": "2.3.0"
       }
     ],
     "relateApis": [
       {
         "name": "wx.createMapContext",
-        "link": "https://developers.weixin.qq.com/miniprogram/dev/api/api-map.html"
+        "link": "https://developers.weixin.qq.com/miniprogram/dev/api/map/wx.createMapContext.html"
       }
     ],
     "notices": [
       "covers 属性即将移除，请使用 markers 替代"
     ],
     "tips": [
-      "`map` 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。",
-      "请勿在 `scroll-view`、`swiper`、`picker-view`、`movable-view` 中使用 `map` 组件。",
-      "`css` 动画对 `map` 组件无效。",
+      "请注意[原生组件使用限制](https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html#原生组件的使用限制)。",
       "`map` 组件使用的经纬度是火星坐标系，调用 `wx.getLocation` 接口需要指定 `type` 为 `gcj02`"
     ],
     "name": "map",
@@ -4812,7 +5122,7 @@
   },
   {
     "desc": [
-      "画布。"
+      "画布。该组件是[原生组件](https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html)，使用时请注意相关限制。"
     ],
     "attrs": [
       {
@@ -4910,13 +5220,11 @@
     "relateApis": [
       {
         "name": "wx.createCanvasContext",
-        "link": "https://developers.weixin.qq.com/miniprogram/dev/api/canvas/create-canvas-context.html"
+        "link": "https://developers.weixin.qq.com/miniprogram/dev/api/canvas/wx.createCanvasContext.html"
       }
     ],
     "tips": [
-      "`canvas` 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。",
-      "请勿在 `scroll-view`、`swiper`、`picker-view`、`movable-view` 中使用 `canvas` 组件。",
-      "`css` 动画对 `canvas` 组件无效。"
+      "请注意[原生组件使用限制](https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html#原生组件的使用限制)。"
     ],
     "bugs": [
       "避免设置过大的宽高，在安卓下会有crash的问题"
@@ -5032,6 +5340,30 @@
         "desc": [
           "网页向小程序 postMessage 时，会在特定时机（小程序后退、组件销毁、分享）触发并收到消息。e.detail = { data }"
         ]
+      },
+      {
+        "name": "bindload",
+        "type": {
+          "name": "function",
+          "returns": {
+            "name": "any"
+          }
+        },
+        "desc": [
+          "网页加载成功时候触发此事件。e.detail = { src }"
+        ]
+      },
+      {
+        "name": "binderror",
+        "type": {
+          "name": "function",
+          "returns": {
+            "name": "any"
+          }
+        },
+        "desc": [
+          "网页加载失败的时候触发此事件。e.detail = { src }"
+        ]
       }
     ],
     "tips": [
@@ -5058,16 +5390,57 @@
         "desc": [
           "广告单元id，可在[小程序管理后台](https://mp.weixin.qq.com)的流量主模块新建"
         ]
+      },
+      {
+        "name": "bindload",
+        "type": {
+          "name": "function",
+          "returns": {
+            "name": "any"
+          }
+        },
+        "desc": [
+          "广告加载成功的回调"
+        ],
+        "since": "2.2.1"
+      },
+      {
+        "name": "binderror",
+        "type": {
+          "name": "function",
+          "returns": {
+            "name": "any"
+          }
+        },
+        "desc": [
+          "当广告发生错误时，触发的事件，可以通过该事件获取错误码及原因，事件对象event.detail = {errCode: 1002}"
+        ],
+        "since": "2.2.1"
       }
     ],
     "notices": [
-      "目前可以给 `ad` 标签设置 wxss 样式调整广告宽度，以使广告与页面更融洽，但请遵循[小程序流量主应用规范](https://wximg.qq.com/wxp/pdftool/get.html?id=rynYA8o3f&pa=10&name=miniprogramAds_supplier_guidance)",
-      "在无广告展示时，`ad` 标签不会占用高度",
-      "`ad` 组件不支持触发 `bindtap` 等触摸相关事件"
+      "监听到error回调后，开发者可以针对性的处理，比如隐藏广告组件的父容器，以保证用户体验，但不要移除广告组件，否则将无法收到bindload的回调。"
     ],
     "name": "ad",
     "docLink": "https://developers.weixin.qq.com/miniprogram/dev/component/ad.html",
     "since": "1.9.94"
+  },
+  {
+    "desc": [
+      "用户扫码打开小程序时，开发者可在小程序内配置公众号关注组件，方便用户快捷关注公众号，可嵌套在原生组件内。"
+    ],
+    "tips": [
+      "使用组件前，需前往小程序后台，在“设置”->“接口设置”->“公众号关注组件”中设置要展示的公众号。 **注：设置的公众号需与小程序主体一致。**",
+      "在一个小程序的生命周期内，只有从以下场景进入小程序，才具有展示引导关注公众号组件的能力:\n\n*   当小程序从扫二维码场景（场景值1011）打开时\n*   当小程序从扫小程序码场景（场景值1047）打开时\n*   当小程序从聊天顶部场景（场景值1089）中的“最近使用”内打开时，若小程序之前未被销毁，则该组件保持上一次打开小程序时的状态\n*   当从其他小程序返回小程序（场景值1038）时，若小程序之前未被销毁，则该组件保持上一次打开小程序时的状态",
+      "当小程序从扫二维码场景（场景值1011）打开时",
+      "当小程序从扫小程序码场景（场景值1047）打开时",
+      "当小程序从聊天顶部场景（场景值1089）中的“最近使用”内打开时，若小程序之前未被销毁，则该组件保持上一次打开小程序时的状态",
+      "当从其他小程序返回小程序（场景值1038）时，若小程序之前未被销毁，则该组件保持上一次打开小程序时的状态",
+      "每个页面只能配置一个该组件。"
+    ],
+    "name": "official-account",
+    "docLink": "https://developers.weixin.qq.com/miniprogram/dev/component/official-account.html",
+    "since": "2.3.0"
   },
   {
     "desc": [

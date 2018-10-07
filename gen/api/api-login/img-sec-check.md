@@ -11,10 +11,10 @@
 
 #### 参数
 
-  参数           |  类型                                                                                 | 默认值 | 是否必填|  说明                                                   
------------------|---------------------------------------------------------------------------------------|--------|---------|---------------------------------------------------------
-  access_token   |  string                                                                               |        |  是     |  接口调用凭证                                           
-  media          |  [Form-Data](https://developers.weixin.qq.com/miniprogram/dev/api/imgSecCheck.html)   |        |  是     |要检测的图片文件，格式支持PNG、JPEG、JPG、GIF，图片尺寸不超过 750px * 1334px
+  参数           |  类型        | 默认值 | 是否必填|  说明                                                   
+-----------------|--------------|--------|---------|---------------------------------------------------------
+  access_token   |  string      |        |  是     |  接口调用凭证                                           
+  media          |  Form-Data   |        |  是     |要检测的图片文件，格式支持PNG、JPEG、JPG、GIF，图片尺寸不超过 750px * 1334px
 
 #### 返回值
 
@@ -39,5 +39,5 @@
 
 #### 调用示例
 
-     curl -F media=@test.jpg
-     'https://api.weixin.qq.com/wxa/img_sec_check?access_token=ACCESS_TOKEN'
+    curl -F media=@test.jpg
+    'https://api.weixin.qq.com/wxa/img_sec_check?access_token=ACCESS_TOKEN'

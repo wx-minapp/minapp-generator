@@ -14,6 +14,7 @@
 ----------------------|-------------|------------------------------------------------|----------
   play                |  无         |  播放                                          |          
   pause               |  无         |  暂停                                          |          
+  stop                |  无         |  停止                                          |  1.7.0   
   seek                |  position   |  跳转到指定位置，单位 s                        |          
   sendDanmu           |  danmu      |  发送弹幕，danmu 包含两个属性 text, color。    |          
   playbackRate        |  rate       | 设置倍速播放，支持的倍率有 0.5/0.8/1.0/1.25/1.5|  1.4.0   
@@ -24,7 +25,7 @@
 
 **示例代码：**
 
-[在开发者工具中预览效果](wechatide://minicode/X5V6Xmmk6xYB)
+[在开发者工具中预览效果](wechatide://minicode/X5V6Xmmk6xYB "在开发者工具中预览效果")
 
     <view class="section tc">
       <video id="myVideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"   enable-danmu danmu-btn controls></video>

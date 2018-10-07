@@ -43,7 +43,7 @@
          y: ''
       },
       header: {
-          'content-type': 'application/json' // 默认值
+      	'content-type': 'application/json' // 默认值
       },
       success: function(res) {
         console.log(res.data)
@@ -53,7 +53,7 @@
 
 **返回值：**
 
-> 基础库 1.4.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.4.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 返回一个 `requestTask` 对象，通过 `requestTask`，可中断请求任务。
 
@@ -72,7 +72,7 @@
          y: ''
       },
       header: {
-          'content-type': 'application/json'
+      	'content-type': 'application/json'
       },
       success: function(res) {
         console.log(res.data)

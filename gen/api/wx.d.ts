@@ -1,4 +1,4 @@
-// Generated at 2018-7-1
+// Generated at 2018-10-7
 declare namespace wx {
   namespace request {
     type Param = {
@@ -119,7 +119,7 @@ declare namespace wx {
    *          y: ''
    *       },
    *       header: {
-   *           'content-type': 'application/json' // 默认值
+   *       	'content-type': 'application/json' // 默认值
    *       },
    *       success: function(res) {
    *         console.log(res.data)
@@ -137,7 +137,7 @@ declare namespace wx {
    *          y: ''
    *       },
    *       header: {
-   *           'content-type': 'application/json'
+   *       	'content-type': 'application/json'
    *       },
    *       success: function(res) {
    *         console.log(res.data)
@@ -452,10 +452,6 @@ declare namespace wx {
        * HTTP Header , header 中不能设置 Referer
        */
       header?: any
-      /**
-       * 默认是GET，有效值：OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-       */
-      method?: string
       /**
        * 子协议数组
        *
@@ -1006,7 +1002,7 @@ declare namespace wx {
     type ParamPropComplete = () => any
   }
   /**
-   * 预览图片。
+   * 预览图片。2.3.0起支持云文件ID。
    *
    * **示例代码：**
    *
@@ -1092,7 +1088,7 @@ declare namespace wx {
     type ParamPropComplete = () => any
   }
   /**
-   * 获取图片信息
+   * 获取图片信息，倘若为网络图片，需先配置download域名才能生效。
    *
    * **示例代码：**
    *
@@ -1486,12 +1482,12 @@ declare namespace wx {
    *     wx.startRecord({
    *       success: function(res) {
    *         var tempFilePath = res.tempFilePath
-   *           wx.playVoice({
+   *       	wx.playVoice({
    *           filePath: tempFilePath
    *         })
    *
    *         setTimeout(function() {
-   *             //暂停播放
+   *       	  //暂停播放
    *           wx.pauseVoice()
    *         }, 5000)
    *       }
@@ -1583,13 +1579,13 @@ declare namespace wx {
    *
    *     ```javascript
    *     wx.getBackgroundAudioPlayerState({
-   *         success: function(res) {
-   *             var status = res.status
-   *             var dataUrl = res.dataUrl
-   *             var currentPosition = res.currentPosition
-   *             var duration = res.duration
-   *             var downloadPercent = res.downloadPercent
-   *         }
+   *     	success: function(res) {
+   *     		var status = res.status
+   *     		var dataUrl = res.dataUrl
+   *     		var currentPosition = res.currentPosition
+   *     		var duration = res.duration
+   *     		var downloadPercent = res.downloadPercent
+   *     	}
    *     })
    *     ```
    * @see https://developers.weixin.qq.com/miniprogram/dev/api/media-background-audio.html#wxgetbackgroundaudioplayerstateobject
@@ -1637,7 +1633,7 @@ declare namespace wx {
     type ParamPropComplete = () => any
   }
   /**
-   * 使用后台播放器播放音乐，对于微信客户端来说，只能同时有一个后台音乐在播放。当用户离开小程序后，音乐将暂停播放；当用户点击“显示在聊天顶部”时，音乐不会暂停播放；当用户在其他小程序占用了音乐播放器，原有小程序内的音乐将停止播放。
+   * 使用后台播放器播放音乐，对于微信客户端来说，只能同时有一个后台音乐在播放。当用户离开小程序后，音乐将暂停播放；当用户在其他小程序占用了音乐播放器，原有小程序内的音乐将停止播放。
    *
    * **OBJECT参数说明：**
    *
@@ -1753,6 +1749,10 @@ declare namespace wx {
    *
    * 获取**全局唯一**的背景音频管理器 `backgroundAudioManager`。
    *
+   * 小程序切入后台，如果音频处于播放状态，可以继续播放。但是后台状态不能通过调用API操纵音频的播放状态。
+   *
+   * 注：从微信客户端6.7.2版本开始，若需要在小程序切后台后继续播放音频，需要在 [app.json](https://developers.weixin.qq.com/miniprogram/dev/framework/config.html) 中配置 `requiredBackgroundModes` 属性。开发版和体验版上可以直接生效，正式版还需通过审核。
+   *
    * **errcode 说明：**
    *
    *   errCode   |  说明   
@@ -1798,7 +1798,7 @@ declare namespace wx {
      */
     paused: boolean
     /**
-     * 音频的数据源，默认为空字符串，**当设置了新的 src 时，会自动开始播放** ，目前支持的格式有 m4a, aac, mp3, wav
+     * 音频的数据源，支持云文件ID（2.2.3起），默认为空字符串，**当设置了新的 src 时，会自动开始播放** ，目前支持的格式有 m4a, aac, mp3, wav
      */
     src: string
     /**
@@ -1812,7 +1812,7 @@ declare namespace wx {
      */
     buffered: number
     /**
-     * 音频标题，用于做原生音频播放器音频标题。原生音频播放器中的分享功能，分享出去的卡片标题，也将使用该值。
+     * 音频标题，用于做原生音频播放器音频标题（必填）。原生音频播放器中的分享功能，分享出去的卡片标题，也将使用该值。
      */
     title: string
     /**
@@ -1861,6 +1861,18 @@ declare namespace wx {
      * 背景音频播放事件
      */
     onPlay(callback: any): any
+    /**
+     * 背景音频开始跳转操作事件
+     *
+     * @since 2.2.3
+     */
+    onSeeking(callback: any): any
+    /**
+     * 背景音频完成跳转操作事件
+     *
+     * @since 2.2.3
+     */
+    onSeeked(callback: any): any
     /**
      * 背景音频暂停事件
      */
@@ -2000,7 +2012,7 @@ declare namespace wx {
 
   class InnerAudioContext {
     /**
-     * 音频的数据链接，用于直接播放。
+     * 音频的数据链接，用于直接播放。支持云文件ID（2.2.3起）。
      */
     src: string
     /**
@@ -2295,8 +2307,8 @@ declare namespace wx {
    *
    *     ```html
    *     <view class="container">
-   *         <video src="{{src}}"></video>
-   *         <button bindtap="bindButtonTap">获取视频</button>
+   *     	<video src="{{src}}"></video>
+   *     	<button bindtap="bindButtonTap">获取视频</button>
    *     </view>
    *     ```
    *
@@ -2304,19 +2316,19 @@ declare namespace wx {
    *
    *     ```javascript
    *     Page({
-   *         bindButtonTap: function() {
-   *             var that = this
-   *             wx.chooseVideo({
-   *                 sourceType: ['album','camera'],
-   *                 maxDuration: 60,
+   *     	bindButtonTap: function() {
+   *     		var that = this
+   *     		wx.chooseVideo({
+   *     			sourceType: ['album','camera'],
+   *     			maxDuration: 60,
    *           camera: 'back',
-   *                 success: function(res) {
-   *                     that.setData({
-   *                         src: res.tempFilePath
-   *                     })
-   *                 }
-   *             })
-   *         }
+   *     			success: function(res) {
+   *     				that.setData({
+   *     					src: res.tempFilePath
+   *     				})
+   *     			}
+   *     		})
+   *     	}
    *     })
    *     ```
    * @see https://developers.weixin.qq.com/miniprogram/dev/api/media-video.html#wxchoosevideoobject
@@ -2446,6 +2458,12 @@ declare namespace wx {
      */
     pause(): any
     /**
+     * 停止
+     *
+     * @since 1.7.0
+     */
+    stop(): any
+    /**
      * 跳转到指定位置，单位 s
      */
     seek(position: any): any
@@ -2491,7 +2509,7 @@ declare namespace wx {
    *
    * **示例代码：**
    *
-   * [在开发者工具中预览效果](wechatide://minicode/VBZ3Jim26zYu)
+   * [在开发者工具中预览效果](wechatide://minicode/VBZ3Jim26zYu "在开发者工具中预览效果")
    * @see https://developers.weixin.qq.com/miniprogram/dev/api/api-camera.html#wxcreatecameracontextthis
    */
   function createCameraContext(instance?: any): CameraContext
@@ -2615,7 +2633,7 @@ declare namespace wx {
    *
    * **示例代码：**
    *
-   * [在开发者工具中预览效果](wechatide://minicode/UzWEzmm763Y4)
+   * [在开发者工具中预览效果](wechatide://minicode/UzWEzmm763Y4 "在开发者工具中预览效果")
    * @see https://developers.weixin.qq.com/miniprogram/dev/api/api-live-player.html#wxcreateliveplayercontextdomid-this
    */
   function createLivePlayerContext(domId: any, instance?: any): LivePlayerContext
@@ -2863,7 +2881,7 @@ declare namespace wx {
    *
    * **示例代码：**
    *
-   * [在开发者工具中预览效果](wechatide://minicode/KvWD9mmA62Yk)
+   * [在开发者工具中预览效果](wechatide://minicode/KvWD9mmA62Yk "在开发者工具中预览效果")
    * @see https://developers.weixin.qq.com/miniprogram/dev/api/api-live-pusher.html#wxcreatelivepushercontext
    */
   function createLivePusherContext(): LivePusherContext
@@ -3160,7 +3178,7 @@ declare namespace wx {
   /**
    * @since 2.1.0
    *
-   * 动态加载网络字体
+   * 动态加载网络字体，文件地址需为下载类型。IOS下仅支持https格式文件地址。
    *
    * **Tip：**
    *
@@ -3171,7 +3189,7 @@ declare namespace wx {
    *     ```javascript
    *     wx.loadFontFace({
    *       family: 'Bitstream Vera Serif Bold',
-   *       source: 'url("http://developer.mozilla.org/@api/deki/files/2934/=VeraSeBd.ttf")',
+   *       source: 'url("https://sungd.github.io/Pacifico.ttf")',
    *       success: function(res) {
    *         console.log(res.status) //  loaded
    *       },
@@ -3630,8 +3648,8 @@ declare namespace wx {
    *
    *     ```javascript
    *     try {
-   *         wx.setStorageSync('key', 'value')
-   *     } catch (e) {    
+   *     	wx.setStorageSync('key', 'value')
+   *     } catch (e) {	
    *     }
    *     ```
    * @see https://developers.weixin.qq.com/miniprogram/dev/api/data.html#wxsetstoragesynckeydata
@@ -3685,7 +3703,7 @@ declare namespace wx {
    *     wx.getStorage({
    *       key: 'key',
    *       success: function(res) {
-   *           console.log(res.data)
+   *       	console.log(res.data)
    *       } 
    *     })
    *     ```
@@ -3702,7 +3720,7 @@ declare namespace wx {
    *     try {
    *       var value = wx.getStorageSync('key')
    *       if (value) {
-   *           // Do something with return value
+   *       	// Do something with return value
    *       }
    *     } catch (e) {
    *       // Do something when catch error
@@ -3895,7 +3913,7 @@ declare namespace wx {
    *
    *     ```javascript
    *     try {
-   *         wx.clearStorageSync()
+   *     	wx.clearStorageSync()
    *     } catch(e) {
    *       // Do something when catch error
    *     }
@@ -3907,7 +3925,7 @@ declare namespace wx {
   namespace getLocation {
     type Param = {
       /**
-       * 默认为 wgs84 返回 gps 坐标，gcj02 返回可用于`wx.openLocation`的坐标
+       * 默认为 wgs84 返回 GPS 坐标；gcj02 返回国测局坐标，可用于`wx.openLocation`的坐标
        */
       type?: string
       /**
@@ -3979,7 +3997,14 @@ declare namespace wx {
     type ParamPropComplete = () => any
   }
   /**
-   * 获取当前的地理位置、速度。当用户离开小程序后，此接口无法调用；当用户点击“显示在聊天顶部”时，此接口可继续调用。
+   * 获取当前的地理位置、速度。当用户离开小程序后，此接口无法调用
+   *
+   * 需要[用户授权](https://developers.weixin.qq.com/miniprogram/dev/api/authorize-index.html) scope.userLocation
+   *
+   * **Tips：**
+   *
+   * 1.  **注：工具中定位模拟使用IP定位，可能会有一定误差。且工具目前仅支持 gcj02 坐标。**
+   * 2.  使用第三方服务进行逆地址解析时，请确认第三方服务默认的坐标系，正确进行坐标转换。
    *
    * **示例代码：**
    *
@@ -4027,11 +4052,11 @@ declare namespace wx {
        */
       address: any
       /**
-       * 纬度，浮点数，范围为-90~90，负数表示南纬
+       * 纬度，浮点数，范围为-90~90，负数表示南纬。使用 gcj02 国测局坐标系
        */
       latitude: any
       /**
-       * 经度，浮点数，范围为-180~180，负数表示西经
+       * 经度，浮点数，范围为-180~180，负数表示西经。使用 gcj02 国测局坐标系
        */
       longitude: any
     }
@@ -4055,11 +4080,11 @@ declare namespace wx {
   namespace openLocation {
     type Param = {
       /**
-       * 纬度，范围为-90~90，负数表示南纬
+       * 纬度，范围为-90~90，负数表示南纬。使用 gcj02 国测局坐标系
        */
       latitude: number
       /**
-       * 经度，范围为-180~180，负数表示西经
+       * 经度，范围为-180~180，负数表示西经。使用 gcj02 国测局坐标系
        */
       longitude: number
       /**
@@ -4646,7 +4671,7 @@ declare namespace wx {
    *
    * **示例代码：**
    *
-   *     ```
+   *     ```js
    *     wx.onMemoryWarning(function () {
    *       console.log('onMemoryWarningReceive')
    *     })
@@ -5413,9 +5438,8 @@ declare namespace wx {
    *
    * **Bug & Tip：**
    *
-   * 1.  `tip`: 基础库版本 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
-   * 2.  `tip`: 在没有调用`wx.openBluetoothAdapter`的情况下调用小程序其它蓝牙模块相关API，API会返回错误，错误码为`10000`
-   * 3.  `bug`: 在用户蓝牙开关未开启或者手机不支持蓝牙功能的情况下，调用`wx.openBluetoothAdapter`会返回错误，错误码为`10001`，表示手机蓝牙功能不可用；此时小程序蓝牙模块已经初始化完成，可通过`wx.onBluetoothAdapterStateChange`监听手机蓝牙状态的改变，也可以调用蓝牙模块的所有API。
+   * 1.  `tip`: 在没有调用`wx.openBluetoothAdapter`的情况下调用小程序其它蓝牙模块相关API，API会返回错误，错误码为`10000`
+   * 2.  `bug`: 在用户蓝牙开关未开启或者手机不支持蓝牙功能的情况下，调用`wx.openBluetoothAdapter`会返回错误，错误码为`10001`，表示手机蓝牙功能不可用；此时小程序蓝牙模块已经初始化完成，可通过`wx.onBluetoothAdapterStateChange`监听手机蓝牙状态的改变，也可以调用蓝牙模块的所有API。
    *
    * **示例代码：**
    *
@@ -6065,7 +6089,7 @@ declare namespace wx {
    *
    *     ```javascript
    *     wx.closeBLEConnection({
-   *       deviceId:deviceId
+   *       deviceId:deviceId,
    *       success: function (res) {
    *         console.log(res)
    *       }
@@ -8079,10 +8103,10 @@ declare namespace wx {
    *
    * **Bug & Tip：**
    *
-   * 1.  `bug`: `Android` `6.3.30`，wx.showModal 的返回的 confirm 一直为 true；
-   * 2.  `tip`: wx.showActionSheet 点击取消或蒙层时，回调 `fail`, errMsg 为 "showActionSheet:fail cancel"；
-   * 3.  `tip`: wx.showLoading 和 wx.showToast 同时只能显示一个，但 wx.hideToast/wx.hideLoading 也应当配对使用；
-   * 4.  `tip`: `iOS` wx.showModal 点击蒙层不会关闭模态弹窗，所以尽量避免使用“取消”分支中实现业务逻辑。
+   * 1.  `tip`: wx.showLoading 和 wx.showToast 同时只能显示一个，但 wx.hideToast/wx.hideLoading 也应当配对使用；
+   * 2.  `bug`: `Android` `6.3.30`，wx.showModal 的返回的 confirm 一直为 true；
+   * 3.  `tip`: `wx.showActionSheet` `wx.showModal` 点击取消或蒙层时，回调 `fail`, errMsg 为 "fail cancel"；
+   * 4.  `tip`: `Android` `6.7.2` 及以上版本 和 `iOS` `wx.showActionSheet` `wx.showModal` 点击蒙层不会关闭模态弹窗，所以尽量避免使用“取消”分支中实现业务逻辑。
    *
    * **示例代码：**
    *
@@ -8100,54 +8124,6 @@ declare namespace wx {
    * @see https://developers.weixin.qq.com/miniprogram/dev/api/api-react.html#wxshowactionsheetobject
    */
   function showActionSheet(OBJECT: showActionSheet.Param): void
-
-  namespace setTopBarText {
-    type Param = {
-      /**
-       * 置顶栏文字内容
-       */
-      text: string
-      /**
-       * 接口调用成功的回调函数
-       */
-      success?: ParamPropSuccess
-      /**
-       * 接口调用失败的回调函数
-       */
-      fail?: ParamPropFail
-      /**
-       * 接口调用结束的回调函数（调用成功、失败都会执行）
-       */
-      complete?: ParamPropComplete
-    }
-    /**
-     * 接口调用成功的回调函数
-     */
-    type ParamPropSuccess = (res: any) => any
-    /**
-     * 接口调用失败的回调函数
-     */
-    type ParamPropFail = (err: any) => any
-    /**
-     * 接口调用结束的回调函数（调用成功、失败都会执行）
-     */
-    type ParamPropComplete = () => any
-  }
-  /**
-   * @since 1.4.3
-   *
-   * 动态设置置顶栏文字内容，只有当前小程序被置顶时能生效，如果当前小程序没有被置顶，也能调用成功，但是不会立即生效，只有在用户将这个小程序置顶后才换上设置的文字内容。**注意：调用成功后，需间隔 5s 才能再次调用此接口，如果在 5s 内再次调用此接口，会回调 fail，errMsg："setTopBarText: fail invoke too frequently"**
-   *
-   * **示例代码：**
-   *
-   *     ```javascript
-   *     wx.setTopBarText({
-   *       text: 'hello, world!'
-   *     })
-   *     ```
-   * @see https://developers.weixin.qq.com/miniprogram/dev/api/ui.html#wxsettopbartextobject
-   */
-  function setTopBarText(OBJECT: setTopBarText.Param): void
 
   namespace setNavigationBarTitle {
     type Param = {
@@ -8743,6 +8719,54 @@ declare namespace wx {
    */
   function setBackgroundTextStyle(OBJECT: setBackgroundTextStyle.Param): void
 
+  namespace setTopBarText {
+    type Param = {
+      /**
+       * 置顶栏文字内容
+       */
+      text: string
+      /**
+       * 接口调用成功的回调函数
+       */
+      success?: ParamPropSuccess
+      /**
+       * 接口调用失败的回调函数
+       */
+      fail?: ParamPropFail
+      /**
+       * 接口调用结束的回调函数（调用成功、失败都会执行）
+       */
+      complete?: ParamPropComplete
+    }
+    /**
+     * 接口调用成功的回调函数
+     */
+    type ParamPropSuccess = (res: any) => any
+    /**
+     * 接口调用失败的回调函数
+     */
+    type ParamPropFail = (err: any) => any
+    /**
+     * 接口调用结束的回调函数（调用成功、失败都会执行）
+     */
+    type ParamPropComplete = () => any
+  }
+  /**
+   * @since 1.4.3
+   *
+   * 动态设置置顶栏文字内容，只有当前小程序被置顶时能生效，如果当前小程序没有被置顶，也能调用成功，但是不会立即生效，只有在用户将这个小程序置顶后才换上设置的文字内容。**注意：调用成功后，需间隔 5s 才能再次调用此接口，如果在 5s 内再次调用此接口，会回调 fail，errMsg："setTopBarText: fail invoke too frequently"**
+   *
+   * **示例代码：**
+   *
+   *     ```javascript
+   *     wx.setTopBarText({
+   *       text: 'hello, world!'
+   *     })
+   *     ```
+   * @see https://developers.weixin.qq.com/miniprogram/dev/api/ui-topbar.html#wxsettopbartextobject
+   */
+  function setTopBarText(OBJECT: setTopBarText.Param): void
+
   namespace navigateTo {
     type Param = {
       /**
@@ -8978,7 +9002,7 @@ declare namespace wx {
     }
   }
   /**
-   * 关闭当前页面，返回上一页面或多级页面。可通过 [`getCurrentPages()`](https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/page.html#getCurrentPages()) 获取当前的页面栈，决定需要返回几层。
+   * 关闭当前页面，返回上一页面或多级页面。可通过 [`getCurrentPages()`](https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/page.html#getcurrentpages) 获取当前的页面栈，决定需要返回几层。
    *
    * **Tip：**
    *
@@ -9100,6 +9124,10 @@ declare namespace wx {
      * 长度值，如果传入 Number 则默认使用 px，可传入其他自定义单位的长度值
      */
     right(length: any): any
+    /**
+     * 导出动画数据传递给组件的animation属性
+     */
+    export(): any
     /**
      * deg的范围-180~180，从原点顺时针旋转一个deg角度
      */
@@ -9270,7 +9298,7 @@ declare namespace wx {
        */
       fileType?: string
       /**
-       * 图片的质量，取值范围为 (0, 1]，不在范围内时当作1.0处理
+       * 图片的质量，目前仅对jpg有效。取值范围为 (0, 1]，不在范围内时当作1.0处理
        *
        * @since 1.7.0
        */
@@ -9584,7 +9612,7 @@ declare namespace wx {
    *
    * **selectorQuery.selectAll(selector)：**
    *
-   * 在当前页面下选择匹配选择器`selector`的节点，返回一个`NodesRef`对象实例。 与`selectorQuery.selectNode(selector)`不同的是，它选择所有匹配选择器的节点。
+   * 在当前页面下选择匹配选择器`selector`的节点，返回一个`NodesRef`对象实例。 与`selectorQuery.select(selector)`不同的是，它选择所有匹配选择器的节点。
    *
    * **selectorQuery.selectViewport()：**
    *
@@ -9792,9 +9820,9 @@ declare namespace wx {
    *     ```javascript
    *     if(wx.getExtConfig) {
    *       wx.getExtConfig({
-   *         success: function (res) {
-   *           console.log(res.extConfig)
-   *         }
+   *     	success: function (res) {
+   *     	  console.log(res.extConfig)
+   *     	}
    *       })
    *     }
    *     ```
@@ -10122,7 +10150,7 @@ declare namespace wx {
   /**
    * **注意：此接口有调整，使用该接口将不再出现授权弹窗，请使用 [<button open-type="getUserInfo"></button>](https://developers.weixin.qq.com/miniprogram/dev/component/button.html) 引导用户主动进行授权操作**
    *
-   * 1.  当用户未授权过，调用该接口将直接报错
+   * 1.  当用户未授权过，调用该接口将直接进入fail回调
    * 2.  当用户授权过，可以使用该接口获取用户信息
    *
    * **示例代码：**
@@ -10153,7 +10181,7 @@ declare namespace wx {
    *               // 已经授权，可以直接调用 getUserInfo 获取头像昵称
    *               wx.getUserInfo({
    *                 success: function(res) {
-   *                   console(res.userInfo)
+   *                   console.log(res.userInfo)
    *                 }
    *               })
    *             }
@@ -10180,8 +10208,8 @@ declare namespace wx {
    *         "unionId": "UNIONID",
    *         "watermark":
    *         {
-   *             "appid":"APPID",
-   *         "timestamp":TIMESTAMP
+   *         	"appid":"APPID",
+   *     	"timestamp":TIMESTAMP
    *         }
    *     }
    *     ```
@@ -10200,7 +10228,7 @@ declare namespace wx {
        */
       nonceStr: string
       /**
-       * 统一下单接口返回的 prepay\_id 参数值，提交格式如：prepay\_id=_*_
+       * 统一下单接口返回的 prepay_id 参数值，提交格式如：prepay_id=***
        */
       package: string
       /**
@@ -10439,29 +10467,7 @@ declare namespace wx {
     /**
      * 接口调用成功的回调函数
      */
-    type ParamPropSuccess = (res: ParamPropSuccessParam) => any
-    type ParamPropSuccessParam = {
-      /**
-       * 错误信息
-       */
-      errMsg: string
-      /**
-       * 包括敏感数据在内的完整转发信息的加密数据，详细见[加密数据解密算法](https://developers.weixin.qq.com/miniprogram/dev/api/signature.html#加密数据解密算法)
-       *
-       * **encryptedData 解密后为一个 JSON 结构，包含字段如下：**
-       *
-       *   字段      |  说明            
-       * ------------|------------------
-       *   openGId   |群对当前小程序的唯一 ID
-       *
-       * **Tip:** 如需要展示群名称，可以使用[开放数据组件](https://developers.weixin.qq.com/miniprogram/dev/component/open-data.html)
-       */
-      encryptedData: string
-      /**
-       * 加密算法的初始向量，详细见[加密数据解密算法](https://developers.weixin.qq.com/miniprogram/dev/api/signature.html#加密数据解密算法)
-       */
-      iv: string
-    }
+    type ParamPropSuccess = (res: any) => any
     /**
      * 接口调用失败的回调函数
      */
@@ -10808,7 +10814,7 @@ declare namespace wx {
   }
   /**
    * @since 1.1.0
-   * > 
+   *
    * > 此接口即将废弃，请使用 [<button>](https://developers.weixin.qq.com/miniprogram/dev/component/button.html) 组件来使用此功能
    *
    * 调起客户端小程序设置界面，返回用户设置的操作结果。
@@ -10970,6 +10976,43 @@ declare namespace wx {
    */
   function getWeRunData(OBJECT: getWeRunData.Param): void
 
+  /**
+   * @since 2.2.2
+   *
+   * 访问当前小程序或插件帐号信息。
+   *
+   * **返回值：**
+   *
+   *   参数          |  类型     |  说明                    
+   * ----------------|-----------|--------------------------
+   *   miniProgram   |  Object   |  小程序帐号信息          
+   *   plugin        |  Object   |插件帐号信息（仅在插件中调用时包含这一项）
+   *
+   * 其中， `miniProgram` 包含以下字段：
+   *
+   *   参数    |  类型     |  说明        
+   * ----------|-----------|--------------
+   *   appId   |  String   | 小程序 appId 
+   *
+   * `plugin` 仅当在插件中调用时提供，它包含以下字段：
+   *
+   *   参数      |  类型     |  说明       
+   * ------------|-----------|-------------
+   *   appId     |  String   |  插件 appId 
+   *   version   |  String   |  插件版本号 
+   *
+   * **示例代码：**
+   *
+   *     ```js
+   *     var accountInfo = wx.getAccountInfoSync();
+   *     accountInfo.miniProgram.appId // 小程序 appId
+   *     accountInfo.plugin.appId // 插件 appId
+   *     accountInfo.plugin.version // 插件版本号， 'a.b.c' 这样的形式
+   *     ```
+   * @see https://developers.weixin.qq.com/miniprogram/dev/api/account-info.html#wxgetaccountinfosync
+   */
+  function getAccountInfoSync(): void
+
   namespace navigateToMiniProgram {
     type Param = {
       /**
@@ -11022,10 +11065,10 @@ declare namespace wx {
   }
   /**
    * @since 1.3.0
-   * > 
+   *
    * > 此接口即将废弃，请使用 [<navigator>](https://developers.weixin.qq.com/miniprogram/dev/component/navigator.html) 组件来使用此功能
    *
-   * 打开同一公众号下关联的另一个小程序。**（注：必须是同一公众号下，而非同个 open 账号下）**
+   * 打开同一公众号下关联的另一个小程序。**（注：必须是同一公众号下，而非同个 open 帐号下）**
    *
    * **Bug & Tip：**
    *
@@ -11092,7 +11135,7 @@ declare namespace wx {
   }
   /**
    * @since 1.3.0
-   * > 
+   *
    * > iOS 微信客户端 6.5.9 版本开始支持，Android 客户端即将在 6.5.10 版本开始支持，请先使用 iOS 客户端进行调试
    *
    * 返回到上一个小程序，只有在当前小程序是被其他小程序打开时可以调用成功
@@ -11716,19 +11759,19 @@ declare namespace wx {
     /**
      * 写log日志，可以提供任意个参数，每个参数的类型为Object/Array/Number/String，参数p1到pN的内容会写入日志
      */
-    log(p1 [: any, p2: any, ...: any, pN]: any): any
+    log(...args: any[]): any
     /**
      * 写info日志，参数同log方法
      */
-    info(p1 [: any, p2: any, ...: any, pN]: any): any
+    info(...args: any[]): any
     /**
      * 写warn日志，参数同log方法
      */
-    warn(p1 [: any, p2: any, ...: any, pN]: any): any
+    warn(...args: any[]): any
     /**
      * 写debug日志，参数同log方法
      */
-    debug(p1 [: any, p2: any, ...: any, pN]: any): any
+    debug(...args: any[]): any
   }
   namespace CanvasContext {
     namespace draw {
@@ -11827,7 +11870,7 @@ declare namespace wx {
      */
     setShadow(offsetX: number, offsetY: number, blur: number, color: string): void
     /**
-     * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+     * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
      *
      * **定义：**
      *
@@ -11841,7 +11884,7 @@ declare namespace wx {
      */
     shadowBlur(): void
     /**
-     * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+     * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
      *
      * **定义：**
      *
@@ -11855,7 +11898,7 @@ declare namespace wx {
      */
     shadowColor(): void
     /**
-     * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+     * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
      *
      * **定义：**
      *
@@ -11869,7 +11912,7 @@ declare namespace wx {
      */
     shadowOffsetX(): void
     /**
-     * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+     * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
      *
      * **定义：**
      *
@@ -12151,11 +12194,11 @@ declare namespace wx {
      */
     setLineJoin(lineJoin: string): void
     /**
-     * > 基础库 1.6.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+     * > 基础库 1.6.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
      *
      * **定义：**
      *
-     * 设置线条的宽度。
+     * 设置虚线样式的方法。
      *
      * **参数：**
      *
@@ -12825,7 +12868,7 @@ declare namespace wx {
      * -----------|-----------|-----------------------------------------------------
      *   rotate   |  Number   |旋转角度，以弧度计(degrees * Math.PI/180；degrees范围为0~360)
      *
-     * ![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/canvas/rotate.png)
+     * ![](https://developers.weixin.qq.com/miniprogram/dev/image/canvas/rotate.png)
      *
      * **参数：**
      *
@@ -12871,7 +12914,7 @@ declare namespace wx {
      */
     translate(x: number, y: number): void
     /**
-     * > 基础库 1.6.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+     * > 基础库 1.6.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
      *
      * **定义：**
      *
@@ -12885,13 +12928,13 @@ declare namespace wx {
      *     wx.downloadFile({
      *       url: 'http://is5.mzstatic.com/image/thumb/Purple128/v4/75/3b/90/753b907c-b7fb-5877-215a-759bd73691a4/source/50x50bb.jpg',
      *       success: function(res) {
-     *           ctx.save()
-     *           ctx.beginPath()
-     *           ctx.arc(50, 50, 25, 0, 2*Math.PI)
-     *           ctx.clip()
-     *           ctx.drawImage(res.tempFilePath, 25, 25)
-     *           ctx.restore()
-     *           ctx.draw()
+     *       	ctx.save()
+     *       	ctx.beginPath()
+     *       	ctx.arc(50, 50, 25, 0, 2*Math.PI)
+     *       	ctx.clip()
+     *       	ctx.drawImage(res.tempFilePath, 25, 25)
+     *       	ctx.restore()
+     *       	ctx.draw()
      *       }
      *     })
      *     ```
@@ -12956,7 +12999,7 @@ declare namespace wx {
      */
     fillText(text: string, x: number, y: number, maxWidth: number): void
     /**
-     * > 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+     * > 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
      *
      * **定义：**
      *
@@ -13000,7 +13043,7 @@ declare namespace wx {
      */
     setTextAlign(align: string): void
     /**
-     * > 基础库 1.4.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+     * > 基础库 1.4.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
      *
      * **定义：**
      *
@@ -13061,10 +13104,10 @@ declare namespace wx {
      *   dx              |  Number   |图像的左上角在目标canvas上 X 轴的位置
      *   dy              |  Number   |图像的左上角在目标canvas上 Y 轴的位置
      *   dWidth          |  Number   |在目标画布上绘制图像的宽度，允许对绘制的图像进行缩放
-     *   dHeigt          |  Number   |在目标画布上绘制图像的高度，允许对绘制的图像进行缩放
+     *   dHeight         |  Number   |在目标画布上绘制图像的高度，允许对绘制的图像进行缩放
      *   sx              |  Number   |源图像的矩形选择框的左上角 X 坐标
      *   sy              |  Number   |源图像的矩形选择框的左上角 Y 坐标
-     *   sWidth          |  Number   |  源图像的矩形选择框的高度     
+     *   sWidth          |  Number   |  源图像的矩形选择框的宽度     
      *   sHeight         |  Number   |  源图像的矩形选择框的高度     
      *
      * **有三个版本的写法：**
@@ -13101,10 +13144,10 @@ declare namespace wx {
      *   dx              |  Number   |图像的左上角在目标canvas上 X 轴的位置
      *   dy              |  Number   |图像的左上角在目标canvas上 Y 轴的位置
      *   dWidth          |  Number   |在目标画布上绘制图像的宽度，允许对绘制的图像进行缩放
-     *   dHeigt          |  Number   |在目标画布上绘制图像的高度，允许对绘制的图像进行缩放
+     *   dHeight         |  Number   |在目标画布上绘制图像的高度，允许对绘制的图像进行缩放
      *   sx              |  Number   |源图像的矩形选择框的左上角 X 坐标
      *   sy              |  Number   |源图像的矩形选择框的左上角 Y 坐标
-     *   sWidth          |  Number   |  源图像的矩形选择框的高度     
+     *   sWidth          |  Number   |  源图像的矩形选择框的宽度     
      *   sHeight         |  Number   |  源图像的矩形选择框的高度     
      *
      * **有三个版本的写法：**
@@ -13126,7 +13169,7 @@ declare namespace wx {
      *     })
      *     ```
      */
-    drawImage(dx: number, dy: number, dWidth: number, dHeight: any): void
+    drawImage(dx: number, dy: number, dWidth: number, dHeight: number): void
     /**
      *
      * **定义：**
@@ -13141,10 +13184,10 @@ declare namespace wx {
      *   dx              |  Number   |图像的左上角在目标canvas上 X 轴的位置
      *   dy              |  Number   |图像的左上角在目标canvas上 Y 轴的位置
      *   dWidth          |  Number   |在目标画布上绘制图像的宽度，允许对绘制的图像进行缩放
-     *   dHeigt          |  Number   |在目标画布上绘制图像的高度，允许对绘制的图像进行缩放
+     *   dHeight         |  Number   |在目标画布上绘制图像的高度，允许对绘制的图像进行缩放
      *   sx              |  Number   |源图像的矩形选择框的左上角 X 坐标
      *   sy              |  Number   |源图像的矩形选择框的左上角 Y 坐标
-     *   sWidth          |  Number   |  源图像的矩形选择框的高度     
+     *   sWidth          |  Number   |  源图像的矩形选择框的宽度     
      *   sHeight         |  Number   |  源图像的矩形选择框的高度     
      *
      * **有三个版本的写法：**
@@ -13166,7 +13209,7 @@ declare namespace wx {
      *     })
      *     ```
      */
-    drawImage(sx: number, sy: number, sWidth: number, sHeight: number, dx: number, dy: number, dWidth: number, dHeight: any): void
+    drawImage(sx: number, sy: number, sWidth: number, sHeight: number, dx: number, dy: number, dWidth: number, dHeight: number): void
     /**
      *
      * **定义：**
@@ -13275,7 +13318,7 @@ declare namespace wx {
      */
     draw(reserve?: boolean, callback?: CanvasContext.draw.Param1): void
     /**
-     * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+     * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
      *
      * **定义：**
      *
@@ -13306,7 +13349,7 @@ declare namespace wx {
      */
     measureText(width: number): void
     /**
-     * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+     * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
      *
      * **定义：**
      *
@@ -13335,7 +13378,7 @@ declare namespace wx {
      */
     globalCompositeOperation(): void
     /**
-     * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+     * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
      *
      * **定义：**
      *
@@ -13359,7 +13402,7 @@ declare namespace wx {
      */
     arcTo(): void
     /**
-     * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+     * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
      *
      * **定义：**
      *
@@ -13382,7 +13425,7 @@ declare namespace wx {
      */
     strokeText(): void
     /**
-     * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+     * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
      *
      * **定义：**
      *
@@ -13402,7 +13445,7 @@ declare namespace wx {
      */
     lineDashOffset(): void
     /**
-     * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+     * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
      *
      * **定义：**
      *
@@ -13433,7 +13476,7 @@ declare namespace wx {
      */
     createPattern(): void
     /**
-     * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+     * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
      *
      * **定义：**
      *
@@ -13462,7 +13505,32 @@ declare namespace wx {
      */
     font(style: any, weight: any, size: any, family: any): void
     /**
-     * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+     * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
+     *
+     * **定义：**
+     *
+     * 使用矩阵多次叠加当前变换的方法
+     *
+     * **参数：**
+     *
+     *   属性值       |  类型     |  说明   
+     * ---------------|-----------|---------
+     *   scaleX       |  Number   | 水平缩放
+     *   skewX        |  Number   | 水平倾斜
+     *   skewY        |  Number   | 垂直倾斜
+     *   scaleY       |  Number   | 垂直缩放
+     *   translateX   |  Number   | 水平移动
+     *   translateY   |  Number   | 垂直移动
+     *
+     * **语法：**
+     *
+     *     ```javascript
+     *     canvasContext.transform(scaleX, skewX, skewY, scaleY, translateX, translateY)
+     *     ```
+     */
+    transform(): void
+    /**
+     * > 基础库 1.9.90 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
      *
      * **定义：**
      *

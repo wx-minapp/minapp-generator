@@ -36,7 +36,7 @@
 
 ### wx.showLoading(OBJECT)
 
-> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 显示 loading 提示框, 需主动调用 [wx.hideLoading](https://developers.weixin.qq.com/miniprogram/dev/api/api-react.html#wxhideloading) 才能关闭提示框
 
@@ -56,7 +56,7 @@
 
 ### wx.hideLoading()
 
-> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 隐藏 loading 提示框
 
@@ -145,7 +145,7 @@
 
 #### Bug & Tip
 
-1.  `bug`: `Android` `6.3.30`，wx.showModal 的返回的 confirm 一直为 true；
-2.  `tip`: wx.showActionSheet 点击取消或蒙层时，回调 `fail`, errMsg 为 "showActionSheet:fail cancel"；
-3.  `tip`: wx.showLoading 和 wx.showToast 同时只能显示一个，但 wx.hideToast/wx.hideLoading 也应当配对使用；
-4.  `tip`: `iOS` wx.showModal 点击蒙层不会关闭模态弹窗，所以尽量避免使用“取消”分支中实现业务逻辑。
+1.  `tip`: wx.showLoading 和 wx.showToast 同时只能显示一个，但 wx.hideToast/wx.hideLoading 也应当配对使用；
+2.  `bug`: `Android` `6.3.30`，wx.showModal 的返回的 confirm 一直为 true；
+3.  `tip`: `wx.showActionSheet` `wx.showModal` 点击取消或蒙层时，回调 `fail`, errMsg 为 "fail cancel"；
+4.  `tip`: `Android` `6.7.2` 及以上版本 和 `iOS` `wx.showActionSheet` `wx.showModal` 点击蒙层不会关闭模态弹窗，所以尽量避免使用“取消”分支中实现业务逻辑。

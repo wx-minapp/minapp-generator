@@ -39,7 +39,7 @@
     https://api.weixin.qq.com/cgi-bin/media/upload?access_token=ACCESS_TOKEN&type=TYPE
     
 
-**临时素材\[接口文档\]**([https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1444738726](https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1444738726))
+**临时素材\[接口文档\]**(https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1444738726)
 
 POST数据示例：
 
@@ -156,20 +156,20 @@ POST数据示例：
       {
          "left_apply_num" : 9,
          "max_apply_num" : 10,
-         "data":
-         "{
-             "poi_list":
-             [
-                {
-                    "poi_id":"123456",
-                    "qualification_address":"广东省广州市海珠区新港中路123号",
-                    "qualification_num":"123456789-1",
-                    "audit_status":3,
-                    "display_status":0,
-                    "refuse_reason":""
-                }
-             ]
-         }"
+    	 "data":
+    	 "{
+    	     "poi_list":
+    	     [
+    	        {
+    			    "poi_id":"123456",
+    				"qualification_address":"广东省广州市海珠区新港中路123号",
+    				"qualification_num":"123456789-1",
+    				"audit_status":3,
+    				"display_status":0,
+    				"refuse_reason":""
+    		    }
+    	     ]
+    	 }"
       }
     }
     

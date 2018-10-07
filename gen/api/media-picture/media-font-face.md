@@ -2,9 +2,9 @@
 
 ### wx.loadFontFace(OBJECT)
 
-> 基础库 2.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 2.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
-动态加载网络字体
+动态加载网络字体，文件地址需为下载类型。IOS下仅支持https格式文件地址。
 
 **OBJECT参数说明：**
 
@@ -24,7 +24,7 @@
 
     wx.loadFontFace({
       family: 'Bitstream Vera Serif Bold',
-      source: 'url("http://developer.mozilla.org/@api/deki/files/2934/=VeraSeBd.ttf")',
+      source: 'url("https://sungd.github.io/Pacifico.ttf")',
       success: function(res) {
         console.log(res.status) //  loaded
       },

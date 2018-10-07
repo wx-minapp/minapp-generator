@@ -14,6 +14,7 @@
     1、直接回复success（推荐方式）
     2、直接回复空串（指字节长度为0的空字符串，而不是结构体中content字段的内容为空）
     
+    
 
 一旦遇到以下情况，微信都会在小程序会话中，向用户下发系统提示“该小程序客服暂时无法提供服务，请稍后再试”：
 
@@ -44,13 +45,14 @@
 #### JSON 格式
 
     {
-        "ToUserName": "toUser",
-        "FromUserName": "fromUser",
-        "CreateTime": 1482048670,
-        "MsgType": "text",
-        "Content": "this is a test",
-        "MsgId": 1234567890123456
+    	"ToUserName": "toUser",
+    	"FromUserName": "fromUser",
+    	"CreateTime": 1482048670,
+    	"MsgType": "text",
+    	"Content": "this is a test",
+    	"MsgId": 1234567890123456
     }
+    
     
 
 #### 参数说明
@@ -84,14 +86,15 @@
 #### JSON 格式
 
     {
-        "ToUserName": "toUser",
-        "FromUserName": "fromUser",
-        "CreateTime": 1482048670,
-        "MsgType": "image",
-        "PicUrl": "this is a url",
-        "MediaId": "media_id",
-        "MsgId": 1234567890123456
+    	"ToUserName": "toUser",
+    	"FromUserName": "fromUser",
+    	"CreateTime": 1482048670,
+    	"MsgType": "image",
+    	"PicUrl": "this is a url",
+    	"MediaId": "media_id",
+    	"MsgId": 1234567890123456
     }
+    
     
 
 #### 参数说明
@@ -113,33 +116,35 @@
 #### XML 格式
 
     <xml>
-        <ToUserName><![CDATA[toUser]]></ToUserName>
-        <FromUserName><![CDATA[fromUser]]></FromUserName>
-        <CreateTime>1482048670</CreateTime>
-        <MsgType><![CDATA[miniprogrampage]]></MsgType>
-        <MsgId>1234567890123456</MsgId>
-        <Title><![CDATA[Title]]></Title>
-        <AppId><![CDATA[AppId]]></AppId>
-        <PagePath><![CDATA[PagePath]]></PagePath>
-        <ThumbUrl><![CDATA[ThumbUrl]]></ThumbUrl>
-        <ThumbMediaId><![CDATA[ThumbMediaId]]></ThumbMediaId>
+    	<ToUserName><![CDATA[toUser]]></ToUserName>
+    	<FromUserName><![CDATA[fromUser]]></FromUserName>
+    	<CreateTime>1482048670</CreateTime>
+    	<MsgType><![CDATA[miniprogrampage]]></MsgType>
+    	<MsgId>1234567890123456</MsgId>
+    	<Title><![CDATA[Title]]></Title>
+    	<AppId><![CDATA[AppId]]></AppId>
+    	<PagePath><![CDATA[PagePath]]></PagePath>
+    	<ThumbUrl><![CDATA[ThumbUrl]]></ThumbUrl>
+    	<ThumbMediaId><![CDATA[ThumbMediaId]]></ThumbMediaId>
     </xml>
+    
     
 
 #### JSON 格式
 
     {
-        "ToUserName": "toUser",
-        "FromUserName": "fromUser",
-        "CreateTime": 1482048670,
-        "MsgType": "miniprogrampage",
-        "MsgId": 1234567890123456,
-        "Title":"title",
-        "AppId":"appid",
-        "PagePath":"path",
-        "ThumbUrl":"",
-        "ThumbMediaId":""
+    	"ToUserName": "toUser",
+    	"FromUserName": "fromUser",
+    	"CreateTime": 1482048670,
+    	"MsgType": "miniprogrampage",
+    	"MsgId": 1234567890123456,
+    	"Title":"title",
+    	"AppId":"appid",
+    	"PagePath":"path",
+    	"ThumbUrl":"",
+    	"ThumbMediaId":""
     }
+    
     
 
 #### 参数说明
@@ -176,12 +181,12 @@
 #### JSON 格式
 
     {
-        "ToUserName": "toUser",
-        "FromUserName": "fromUser",
-        "CreateTime": 1482048670,
-        "MsgType": "event",
-        "Event": "user_enter_tempsession",
-        "SessionFrom": "sessionFrom"
+    	"ToUserName": "toUser",
+    	"FromUserName": "fromUser",
+    	"CreateTime": 1482048670,
+    	"MsgType": "event",
+    	"Event": "user_enter_tempsession",
+    	"SessionFrom": "sessionFrom"
     }
     
 

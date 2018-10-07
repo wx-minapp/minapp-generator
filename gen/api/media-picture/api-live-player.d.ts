@@ -8,7 +8,7 @@ export namespace wx {
    *
    * **示例代码：**
    *
-   * [在开发者工具中预览效果](wechatide://minicode/UzWEzmm763Y4)
+   * [在开发者工具中预览效果](wechatide://minicode/UzWEzmm763Y4 "在开发者工具中预览效果")
    * @see https://developers.weixin.qq.com/miniprogram/dev/api/api-live-player.html#wxcreateliveplayercontextdomid-this
    */
   function createLivePlayerContext(domId: any, instance?: any): LivePlayerContext

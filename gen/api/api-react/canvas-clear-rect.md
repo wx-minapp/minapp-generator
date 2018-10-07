@@ -32,4 +32,4 @@ canvasContext.clearRect
     ctx.draw()
     
 
-![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/canvas/clear-rect.png)
+![](https://developers.weixin.qq.com/miniprogram/dev/image/canvas/clear-rect.png)

@@ -4,7 +4,7 @@ Author Mora <qiuzhongleiabc@126.com> (https://github.com/qiu8310)
 *******************************************************************/
 
 /* tslint:disable:object-literal-key-quotes */
-export const SINCE_TEST_GLOBAL_REGEXP = /> 基础库 ([\d\.]+) 开始支持，低版本需做\[兼容处理\]\(.*?\)/g
+export const SINCE_TEST_GLOBAL_REGEXP = /> 基础库 ([\d\.]+) 开始支持，低版本需做\[兼容处理\]\(.*?\)。?/g
 export const SINCE_LINK_REGEXP = /\[([\d\.]+)\]\(https[^\)]*开始支持，低版本需做兼容处理[^\)]*\)/
 
 export const WX_FUNC_REGEXP = /^wx\.(\w+)(?:\((.*?)\))?$/
@@ -28,6 +28,7 @@ export const TABLE_REST_FIELD_MAP: {[key: string]: string} = {
   '参数说明': 'desc',
   '返回': 'desc',
   '备注': 'notice',
+  '版本': 'since',
   '最低版本': 'since',
   '支持版本': 'since',
 }

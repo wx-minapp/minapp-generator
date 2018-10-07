@@ -7,7 +7,7 @@
 
 ### 登录流程时序
 
-![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/api-login.jpg)
+![](https://developers.weixin.qq.com/miniprogram/dev/image/api-login.jpg)
 
 #### 说明：
 
@@ -108,8 +108,8 @@
 
     //正常返回的JSON数据包
     {
-          "openid": "OPENID",
-          "session_key": "SESSIONKEY",
+      	"openid": "OPENID",
+      	"session_key": "SESSIONKEY",
     }
     
     //满足UnionID返回条件时，返回的JSON数据包
@@ -120,8 +120,8 @@
     }
     //错误时返回JSON数据包(示例为Code无效)
     {
-        "errcode": 40029,
-        "errmsg": "invalid code"
+    	"errcode": 40029,
+    	"errmsg": "invalid code"
     }
     
 

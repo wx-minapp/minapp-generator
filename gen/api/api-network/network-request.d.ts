@@ -120,7 +120,7 @@ export namespace wx {
    *          y: ''
    *       },
    *       header: {
-   *           'content-type': 'application/json' // 默认值
+   *       	'content-type': 'application/json' // 默认值
    *       },
    *       success: function(res) {
    *         console.log(res.data)
@@ -138,7 +138,7 @@ export namespace wx {
    *          y: ''
    *       },
    *       header: {
-   *           'content-type': 'application/json'
+   *       	'content-type': 'application/json'
    *       },
    *       success: function(res) {
    *         console.log(res.data)

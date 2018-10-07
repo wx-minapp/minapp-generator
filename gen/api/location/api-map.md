@@ -64,7 +64,7 @@
 
 **示例代码：**
 
-[在开发者工具中预览效果](wechatide://minicode/3uVxpmmT6wY9)
+[在开发者工具中预览效果](wechatide://minicode/3uVxpmmT6wY9 "在开发者工具中预览效果")
 
     <!-- map.wxml -->
     <map id="myMap" show-location />

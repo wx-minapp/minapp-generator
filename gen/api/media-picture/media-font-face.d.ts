@@ -61,7 +61,7 @@ export namespace wx {
   /**
    * @since 2.1.0
    *
-   * 动态加载网络字体
+   * 动态加载网络字体，文件地址需为下载类型。IOS下仅支持https格式文件地址。
    *
    * **Tip：**
    *
@@ -72,7 +72,7 @@ export namespace wx {
    *     ```javascript
    *     wx.loadFontFace({
    *       family: 'Bitstream Vera Serif Bold',
-   *       source: 'url("http://developer.mozilla.org/@api/deki/files/2934/=VeraSeBd.ttf")',
+   *       source: 'url("https://sungd.github.io/Pacifico.ttf")',
    *       success: function(res) {
    *         console.log(res.status) //  loaded
    *       },

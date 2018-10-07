@@ -2,26 +2,35 @@
 
 #### map
 
-地图。
+地图。该组件是[原生组件](https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html)，使用时请注意相关限制。 个性化地图能力可在小程序后台“设置-开发者工具-腾讯位置服务”申请开通。 设置subkey后，小程序内的地图组件均会使用该底图效果，底图场景的切换会在后续版本提供。 详见[《小程序个性地图使用指南》](https://lbs.qq.com/product/miniapp/guide/)
 
-  属性名             |  类型          | 默认值 |  说明                         | 最低版本 
----------------------|----------------|--------|-------------------------------|----------
-  longitude          |  Number        |        |  中心经度                     |          
-  latitude           |  Number        |        |  中心纬度                     |          
-  scale              |  Number        |  16    |  缩放级别，取值范围为5-18     |          
-  markers            |  Array         |        |  标记点                       |          
-  covers             |  Array         |        |  **即将移除，请使用 markers** |          
-  polyline           |  Array         |        |  路线                         |          
-  circles            |  Array         |        |  圆                           |          
-  controls           |  Array         |        |  控件                         |          
-  include-points     |  Array         |        | 缩放视野以包含所有给定的坐标点|          
-  show-location      |  Boolean       |        |  显示带有方向的当前定位点     |          
-  bindmarkertap      |  EventHandle   |        |点击标记点时触发，会返回marker的id|          
-  bindcallouttap     |  EventHandle   |        |点击标记点对应的气泡时触发，会返回marker的id|  1.2.0   
-  bindcontroltap     |  EventHandle   |        |点击控件时触发，会返回control的id|          
-  bindregionchange   |  EventHandle   |        |  视野发生变化时触发           |          
-  bindtap            |  EventHandle   |        |  点击地图时触发               |          
-  bindupdated        |  EventHandle   |        |  在地图渲染更新完成时触发     |  1.6.0   
+  属性名               |  类型          |  默认值  |  说明                                                                                                        |  最低版本                                                                                                                                            
+-----------------------|----------------|----------|--------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------
+  longitude            |  Number        |          |  中心经度                                                                                                    |                                                                                                                                                      
+  latitude             |  Number        |          |  中心纬度                                                                                                    |                                                                                                                                                      
+  scale                |  Number        |  16      |  缩放级别，取值范围为5-18                                                                                    |                                                                                                                                                      
+  markers              |  Array         |          |  标记点                                                                                                      |                                                                                                                                                      
+  covers               |  Array         |          |  **即将移除，请使用 markers**                                                                                |                                                                                                                                                      
+  polyline             |  Array         |          |  路线                                                                                                        |                                                                                                                                                      
+  polygons             |  Array         |          |  多边形                                                                                                      |  2.3.0                                                                                                                                               
+  circles              |  Array         |          |  圆                                                                                                          |                                                                                                                                                      
+  controls             |  Array         |          |控件（即将废弃，建议使用 [cover-view](https://developers.weixin.qq.com/miniprogram/dev/component/cover-view.html) 代替）|                                                                                                                                                      
+  include-points       |  Array         |          |  缩放视野以包含所有给定的坐标点                                                                              |                                                                                                                                                      
+  show-location        |  Boolean       |          |  显示带有方向的当前定位点                                                                                    |                                                                                                                                                      
+  subkey               |  String        |  ''      |  个性化地图使用的key，仅初始化地图时有效                                                                     |  2.3.0                                                                                                                                               
+  enable-3D            |  Boolean       |  false   |  展示3D楼块(工具暂不支持）                                                                                   |  2.3.0                                                                                                                                               
+  show-compass         |  Boolean       |  false   |  显示指南针                                                                                                  |  2.3.0                                                                                                                                               
+  enable-overlooking   |  Boolean       |  false   |  开启俯视                                                                                                    |  2.3.0                                                                                                                                               
+  enable-zoom          |  Boolean       |  true    |  是否支持缩放                                                                                                |  2.3.0                                                                                                                                               
+  enable-scroll        |  Boolean       |  true    |  是否支持拖动                                                                                                |  2.3.0                                                                                                                                               
+  enable-rotate        |  Boolean       |  false   |  是否支持旋转                                                                                                |  2.3.0                                                                                                                                               
+  bindmarkertap        |  EventHandle   |          |  点击标记点时触发，会返回marker的id                                                                          |                                                                                                                                                      
+  bindcallouttap       |  EventHandle   |          |  点击标记点对应的气泡时触发，会返回marker的id                                                                |  1.2.0                                                                                                                                               
+  bindcontroltap       |  EventHandle   |          |  点击控件时触发，会返回control的id                                                                           |                                                                                                                                                      
+  bindregionchange     |  EventHandle   |          |  视野发生变化时触发                                                                                          |[2.3.0](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html "基础库 2.3.0 开始支持，低版本需做兼容处理。")起增加`causedBy` 参数区分拖动、缩放和调用接口等来源
+  bindtap              |  EventHandle   |          |  点击地图时触发                                                                                              |                                                                                                                                                      
+  bindupdated          |  EventHandle   |          |  在地图渲染更新完成时触发                                                                                    |  1.6.0                                                                                                                                               
+  bindpoitap           |  EventHandle   |          |  点击地图poi点时触发                                                                                         |  2.3.0                                                                                                                                               
 
 **注意: covers 属性即将移除，请使用 markers 替代**
 
@@ -29,20 +38,21 @@
 
 标记点用于在地图上显示标记的位置
 
-  属性        |  说明                 |  类型     |  必填 |  备注                                                                 | 最低版本 
---------------|-----------------------|-----------|-------|-----------------------------------------------------------------------|----------
-  id          |  标记点id             |  Number   |  否   |marker点击事件回调会返回此id。**建议为每个marker设置上Number类型id，保证更新marker时有更好的性能。**|          
-  latitude    |  纬度                 |  Number   |  是   |  浮点数，范围 -90 ~ 90                                                |          
-  longitude   |  经度                 |  Number   |  是   |  浮点数，范围 -180 ~ 180                                              |          
-  title       |  标注点名             |  String   |  否   |                                                                       |          
-  iconPath    |  显示的图标           |  String   |  是   |项目目录下的图片路径，支持相对路径写法，以'/'开头则表示相对小程序根目录；也支持临时路径|          
-  rotate      |  旋转角度             |  Number   |  否   |  顺时针旋转的角度，范围 0 ~ 360，默认为 0                             |          
-  alpha       |  标注的透明度         |  Number   |  否   |  默认1，无透明，范围 0 ~ 1                                            |          
-  width       |  标注图标宽度         |  Number   |  否   |  默认为图片实际宽度                                                   |          
-  height      |  标注图标高度         |  Number   |  否   |  默认为图片实际高度                                                   |          
-  callout     |自定义标记点上方的气泡窗口|  Object   |  否   |  支持的属性见下表，可识别换行符。                                     |  1.2.0   
-  label       |  为标记点旁边增加标签 |  Object   |  否   |  支持的属性见下表，可识别换行符。                                     |  1.2.0   
-  anchor      |经纬度在标注图标的锚点，默认底边中点|  Object   |  否   |  {x, y}，x表示横向(0-1)，y表示竖向(0-1)。{x: .5, y: 1} 表示底边中点   |  1.2.0   
+  属性        |  说明                 |  类型     |  必填 |  备注                                                                                                                                                                     | 最低版本 
+--------------|-----------------------|-----------|-------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------
+  id          |  标记点id             |  Number   |  否   |  marker点击事件回调会返回此id。**建议为每个marker设置上Number类型id，保证更新marker时有更好的性能。**                                                                     |          
+  latitude    |  纬度                 |  Number   |  是   |  浮点数，范围 -90 ~ 90                                                                                                                                                    |          
+  longitude   |  经度                 |  Number   |  是   |  浮点数，范围 -180 ~ 180                                                                                                                                                  |          
+  title       |  标注点名             |  String   |  否   |                                                                                                                                                                           |          
+  zIndex      |  显示层级             |  Number   |  否   |                                                                                                                                                                           |  2.3.0   
+  iconPath    |  显示的图标           |  String   |  是   |项目目录下的图片路径，支持相对路径写法，以'/'开头则表示相对小程序根目录；也支持临时路径和网络图片（[2.3.0](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html "基础库 2.3.0 开始支持，低版本需做兼容处理。")）|          
+  rotate      |  旋转角度             |  Number   |  否   |  顺时针旋转的角度，范围 0 ~ 360，默认为 0                                                                                                                                 |          
+  alpha       |  标注的透明度         |  Number   |  否   |  默认1，无透明，范围 0 ~ 1                                                                                                                                                |          
+  width       |  标注图标宽度         |  Number   |  否   |  默认为图片实际宽度                                                                                                                                                       |          
+  height      |  标注图标高度         |  Number   |  否   |  默认为图片实际高度                                                                                                                                                       |          
+  callout     |自定义标记点上方的气泡窗口|  Object   |  否   |  支持的属性见下表，可识别换行符。                                                                                                                                         |  1.2.0   
+  label       |  为标记点旁边增加标签 |  Object   |  否   |  支持的属性见下表，可识别换行符。                                                                                                                                         |  1.2.0   
+  anchor      |经纬度在标注图标的锚点，默认底边中点|  Object   |  否   |  {x, y}，x表示横向(0-1)，y表示竖向(0-1)。{x: .5, y: 1} 表示底边中点                                                                                                       |  1.2.0   
 
 ##### marker 上的气泡 callout
 
@@ -51,7 +61,9 @@
   content        |  文本                              |  String   |  1.2.0   
   color          |  文本颜色                          |  String   |  1.2.0   
   fontSize       |  文字大小                          |  Number   |  1.2.0   
-  borderRadius   |  callout边框圆角                   |  Number   |  1.2.0   
+  borderRadius   |  边框圆角                          |  Number   |  1.2.0   
+  borderWidth    |  边框宽度                          |  Number   |  2.3.0   
+  borderColor    |  边框颜色                          |  String   |  2.3.0   
   bgColor        |  背景色                            |  String   |  1.2.0   
   padding        |  文本边缘留白                      |  Number   |  1.2.0   
   display        |  'BYCLICK':点击显示; 'ALWAYS':常显 |  String   |  1.2.0   
@@ -90,6 +102,18 @@
   borderColor     |线的边框颜色|  String    |  否   |                                     |  1.2.0   
   borderWidth     |  线的厚度 |  Number    |  否   |                                     |  1.2.0   
 
+##### polygons
+
+指定一系列坐标点，根据 points 坐标数据生成闭合多边形，最低版本[2.3.0](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html "基础库 2.3.0 开始支持，低版本需做兼容处理。")
+
+  属性          |  说明        |  类型     |  必填 |  备注                               | 最低版本
+----------------|--------------|-----------|-------|-------------------------------------|---------
+  points        |  经纬度数组  |  Array    |  是   |  [{latitude: 0, longitude: 0}]      |         
+  strokeWidth   |  描边的宽度  |  Number   |  否   |                                     |         
+  strokeColor   |  描边的颜色  |  String   |  否   |8位十六进制表示，后两位表示alpha值，如：#000000AA|         
+  fillColor     |  填充颜色    |  String   |  否   |8位十六进制表示，后两位表示alpha值，如：#000000AA|         
+  zIndex        |设置多边形Z轴数值|  Number   |  否   |                                     |         
+
 ##### circles
 
 在地图上显示圆
@@ -127,7 +151,7 @@
 
 **示例：**
 
-[在开发者工具中预览效果](wechatide://minicode/3uVxpmmT6wY9)
+[在开发者工具中预览效果](wechatide://minicode/3uVxpmmT6wY9 "在开发者工具中预览效果")
 
     <!-- map.wxml -->
     <map id="map" longitude="113.324520" latitude="23.099994" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 300px;"></map>
@@ -180,11 +204,9 @@
     })
     
 
-相关api：[wx.createMapContext](https://developers.weixin.qq.com/miniprogram/dev/api/api-map.html)
+相关api：[wx.createMapContext](https://developers.weixin.qq.com/miniprogram/dev/api/map/wx.createMapContext.html)
 
 ##### Bug & Tip
 
-1.  `tip`: `map` 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。
-2.  `tip`: 请勿在 `scroll-view`、`swiper`、`picker-view`、`movable-view` 中使用 `map` 组件。
-3.  `tip`: `css` 动画对 `map` 组件无效。
-4.  `tip`: `map` 组件使用的经纬度是火星坐标系，调用 `wx.getLocation` 接口需要指定 `type` 为 `gcj02`
+1.  请注意[原生组件使用限制](https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html#原生组件的使用限制)。
+2.  `tip`: `map` 组件使用的经纬度是火星坐标系，调用 `wx.getLocation` 接口需要指定 `type` 为 `gcj02`

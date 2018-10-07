@@ -12,10 +12,6 @@ export namespace wx {
        */
       header?: any
       /**
-       * 默认是GET，有效值：OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-       */
-      method?: string
-      /**
        * 子协议数组
        *
        * @since 1.4.0

@@ -15,10 +15,10 @@ canvasContext.drawImage
   dx              |  Number   |图像的左上角在目标canvas上 X 轴的位置
   dy              |  Number   |图像的左上角在目标canvas上 Y 轴的位置
   dWidth          |  Number   |在目标画布上绘制图像的宽度，允许对绘制的图像进行缩放
-  dHeigt          |  Number   |在目标画布上绘制图像的高度，允许对绘制的图像进行缩放
+  dHeight         |  Number   |在目标画布上绘制图像的高度，允许对绘制的图像进行缩放
   sx              |  Number   |源图像的矩形选择框的左上角 X 坐标
   sy              |  Number   |源图像的矩形选择框的左上角 Y 坐标
-  sWidth          |  Number   |  源图像的矩形选择框的高度     
+  sWidth          |  Number   |  源图像的矩形选择框的宽度     
   sHeight         |  Number   |  源图像的矩形选择框的高度     
 
 **有三个版本的写法：**
@@ -39,4 +39,4 @@ canvasContext.drawImage
     })
     
 
-![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/canvas/draw-image.png)
+![](https://developers.weixin.qq.com/miniprogram/dev/image/canvas/draw-image.png)

@@ -2,8 +2,8 @@
 
 ### wx.navigateBackMiniProgram(OBJECT)
 
-> 基础库 1.3.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
-> 
+> 基础库 1.3.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
+
 > iOS 微信客户端 6.5.9 版本开始支持，Android 客户端即将在 6.5.10 版本开始支持，请先使用 iOS 客户端进行调试
 
 返回到上一个小程序，只有在当前小程序是被其他小程序打开时可以调用成功

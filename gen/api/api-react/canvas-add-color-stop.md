@@ -38,4 +38,4 @@ canvasContext.addColorStop
     ctx.draw()
     
 
-![](https://mp.weixin.qq.com/debug/wxadoc/dev/image/canvas/color-stop.png)
+![](https://developers.weixin.qq.com/miniprogram/dev/image/canvas/color-stop.png)

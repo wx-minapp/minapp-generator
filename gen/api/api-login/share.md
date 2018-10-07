@@ -1,47 +1,12 @@
 <!-- https://developers.weixin.qq.com/miniprogram/dev/api/share.html -->
 
-### onShareAppMessage(options)
+### Page.onShareAppMessage(Object)
 
-在 Page 中定义 onShareAppMessage 函数，设置该页面的转发信息。
-
-*   只有定义了此事件处理函数，右上角菜单才会显示 “转发” 按钮
-*   用户点击转发按钮的时候会调用
-*   此事件需要 return 一个 Object，用于自定义转发内容
-
-**options 参数说明**
-
-  参数     |  类型     |  说明                                                         | 最低版本 
------------|-----------|---------------------------------------------------------------|----------
-  from     |  String   |  转发事件来源。button：页面内转发按钮；menu：右上角转发菜单   |  1.2.4   
-  target   |  Object   |如果 from 值是 button，则 target 是触发这次转发事件的 button，否则为 undefined|  1.2.4   
-
-**自定义转发字段**
-
-  字段       |  说明                                                                            |  默认值                      | 最低版本 
--------------|----------------------------------------------------------------------------------|------------------------------|----------
-  title      |  转发标题                                                                        |  当前小程序名称              |          
-  path       |  转发路径                                                                        |当前页面 path ，必须是以 / 开头的完整路径|          
-  imageUrl   |自定义图片路径，可以是本地文件路径、代码包文件路径或者网络图片路径，支持PNG及JPG，不传入 imageUrl 则使用默认截图。显示图片长宽比是 5:4|                              |  1.5.0   
-
-**示例代码：**
-
-    Page({
-      onShareAppMessage: function (res) {
-        if (res.from === 'button') {
-          // 来自页面内转发按钮
-          console.log(res.target)
-        }
-        return {
-          title: '自定义转发标题',
-          path: '/page/user?id=123'
-        }
-      }
-    })
-    
+在 Page 中定义 [onShareAppMessage](https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/page.html#onshareappmessageobject) 事件处理函数，自定义该页面的转发内容。
 
 ### wx.showShareMenu(OBJECT)
 
-> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 显示当前页面的转发按钮
 
@@ -63,7 +28,7 @@
 
 ### wx.hideShareMenu(OBJECT)
 
-> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 隐藏转发按钮
 
@@ -82,7 +47,7 @@
 
 ### wx.updateShareMenu(OBJECT)
 
-> 基础库 1.2.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.2.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 更新转发属性
 
@@ -106,7 +71,7 @@
 
 ### wx.getShareInfo(OBJECT)
 
-> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 获取转发详细信息
 
@@ -120,7 +85,7 @@
   fail          |  Function   |  否   |  接口调用失败的回调函数     |           
   complete      |  Function   |  否   |接口调用结束的回调函数（调用成功、失败都会执行）|           
 
-**success 参数说明**
+**CALLBACK 参数说明：**
 
   参数            |  类型     |  说明                                                                                                               
 ------------------|-----------|---------------------------------------------------------------------------------------------------------------------
@@ -142,7 +107,7 @@
 
 ### 页面内发起转发
 
-> 基础库 1.2.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.2.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 通过给 `button` 组件设置属性 `open-type="share"`，可以在用户点击按钮后触发 `Page.onShareAppMessage()` 事件，如果当前页面没有定义此事件，则点击后无效果。相关组件：[button](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)
 

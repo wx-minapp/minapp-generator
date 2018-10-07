@@ -63,6 +63,12 @@ export namespace wx {
      */
     pause(): any
     /**
+     * 停止
+     *
+     * @since 1.7.0
+     */
+    stop(): any
+    /**
      * 跳转到指定位置，单位 s
      */
     seek(position: any): any

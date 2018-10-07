@@ -13,7 +13,7 @@ import {COLLECT} from './collect'
 import {rootNode, warn, EOL} from '../generator'
 
 export default async function(res: any, nodeIterator: any) {
-  const EXPECT = 151
+  const EXPECT = 188
   const DATA = COLLECT.API
   if (rootNode.leafNodes.length !== EXPECT) warn(`API 文档数量更新了 ${rootNode.leafNodes.length - EXPECT} 页！`)
 
@@ -39,7 +39,7 @@ export default async function(res: any, nodeIterator: any) {
         if (!res._.length && !res.noCanvas) {
           fs.writeFileSync(path.join(C.DIR.GEN_API, 'api-react', 'canvas-context.d.ts'), 'export ' + DATA.CnavasContext.toTSString(0))
         }
-        if (!res._.length && !res.canvas && !res.noCanvas) {
+        if (!res._.length && !res.canvas && !res.noCanvas && !res.folder) {
           if (res.promise) {
             fs.writeFileSync(C.OUTPUT.PROMISABLE, JSON.stringify(DATA.PROMISABLE, null, 2))
             fs.writeFileSync(C.OUTPUT.WXP, `// Generated at ${new Date().toLocaleDateString()}${EOL}export namespace wxp {${EOL}${tss.join(EOL)}${EOL}${DATA.CnavasContext.toTSString(1, true)}${EOL}}${EOL}`)

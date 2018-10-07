@@ -2,7 +2,7 @@
 
 ### wx.chooseAddress(OBJECT)
 
-> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+> 基础库 1.1.0 开始支持，低版本需做[兼容处理](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)。
 
 调起用户编辑收货地址原生界面，并在编辑完成后返回用户选择的地址。
 

@@ -236,7 +236,7 @@ export namespace wx {
     }
   }
   /**
-   * 关闭当前页面，返回上一页面或多级页面。可通过 [`getCurrentPages()`](https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/page.html#getCurrentPages()) 获取当前的页面栈，决定需要返回几层。
+   * 关闭当前页面，返回上一页面或多级页面。可通过 [`getCurrentPages()`](https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/page.html#getcurrentpages) 获取当前的页面栈，决定需要返回几层。
    *
    * **Tip：**
    *

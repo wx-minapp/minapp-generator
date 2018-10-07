@@ -4,7 +4,7 @@
 
 **注意：此接口有调整，使用该接口将不再出现授权弹窗，请使用 [<button open-type="getUserInfo"></button>](https://developers.weixin.qq.com/miniprogram/dev/component/button.html) 引导用户主动进行授权操作**
 
-1.  当用户未授权过，调用该接口将直接报错
+1.  当用户未授权过，调用该接口将直接进入fail回调
 2.  当用户授权过，可以使用该接口获取用户信息
 
 **OBJECT参数说明：**
@@ -61,7 +61,7 @@
               // 已经授权，可以直接调用 getUserInfo 获取头像昵称
               wx.getUserInfo({
                 success: function(res) {
-                  console(res.userInfo)
+                  console.log(res.userInfo)
                 }
               })
             }
@@ -87,7 +87,7 @@ encryptedData 解密后为以下 json 结构，详见[加密数据解密算法](
         "unionId": "UNIONID",
         "watermark":
         {
-            "appid":"APPID",
-        "timestamp":TIMESTAMP
+        	"appid":"APPID",
+    	"timestamp":TIMESTAMP
         }
     }
