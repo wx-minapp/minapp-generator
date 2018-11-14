@@ -1,0 +1,394 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, viewport-fit=cover"/>
+    <title>
+  概述 &ndash; 开放平台 - 小程序
+</title>
+    
+    <base href="/mini/">
+    <link rel="icon" href="https://zos.alipayobjects.com/rmsportal/nDgBIDOgapQuIrT.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="https://zos.alipayobjects.com/rmsportal/nDgBIDOgapQuIrT.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://gw.alipayobjects.com/os/lib/normalize/8.0.0/normalize.min.css">
+    <link href="https://gw.alipayobjects.com/os/skylark-tools/wNmLfkvGYsPYlpKYUWOt.css" rel="stylesheet">
+    <link href="https://gw.alipayobjects.com/os/skylark-tools/PgvdofZAPhLvCHnztAOS.css" rel="stylesheet">
+    <link href="https://gw.alipayobjects.com/os/skylark-tools/rPiLPxFbzaCsqfLlGtgu.css" rel="stylesheet">
+    <link href="https://gw.alipayobjects.com/os/skylark-tools/gOAXUBHSWOLZGjqRBimP.css" rel="stylesheet">
+    <link href="https://gw.alipayobjects.com/os/skylark-tools/xtBdRnwNwRpgHYvtzCsV.css" rel="stylesheet">
+    <link href="https://gw.alipayobjects.com/os/rmsportal/vjrLbUhnRNWORIGKudGU.css" rel="stylesheet" />
+    <script src="https://gw.alipayobjects.com/os/lib/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://gw.alipayobjects.com/os/lib/lodash.js/4.17.10/lodash.core.min.js"></script>
+    <script src="https://gw.alipayobjects.com/os/rmsportal/lkcCPYpKisNBawSIRSvj.js"></script>
+    <script>
+      window.APP_DATA = {};
+      window.CONTEXT = {
+        'site': {
+          'slug': "mini",
+          'type': "subsite"
+        },
+        'section': "component",
+        'page': {
+          'title': "概述",
+          'slug': "overview"
+        }
+      };
+      
+      window.SITEMAP = {"api":{"name":"API","pages":[{"currentPath":"1","depth":1,"isError":false,"isOutPath":false,"rootPath":"1","slug":"overview","title":"概述"},{"currentPath":"2","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"2","slug":"#","title":"界面"},{"currentPath":"2.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"2","slug":"ui-navigate","title":"导航栏"},{"currentPath":"2.2","depth":2,"isError":false,"isOutPath":false,"rootPath":"2","slug":"ui-tabbar","title":"TabBar"},{"currentPath":"2.3","depth":2,"isError":false,"isOutPath":false,"rootPath":"2","slug":"ui-feedback","title":"交互反馈"},{"currentPath":"2.4","depth":2,"isError":false,"isOutPath":false,"rootPath":"2","slug":"ui-pulldown","title":"下拉刷新"},{"currentPath":"2.5","depth":2,"isError":false,"isOutPath":false,"rootPath":"2","slug":"ui-contact","title":"联系人"},{"currentPath":"2.6","depth":2,"isError":false,"isOutPath":false,"rootPath":"2","slug":"ui-city","title":"选择城市"},{"currentPath":"2.7","depth":2,"isError":false,"isOutPath":false,"rootPath":"2","slug":"ui-date","title":"选择日期"},{"currentPath":"2.8","depth":2,"isError":false,"isOutPath":false,"rootPath":"2","slug":"ui-animation","title":"动画"},{"currentPath":"2.9","depth":2,"isError":false,"isOutPath":false,"rootPath":"2","slug":"ui-canvas","title":"画布"},{"currentPath":"2.10","depth":2,"isError":false,"isOutPath":false,"rootPath":"2","slug":"ui-map","title":"地图"},{"currentPath":"2.11","depth":2,"isError":false,"isOutPath":false,"rootPath":"2","slug":"ui-hidekeyboard","title":"键盘"},{"currentPath":"2.12","depth":2,"isError":false,"isOutPath":false,"rootPath":"2","slug":"scroll","title":"滚动"},{"currentPath":"2.13","depth":2,"isError":false,"isOutPath":false,"rootPath":"2","slug":"selector-query","title":"节点查询"},{"currentPath":"2.14","depth":2,"isError":false,"isOutPath":false,"rootPath":"2","slug":"ewdxl3","title":"级联选择"},{"currentPath":"3","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"3","slug":"#","title":"[NEW]开放接口"},{"currentPath":"3.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"3","slug":"openapi-authorize","title":"用户授权"},{"currentPath":"3.2","depth":2,"isError":false,"isOutPath":false,"rootPath":"3","slug":"userinfo","title":"客户端获取会员信息"},{"currentPath":"3.3","depth":2,"isError":false,"isOutPath":false,"rootPath":"3","slug":"openapi-pay","title":"小程序唤起支付"},{"currentPath":"3.4","depth":2,"isError":false,"isOutPath":false,"rootPath":"3","slug":"pay-sign","title":"支付代扣签约"},{"currentPath":"3.5","depth":2,"isError":false,"isOutPath":false,"rootPath":"3","slug":"openapi-qrcode","title":"小程序二维码"},{"currentPath":"3.6","depth":2,"isError":false,"isOutPath":false,"rootPath":"3","slug":"card-voucher-ticket","title":"跳转支付宝卡包"},{"currentPath":"3.7","depth":2,"isError":false,"isOutPath":false,"rootPath":"3","slug":"add-card-auth","title":"会员开卡授权"},{"currentPath":"3.8","depth":2,"isError":false,"isOutPath":false,"rootPath":"3","slug":"zm-service","title":"芝麻认证"},{"currentPath":"3.9","depth":2,"isError":false,"isOutPath":false,"rootPath":"3","slug":"zmcreditborrow","title":"信用借还"},{"currentPath":"3.10","depth":2,"isError":false,"isOutPath":false,"rootPath":"3","slug":"templatemessage","title":"模板消息"},{"currentPath":"3.11","depth":2,"isError":false,"isOutPath":false,"rootPath":"3","slug":"text-identification","title":"[NEW]文本风险识别"},{"currentPath":"3.12","depth":2,"isError":false,"isOutPath":false,"rootPath":"3","slug":"open-miniprogram","title":"[NEW]小程序跳转"},{"currentPath":"3.13","depth":2,"isError":false,"isOutPath":false,"rootPath":"3","slug":"webview-context","title":"webview组件控制"},{"currentPath":"3.14","depth":2,"isError":false,"isOutPath":false,"rootPath":"3","slug":"navigatetoalipaypage","title":"打开支付宝应用或页面"},{"currentPath":"3.15","depth":2,"isError":false,"isOutPath":false,"rootPath":"3","slug":"updatealipayclient","title":"升级支付宝最新版本"},{"currentPath":"4","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"4","slug":"#","title":"多媒体"},{"currentPath":"4.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"4","slug":"media-image","title":"图片"},{"currentPath":"5","depth":1,"isError":false,"isOutPath":false,"rootPath":"5","slug":"storage","title":"缓存"},{"currentPath":"6","depth":1,"isError":false,"isOutPath":false,"rootPath":"6","slug":"file","title":"文件"},{"currentPath":"7","depth":1,"isError":false,"isOutPath":false,"rootPath":"7","slug":"location","title":"位置"},{"currentPath":"8","depth":1,"isError":false,"isOutPath":false,"rootPath":"8","slug":"network","title":"网络"},{"currentPath":"9","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"9","slug":"#","title":"设备"},{"currentPath":"9.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"9","slug":"can-i-use","title":"canIUse"},{"currentPath":"9.2","depth":2,"isError":false,"isOutPath":false,"rootPath":"9","slug":"sdk-version","title":"获取基础库版本号"},{"currentPath":"9.3","depth":2,"isError":false,"isOutPath":false,"rootPath":"9","slug":"system-info","title":"系统信息"},{"currentPath":"9.4","depth":2,"isError":false,"isOutPath":false,"rootPath":"9","slug":"network-status","title":"网络状态"},{"currentPath":"9.5","depth":2,"isError":false,"isOutPath":false,"rootPath":"9","slug":"clipboard","title":"剪贴板"},{"currentPath":"9.6","depth":2,"isError":false,"isOutPath":false,"rootPath":"9","slug":"shake","title":"摇一摇"},{"currentPath":"9.7","depth":2,"isError":false,"isOutPath":false,"rootPath":"9","slug":"vibrate","title":"震动"},{"currentPath":"9.8","depth":2,"isError":false,"isOutPath":false,"rootPath":"9","slug":"accelerometer","title":"加速度计"},{"currentPath":"9.9","depth":2,"isError":false,"isOutPath":false,"rootPath":"9","slug":"gyroscope","title":"陀螺仪"},{"currentPath":"9.10","depth":2,"isError":false,"isOutPath":false,"rootPath":"9","slug":"compass","title":"罗盘"},{"currentPath":"9.11","depth":2,"isError":false,"isOutPath":false,"rootPath":"9","slug":"macke-call","title":"拨打电话"},{"currentPath":"9.12","depth":2,"isError":false,"isOutPath":false,"rootPath":"9","slug":"get-server-time","title":"获取服务器时间"},{"currentPath":"9.13","depth":2,"isError":false,"isOutPath":false,"rootPath":"9","slug":"user-capture-screen","title":"用户截屏事件"},{"currentPath":"9.14","depth":2,"isError":false,"isOutPath":false,"rootPath":"9","slug":"screen-brightness","title":"屏幕亮度"},{"currentPath":"9.15","depth":2,"isError":false,"isOutPath":false,"rootPath":"9","slug":"xmk3ml","title":"设置"},{"currentPath":"9.16","depth":2,"isError":false,"isOutPath":false,"rootPath":"9","slug":"contact","title":"添加手机联系人"},{"currentPath":"9.17","depth":2,"isError":false,"isOutPath":false,"rootPath":"9","slug":"show-auth-guide","title":"权限引导"},{"currentPath":"10","depth":1,"isError":false,"isOutPath":false,"rootPath":"10","slug":"scan","title":"扫码"},{"currentPath":"11","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"11","slug":"#","title":"蓝牙"},{"currentPath":"11.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"11","slug":"bluetooth-intro","title":"快速接入"},{"currentPath":"11.2","depth":2,"isError":false,"isOutPath":false,"rootPath":"11","slug":"bluetooth-api","title":"API列表"},{"currentPath":"12","depth":1,"isError":false,"isOutPath":false,"rootPath":"12","slug":"yqleyc","title":"iBeacon"},{"currentPath":"13","depth":1,"isError":false,"isOutPath":false,"rootPath":"13","slug":"data-safe","title":"数据安全"},{"currentPath":"14","depth":1,"isError":false,"isOutPath":false,"rootPath":"14","slug":"share_app","title":"分享"},{"currentPath":"15","depth":1,"isError":false,"isOutPath":false,"rootPath":"15","slug":"optionmenuitem","title":"自定义通用菜单"},{"currentPath":"16","depth":1,"isError":false,"isOutPath":false,"rootPath":"16","slug":"runscene","title":"小程序当前运行版本类型"},{"currentPath":"17","depth":1,"isError":false,"isOutPath":false,"rootPath":"17","slug":"report","title":"自定义分析"}],"slug":"api"},"business":{"name":"行业组件","pages":[{"currentPath":"1","depth":1,"isError":false,"isOutPath":false,"rootPath":"1","slug":"sb3gzl","title":"出行-公交刷码乘车"}],"slug":"business"},"catalog":{"name":"主目录","pages":[{"currentPath":"1","depth":1,"isError":false,"isOutPath":true,"rootPath":"1","slug":"introduce","title":"介绍"},{"currentPath":"2","depth":1,"isError":false,"isOutPath":true,"rootPath":"2","slug":"design","title":"设计"},{"currentPath":"3","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"3","slug":"#","title":"开发"},{"currentPath":"3.1","depth":2,"isError":false,"isOutPath":true,"rootPath":"3","slug":"developer/getting-started","title":"简易教程"},{"currentPath":"3.2","depth":2,"isError":false,"isOutPath":true,"rootPath":"3","slug":"framework/","title":"框架"},{"currentPath":"3.3","depth":2,"isError":false,"isOutPath":true,"rootPath":"3","slug":"component/","title":"组件"},{"currentPath":"3.4","depth":2,"isError":false,"isOutPath":true,"rootPath":"3","slug":"component-ext","title":"[NEW]扩展组件"},{"currentPath":"3.5","depth":2,"isError":false,"isOutPath":true,"rootPath":"3","slug":"api/","title":"API"},{"currentPath":"3.6","depth":2,"isError":false,"isOutPath":true,"rootPath":"3","slug":"ide/","title":"开发工具"},{"currentPath":"3.7","depth":2,"isError":false,"isOutPath":true,"rootPath":"3","slug":"multi-platform/","title":"多端支持"},{"currentPath":"3.8","depth":2,"isError":false,"isOutPath":true,"rootPath":"3","slug":"cloud-service/","title":"云服务(公测)"},{"currentPath":"3.9","depth":2,"isError":false,"isOutPath":true,"rootPath":"3","slug":"developer/qa","title":"Q\u0026A"},{"currentPath":"3.10","depth":2,"isError":false,"isOutPath":true,"rootPath":"3","slug":"developer/changelog","title":"更新日志"},{"currentPath":"4","depth":1,"isError":false,"isOutPath":true,"rootPath":"4","slug":"data","title":"数据"},{"currentPath":"5","depth":1,"isError":false,"isOutPath":true,"rootPath":"5","slug":"operation","title":"运营"},{"currentPath":"6","depth":1,"isError":false,"isOutPath":true,"rootPath":"6","slug":"isv","title":"小程序三方业务"},{"currentPath":"7","depth":1,"isError":false,"isOutPath":true,"rootPath":"7","slug":"jsapi","title":"JSAPI"}],"slug":"catalog"},"cloud-service":{"name":"云服务","pages":[{"currentPath":"1","depth":1,"isError":false,"isOutPath":false,"rootPath":"1","slug":"bnd2v4","title":"云服务概览"},{"currentPath":"2","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"2","slug":"#","title":"云应用"},{"currentPath":"2.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"2","slug":"gpkcis","title":"产品介绍"},{"currentPath":"2.2","depth":2,"isError":false,"isOutPath":false,"parent":true,"rootPath":"2","slug":"#","title":"快速开始"},{"currentPath":"2.2.1","depth":3,"isError":false,"isOutPath":false,"rootPath":"2","slug":"mw4cfv","title":"Spring Boot"},{"currentPath":"2.2.2","depth":3,"isError":false,"isOutPath":false,"rootPath":"2","slug":"hvd7k7","title":"SOFA Boot"},{"currentPath":"2.2.3","depth":3,"isError":false,"isOutPath":false,"rootPath":"2","slug":"bwwxu1","title":"NodeJS"},{"currentPath":"2.3","depth":2,"isError":false,"isOutPath":false,"parent":true,"rootPath":"2","slug":"#","title":"控制台操作指南"},{"currentPath":"2.3.1","depth":3,"isError":false,"isOutPath":false,"rootPath":"2","slug":"rgrr6s","title":"创建云应用"},{"currentPath":"2.3.2","depth":3,"isError":false,"isOutPath":false,"rootPath":"2","slug":"dp7c9f","title":"构建环境"},{"currentPath":"2.3.3","depth":3,"isError":false,"isOutPath":false,"rootPath":"2","slug":"uqe9fp","title":"查看应用详情"},{"currentPath":"2.3.4","depth":3,"isError":false,"isOutPath":false,"rootPath":"2","slug":"cwfcg8","title":"部署云应用"},{"currentPath":"2.3.5","depth":3,"isError":false,"isOutPath":false,"rootPath":"2","slug":"dw2w5f","title":"管理云应用"},{"currentPath":"2.4","depth":2,"isError":false,"isOutPath":false,"parent":true,"rootPath":"2","slug":"#","title":"技术栈介绍"},{"currentPath":"2.4.1","depth":3,"isError":false,"isOutPath":false,"rootPath":"2","slug":"case9x","title":"Spring Boot"},{"currentPath":"2.4.2","depth":3,"isError":false,"isOutPath":false,"rootPath":"2","slug":"tmp44c","title":"SOFA Boot"},{"currentPath":"2.4.3","depth":3,"isError":false,"isOutPath":false,"rootPath":"2","slug":"zcmzy2","title":"NodeJS"},{"currentPath":"2.5","depth":2,"isError":false,"isOutPath":false,"parent":true,"rootPath":"2","slug":"#","title":"小程序开发者工具"},{"currentPath":"2.5.1","depth":3,"isError":false,"isOutPath":false,"rootPath":"2","slug":"xd8f50","title":"软件安装"},{"currentPath":"2.5.2","depth":3,"isError":false,"isOutPath":false,"rootPath":"2","slug":"mi30zw","title":"操作说明"},{"currentPath":"2.6","depth":2,"isError":false,"isOutPath":false,"parent":true,"rootPath":"2","slug":"#","title":"IDEA插件"},{"currentPath":"2.6.1","depth":3,"isError":false,"isOutPath":false,"rootPath":"2","slug":"snmwqp","title":"软件安装"},{"currentPath":"2.6.2","depth":3,"isError":false,"isOutPath":false,"rootPath":"2","slug":"xbflqq","title":"操作说明"},{"currentPath":"2.7","depth":2,"isError":false,"isOutPath":false,"rootPath":"2","slug":"fyvf3m","title":"常见问题"},{"currentPath":"3","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"3","slug":"#","title":"Basement"},{"currentPath":"3.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"3","slug":"slz4zt","title":"产品介绍"},{"currentPath":"3.2","depth":2,"isError":false,"isOutPath":false,"rootPath":"3","slug":"fqaeo2","title":"快速开始"},{"currentPath":"3.3","depth":2,"isError":false,"isOutPath":false,"parent":true,"rootPath":"3","slug":"#","title":"控制台操作指南"},{"currentPath":"3.3.1","depth":3,"isError":false,"isOutPath":false,"rootPath":"3","slug":"pyzplx","title":"创建云服务"},{"currentPath":"3.3.2","depth":3,"isError":false,"isOutPath":false,"rootPath":"3","slug":"gph4gq","title":"云函数控制台"},{"currentPath":"3.3.3","depth":3,"isError":false,"isOutPath":false,"rootPath":"3","slug":"gtfrzk","title":"数据存储控制台"},{"currentPath":"3.3.4","depth":3,"isError":false,"isOutPath":false,"rootPath":"3","slug":"sl61t5","title":"文件存储控制台"}],"slug":"cloud-service"},"component":{"name":"组件","pages":[{"currentPath":"1","depth":1,"isError":false,"isOutPath":false,"rootPath":"1","slug":"overview","title":"概述"},{"currentPath":"2","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"2","slug":"#","title":"视图容器"},{"currentPath":"2.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"2","slug":"view","title":"View"},{"currentPath":"2.2","depth":2,"isError":false,"isOutPath":false,"rootPath":"2","slug":"swiper","title":"Swiper"},{"currentPath":"2.3","depth":2,"isError":false,"isOutPath":false,"rootPath":"2","slug":"scroll-view","title":"scroll-view"},{"currentPath":"2.4","depth":2,"isError":false,"isOutPath":false,"rootPath":"2","slug":"cover-view","title":"cover-view"},{"currentPath":"2.5","depth":2,"isError":false,"isOutPath":false,"rootPath":"2","slug":"movable-view","title":"movable-view"},{"currentPath":"3","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"3","slug":"#","title":"基础内容"},{"currentPath":"3.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"3","slug":"text","title":"Text"},{"currentPath":"3.2","depth":2,"isError":false,"isOutPath":false,"rootPath":"3","slug":"icon","title":"Icon"},{"currentPath":"3.3","depth":2,"isError":false,"isOutPath":false,"rootPath":"3","slug":"progress","title":"Progress"},{"currentPath":"4","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"4","slug":"#","title":"表单组件"},{"currentPath":"4.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"4","slug":"button","title":"Button"},{"currentPath":"4.2","depth":2,"isError":false,"isOutPath":false,"rootPath":"4","slug":"form","title":"Form"},{"currentPath":"4.3","depth":2,"isError":false,"isOutPath":false,"rootPath":"4","slug":"label","title":"Label"},{"currentPath":"4.4","depth":2,"isError":false,"isOutPath":false,"rootPath":"4","slug":"input","title":"Input"},{"currentPath":"4.5","depth":2,"isError":false,"isOutPath":false,"rootPath":"4","slug":"textarea","title":"Textarea"},{"currentPath":"4.6","depth":2,"isError":false,"isOutPath":false,"rootPath":"4","slug":"radio","title":"Radio"},{"currentPath":"4.7","depth":2,"isError":false,"isOutPath":false,"rootPath":"4","slug":"checkbox","title":"Checkbox"},{"currentPath":"4.8","depth":2,"isError":false,"isOutPath":false,"rootPath":"4","slug":"switch","title":"Switch"},{"currentPath":"4.9","depth":2,"isError":false,"isOutPath":false,"rootPath":"4","slug":"slider","title":"Slider"},{"currentPath":"4.10","depth":2,"isError":false,"isOutPath":false,"rootPath":"4","slug":"picker-view","title":"picker-view"},{"currentPath":"4.11","depth":2,"isError":false,"isOutPath":false,"rootPath":"4","slug":"picker","title":"Picker"},{"currentPath":"5","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"5","slug":"#","title":"导航"},{"currentPath":"5.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"5","slug":"navigator","title":"Navigator"},{"currentPath":"6","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"6","slug":"#","title":"媒体组件"},{"currentPath":"6.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"6","slug":"image","title":"Image"},{"currentPath":"7","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"7","slug":"#","title":"画布"},{"currentPath":"7.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"7","slug":"canvas","title":"Canvas"},{"currentPath":"8","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"8","slug":"#","title":"地图"},{"currentPath":"8.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"8","slug":"map","title":"Map"},{"currentPath":"9","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"9","slug":"#","title":"开放组件"},{"currentPath":"9.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"9","slug":"web-view","title":"web-view"},{"currentPath":"9.2","depth":2,"isError":false,"isOutPath":false,"rootPath":"9","slug":"lifestyle","title":"关注生活号组件"},{"currentPath":"9.3","depth":2,"isError":false,"isOutPath":false,"rootPath":"9","slug":"contact-button","title":"智能客服组件"}],"slug":"component"},"component-ext":{"name":"扩展组件","pages":[{"currentPath":"1","depth":1,"isError":false,"isOutPath":false,"rootPath":"1","slug":"overview-ext-common","title":"概述"},{"currentPath":"2","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"2","slug":"#","title":"布局导航"},{"currentPath":"2.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"2","slug":"list","title":"List 列表"},{"currentPath":"2.2","depth":2,"isError":false,"isOutPath":false,"rootPath":"2","slug":"tabs","title":"Tabs 选项卡"},{"currentPath":"2.3","depth":2,"isError":false,"isOutPath":false,"rootPath":"2","slug":"vtabs","title":"VTabs 纵向选项卡"},{"currentPath":"2.4","depth":2,"isError":false,"isOutPath":false,"rootPath":"2","slug":"card","title":"Card 卡片"},{"currentPath":"2.5","depth":2,"isError":false,"isOutPath":false,"rootPath":"2","slug":"grid","title":"Grid 宫格"},{"currentPath":"2.6","depth":2,"isError":false,"isOutPath":false,"rootPath":"2","slug":"steps","title":"Steps 步骤条"},{"currentPath":"2.7","depth":2,"isError":false,"isOutPath":false,"rootPath":"2","slug":"footer","title":"Footer 页脚"},{"currentPath":"3","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"3","slug":"#","title":"操作浮层"},{"currentPath":"3.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"3","slug":"popover","title":"Popover 气泡"},{"currentPath":"3.2","depth":2,"isError":false,"isOutPath":false,"rootPath":"3","slug":"filter","title":"Filter 筛选"},{"currentPath":"3.3","depth":2,"isError":false,"isOutPath":false,"rootPath":"3","slug":"modal","title":"Modal 对话框"},{"currentPath":"3.4","depth":2,"isError":false,"isOutPath":false,"rootPath":"3","slug":"popup","title":"Popup 弹出菜单"},{"currentPath":"4","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"4","slug":"#","title":"结果类"},{"currentPath":"4.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"4","slug":"pageresult","title":"PageResult 异常页"},{"currentPath":"4.2","depth":2,"isError":false,"isOutPath":false,"rootPath":"4","slug":"message","title":"Message 结果页"},{"currentPath":"5","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"5","slug":"#","title":"提示引导"},{"currentPath":"5.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"5","slug":"tips","title":"Tips 引导"},{"currentPath":"5.2","depth":2,"isError":false,"isOutPath":false,"rootPath":"5","slug":"notice","title":"Notice 通告栏"},{"currentPath":"5.3","depth":2,"isError":false,"isOutPath":false,"rootPath":"5","slug":"badge","title":"Badge 徽标"},{"currentPath":"6","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"6","slug":"#","title":"表单类"},{"currentPath":"6.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"6","slug":"inputitem","title":"InputItem 文本输入"},{"currentPath":"6.2","depth":2,"isError":false,"isOutPath":false,"rootPath":"6","slug":"amountinput","title":"AmountInput 金额输入"},{"currentPath":"6.3","depth":2,"isError":false,"isOutPath":false,"rootPath":"6","slug":"search-bar","title":"SearchBar 搜索框"},{"currentPath":"6.4","depth":2,"isError":false,"isOutPath":false,"rootPath":"6","slug":"am-checkbox","title":"AMCheckBox 复选框"},{"currentPath":"7","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"7","slug":"#","title":"手势类"},{"currentPath":"7.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"7","slug":"swipe-action","title":"SwipeAction 可滑动单元格"},{"currentPath":"8","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"8","slug":"#","title":"其他"},{"currentPath":"8.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"8","slug":"calendar","title":"Calendar 日历"},{"currentPath":"8.2","depth":2,"isError":false,"isOutPath":false,"rootPath":"8","slug":"stepper","title":"Stepper 步进器"}],"slug":"component-ext"},"data":{"name":"数据","pages":[{"currentPath":"1","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"1","slug":"nw1gwf","title":"功能概述"},{"currentPath":"1.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"1","slug":"wynp52","title":"实时统计"},{"currentPath":"1.2","depth":2,"isError":false,"isOutPath":false,"rootPath":"1","slug":"bisqcx","title":"整体概况"},{"currentPath":"1.3","depth":2,"isError":false,"isOutPath":false,"rootPath":"1","slug":"bgf6mo","title":"页面分析"},{"currentPath":"1.4","depth":2,"isError":false,"isOutPath":false,"rootPath":"1","slug":"qpvnuv","title":"用户留存"},{"currentPath":"1.5","depth":2,"isError":false,"isOutPath":false,"rootPath":"1","slug":"aio7a5","title":"自定义分析"},{"currentPath":"1.6","depth":2,"isError":false,"isOutPath":false,"rootPath":"1","slug":"ltwmii","title":"事件分析"},{"currentPath":"1.7","depth":2,"isError":false,"isOutPath":false,"rootPath":"1","slug":"eku6qh","title":"事件管理"},{"currentPath":"2","depth":1,"isError":false,"isOutPath":false,"rootPath":"2","slug":"bvh151","title":"名词解释"},{"currentPath":"3","depth":1,"isError":false,"isOutPath":false,"rootPath":"3","slug":"geg0k1","title":"指标解释"},{"currentPath":"4","depth":1,"isError":false,"isOutPath":false,"rootPath":"4","slug":"opendataassistant","title":"小程序数据助手"}],"slug":"data"},"design":{"name":"设计","pages":[{"currentPath":"1","depth":1,"isError":false,"isOutPath":false,"rootPath":"1","slug":"gp53d0","title":"支付宝小程序设计交流群"},{"currentPath":"2","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"2","slug":"#","title":"视觉"},{"currentPath":"2.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"2","slug":"color","title":"颜色"},{"currentPath":"2.2","depth":2,"isError":false,"isOutPath":false,"rootPath":"2","slug":"icon","title":"图标"},{"currentPath":"3","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"3","slug":"#","title":"框架规范"},{"currentPath":"3.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"3","slug":"bvaiiz","title":"小程序标题栏"},{"currentPath":"4","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"4","slug":"#","title":"组件"},{"currentPath":"4.1","depth":2,"isError":false,"isOutPath":false,"parent":true,"rootPath":"4","slug":"#","title":"页面布局"},{"currentPath":"4.1.1","depth":3,"isError":false,"isOutPath":false,"rootPath":"4","slug":"oq20vv","title":"底部标签栏 Tab bar"},{"currentPath":"4.1.2","depth":3,"isError":false,"isOutPath":false,"rootPath":"4","slug":"lfdlzg","title":"顶部选项卡 Tabs"},{"currentPath":"4.1.3","depth":3,"isError":false,"isOutPath":false,"rootPath":"4","slug":"rngz9r","title":"列表 List"},{"currentPath":"4.1.4","depth":3,"isError":false,"isOutPath":false,"rootPath":"4","slug":"qgriew","title":"宫格 Grid"},{"currentPath":"4.1.5","depth":3,"isError":false,"isOutPath":false,"rootPath":"4","slug":"fhcgwe","title":"步骤条 Steps"},{"currentPath":"4.1.6","depth":3,"isError":false,"isOutPath":false,"rootPath":"4","slug":"mrhxk2","title":"页脚 Footer"},{"currentPath":"4.1.7","depth":3,"isError":false,"isOutPath":false,"rootPath":"4","slug":"cmoxkv","title":"轮播图 Carousel figure"},{"currentPath":"4.2","depth":2,"isError":false,"isOutPath":false,"parent":true,"rootPath":"4","slug":"#","title":"表单"},{"currentPath":"4.2.1","depth":3,"isError":false,"isOutPath":false,"rootPath":"4","slug":"hod7is","title":"搜索 Search"},{"currentPath":"4.2.2","depth":3,"isError":false,"isOutPath":false,"rootPath":"4","slug":"vrnhwt","title":"按钮 Button"},{"currentPath":"4.2.3","depth":3,"isError":false,"isOutPath":false,"rootPath":"4","slug":"gfgalw","title":"文本框 Text fields"},{"currentPath":"4.3","depth":2,"isError":false,"isOutPath":false,"parent":true,"rootPath":"4","slug":"#","title":"反馈"},{"currentPath":"4.3.1","depth":3,"isError":false,"isOutPath":false,"rootPath":"4","slug":"nivgly","title":"弹窗 Dialog"},{"currentPath":"4.3.2","depth":3,"isError":false,"isOutPath":false,"rootPath":"4","slug":"ao4r0r","title":"Toast提示"},{"currentPath":"4.3.3","depth":3,"isError":false,"isOutPath":false,"rootPath":"4","slug":"mkb752","title":"进度\u0026加载 Progress\u0026activity"},{"currentPath":"4.4","depth":2,"isError":false,"isOutPath":false,"parent":true,"rootPath":"4","slug":"#","title":"操作浮层"},{"currentPath":"4.4.1","depth":3,"isError":false,"isOutPath":false,"rootPath":"4","slug":"ypswcw","title":"气泡菜单 Pop menus"},{"currentPath":"4.4.2","depth":3,"isError":false,"isOutPath":false,"rootPath":"4","slug":"nbgibq","title":"操作面板 actionSheets"},{"currentPath":"4.4.3","depth":3,"isError":false,"isOutPath":false,"rootPath":"4","slug":"akgiwx","title":"选择器 Pickers"},{"currentPath":"4.4.4","depth":3,"isError":false,"isOutPath":false,"rootPath":"4","slug":"vlwr8o","title":"自定义数字键盘 Keyboard"},{"currentPath":"4.5","depth":2,"isError":false,"isOutPath":false,"parent":true,"rootPath":"4","slug":"#","title":"提示引导"},{"currentPath":"4.5.1","depth":3,"isError":false,"isOutPath":false,"rootPath":"4","slug":"cq4zi4","title":"通告栏 Notice"},{"currentPath":"4.5.2","depth":3,"isError":false,"isOutPath":false,"rootPath":"4","slug":"pv4p26","title":"Tips引导"},{"currentPath":"4.5.3","depth":3,"isError":false,"isOutPath":false,"rootPath":"4","slug":"bb7r83","title":"全蒙层引导 Guide"},{"currentPath":"4.5.4","depth":3,"isError":false,"isOutPath":false,"rootPath":"4","slug":"ne4kqq","title":"页底提示"},{"currentPath":"4.6","depth":2,"isError":false,"isOutPath":false,"parent":true,"rootPath":"4","slug":"#","title":"结果类"},{"currentPath":"4.6.1","depth":3,"isError":false,"isOutPath":false,"rootPath":"4","slug":"hfand2","title":"异常页面 Error states"},{"currentPath":"4.6.2","depth":3,"isError":false,"isOutPath":false,"rootPath":"4","slug":"gvafvw","title":"结果页 Results page"},{"currentPath":"4.7","depth":2,"isError":false,"isOutPath":false,"parent":true,"rootPath":"4","slug":"#","title":"手势相关"},{"currentPath":"4.7.1","depth":3,"isError":false,"isOutPath":false,"rootPath":"4","slug":"sgt18x","title":"下拉刷新 Drop-down refresh"},{"currentPath":"4.8","depth":2,"isError":false,"isOutPath":false,"parent":true,"rootPath":"4","slug":"#","title":"业务类"},{"currentPath":"4.8.1","depth":3,"isError":false,"isOutPath":false,"rootPath":"4","slug":"qo9b82","title":"会话 Chat"},{"currentPath":"4.8.2","depth":3,"isError":false,"isOutPath":false,"rootPath":"4","slug":"gendcr","title":"城市选择 City selection"},{"currentPath":"5","depth":1,"isError":false,"isOutPath":false,"rootPath":"5","slug":"kyser2","title":"资源下载"},{"currentPath":"6","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"6","slug":"#","title":"设计工具"},{"currentPath":"6.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"6","slug":"nkq0g5","title":"介绍"},{"currentPath":"6.2","depth":2,"isError":false,"isOutPath":false,"rootPath":"6","slug":"cgdp2w","title":"下载安装说明"},{"currentPath":"6.3","depth":2,"isError":false,"isOutPath":false,"parent":true,"rootPath":"6","slug":"#","title":"使用指南和功能介绍"},{"currentPath":"6.3.1","depth":3,"isError":false,"isOutPath":false,"rootPath":"6","slug":"rtlt8l","title":"组件库"},{"currentPath":"6.3.2","depth":3,"isError":false,"isOutPath":false,"rootPath":"6","slug":"gn8242","title":"模板库"},{"currentPath":"6.3.3","depth":3,"isError":false,"isOutPath":false,"rootPath":"6","slug":"fl6b1b","title":"色彩库"},{"currentPath":"6.3.4","depth":3,"isError":false,"isOutPath":false,"rootPath":"6","slug":"qacayx","title":"iconfont库"},{"currentPath":"6.4","depth":2,"isError":false,"isOutPath":false,"rootPath":"6","slug":"hq1ccf","title":"如何升级新版本"},{"currentPath":"6.5","depth":2,"isError":false,"isOutPath":false,"rootPath":"6","slug":"afn23e","title":"常见问题FAQ"}],"slug":"design"},"developer":{"name":"入门","pages":[{"currentPath":"1","depth":1,"isError":false,"isOutPath":false,"rootPath":"1","slug":"getting-started","title":"简易教程"},{"currentPath":"2","depth":1,"isError":false,"isOutPath":false,"rootPath":"2","slug":"qa","title":"Q\u0026A"},{"currentPath":"3","depth":1,"isError":false,"isOutPath":false,"rootPath":"3","slug":"changelog","title":"更新日志"}],"slug":"developer"},"framework":{"name":"框架","pages":[{"currentPath":"1","depth":1,"isError":false,"isOutPath":false,"rootPath":"1","slug":"overview","title":"概述"},{"currentPath":"2","depth":1,"isError":false,"isOutPath":false,"rootPath":"2","slug":"app","title":"App"},{"currentPath":"3","depth":1,"isError":false,"isOutPath":false,"rootPath":"3","slug":"page","title":"Page"},{"currentPath":"4","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"4","slug":"axml","title":"视图层"},{"currentPath":"4.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"4","slug":"events","title":"事件"},{"currentPath":"4.2","depth":2,"isError":false,"isOutPath":false,"rootPath":"4","slug":"acss","title":"样式"},{"currentPath":"4.3","depth":2,"isError":false,"isOutPath":false,"rootPath":"4","slug":"sjs","title":"自定义脚本"},{"currentPath":"5","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"5","slug":"custom-component-overview","title":"[NEW]自定义组件"},{"currentPath":"5.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"5","slug":"develop-custom-component","title":"开发自定义组件"},{"currentPath":"5.2","depth":2,"isError":false,"isOutPath":false,"rootPath":"5","slug":"use-custom-component","title":"使用自定义组件"},{"currentPath":"5.3","depth":2,"isError":false,"isOutPath":false,"rootPath":"5","slug":"custom-component-publish","title":"发布自定义组件"},{"currentPath":"6","depth":1,"isError":false,"isOutPath":false,"rootPath":"6","slug":"compatibility","title":"兼容"},{"currentPath":"7","depth":1,"isError":false,"isOutPath":false,"rootPath":"7","slug":"lib","title":"基础库"},{"currentPath":"8","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"8","slug":"performance","title":"性能"},{"currentPath":"8.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"8","slug":"performance-tips","title":"优化建议"}],"slug":"framework"},"ide":{"name":"开发工具","pages":[{"currentPath":"1","depth":1,"isError":false,"isOutPath":false,"rootPath":"1","slug":"overview","title":"概述"},{"currentPath":"2","depth":1,"isError":false,"isOutPath":false,"rootPath":"2","slug":"coding","title":"编码"},{"currentPath":"3","depth":1,"isError":false,"isOutPath":false,"rootPath":"3","slug":"debug","title":"调试"},{"currentPath":"4","depth":1,"isError":false,"isOutPath":true,"rootPath":"4","slug":"ide/remote-debug","title":"[NEW]远程调试"},{"currentPath":"5","depth":1,"isError":false,"isOutPath":false,"rootPath":"5","slug":"upload","title":"上传"},{"currentPath":"6","depth":1,"isError":false,"isOutPath":false,"rootPath":"6","slug":"beta","title":"体验版测试"},{"currentPath":"7","depth":1,"isError":false,"isOutPath":false,"rootPath":"7","slug":"conf","title":"设置"},{"currentPath":"8","depth":1,"isError":false,"isOutPath":false,"rootPath":"8","slug":"dev-assistant","title":"研发助手"},{"currentPath":"9","depth":1,"isError":false,"isOutPath":false,"rootPath":"9","slug":"demo-plus","title":"示例模板市场"},{"currentPath":"10","depth":1,"isError":false,"isOutPath":false,"rootPath":"10","slug":"changelog","title":"历史更新日志"},{"currentPath":"11","depth":1,"isError":false,"isOutPath":false,"rootPath":"11","slug":"appx-changelog","title":"基础库更新日志"},{"currentPath":"12","depth":1,"isError":false,"isOutPath":false,"rootPath":"12","slug":"download","title":"下载"}],"slug":"ide"},"introduce":{"name":"介绍","pages":[{"currentPath":"1","depth":1,"isError":false,"isOutPath":false,"rootPath":"1","slug":"register","title":"开发者入驻"},{"currentPath":"2","depth":1,"isError":false,"isOutPath":false,"rootPath":"2","slug":"create","title":"创建小程序"},{"currentPath":"3","depth":1,"isError":false,"isOutPath":false,"rootPath":"3","slug":"prepare","title":"小程序开发准备"},{"currentPath":"4","depth":1,"isError":false,"isOutPath":false,"rootPath":"4","slug":"release","title":"小程序提审、发布与修改"},{"currentPath":"5","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"5","slug":"#","title":"开放能力"},{"currentPath":"5.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"5","slug":"pay","title":"接入小程序支付"},{"currentPath":"5.2","depth":2,"isError":false,"isOutPath":false,"rootPath":"5","slug":"pre-authorization","title":"[NEW]接入资金授权"},{"currentPath":"5.3","depth":2,"isError":false,"isOutPath":false,"rootPath":"5","slug":"antcreditpay-istallment","title":"接入花呗分期"},{"currentPath":"5.4","depth":2,"isError":false,"isOutPath":false,"rootPath":"5","slug":"auth","title":"获取会员信息"},{"currentPath":"5.5","depth":2,"isError":false,"isOutPath":false,"rootPath":"5","slug":"zhima","title":"芝麻分(普惠版)"},{"currentPath":"5.6","depth":2,"isError":false,"isOutPath":false,"rootPath":"5","slug":"zm-verify","title":"芝麻认证"},{"currentPath":"5.7","depth":2,"isError":false,"isOutPath":false,"rootPath":"5","slug":"credit-borrow","title":"信用借还"},{"currentPath":"5.8","depth":2,"isError":false,"isOutPath":false,"rootPath":"5","slug":"voucher","title":"支付宝卡包"},{"currentPath":"5.9","depth":2,"isError":false,"isOutPath":false,"rootPath":"5","slug":"card","title":"商户会员卡"},{"currentPath":"5.10","depth":2,"isError":false,"isOutPath":false,"rootPath":"5","slug":"membership-integral","title":"蚂蚁会员积分"},{"currentPath":"5.11","depth":2,"isError":false,"isOutPath":false,"rootPath":"5","slug":"qrcode","title":"小程序二维码"},{"currentPath":"5.12","depth":2,"isError":false,"isOutPath":false,"rootPath":"5","slug":"vzd5v0","title":"关联普通二维码"},{"currentPath":"5.13","depth":2,"isError":false,"isOutPath":false,"rootPath":"5","slug":"sandboxie","title":"小程序沙箱环境"},{"currentPath":"5.14","depth":2,"isError":false,"isOutPath":false,"rootPath":"5","slug":"cloud-testing","title":"小程序云测试"},{"currentPath":"5.15","depth":2,"isError":false,"isOutPath":false,"rootPath":"5","slug":"custom-service","title":"智能客服"},{"currentPath":"5.16","depth":2,"isError":false,"isOutPath":false,"rootPath":"5","slug":"antcloudmini","title":"云服务"},{"currentPath":"5.17","depth":2,"isError":false,"isOutPath":false,"rootPath":"5","slug":"text-identification","title":"文本风险识别"},{"currentPath":"5.18","depth":2,"isError":false,"isOutPath":false,"rootPath":"5","slug":"open-miniprogram","title":"小程序相互跳转"},{"currentPath":"5.19","depth":2,"isError":false,"isOutPath":false,"rootPath":"5","slug":"life","title":"关注生活号"},{"currentPath":"5.20","depth":2,"isError":false,"isOutPath":false,"rootPath":"5","slug":"payresult","title":"支付后推荐"},{"currentPath":"5.21","depth":2,"isError":false,"isOutPath":false,"rootPath":"5","slug":"share","title":"小程序自定义分享"},{"currentPath":"5.22","depth":2,"isError":false,"isOutPath":false,"rootPath":"5","slug":"transit","title":"出行-公交刷码乘车"},{"currentPath":"5.23","depth":2,"isError":false,"isOutPath":false,"rootPath":"5","slug":"ocr-meter","title":"水燃OCR自助抄表"},{"currentPath":"5.24","depth":2,"isError":false,"isOutPath":false,"rootPath":"5","slug":"message","title":"模板消息"},{"currentPath":"6","depth":1,"isError":false,"isOutPath":false,"rootPath":"6","slug":"inspection","title":"安全检测"},{"currentPath":"7","depth":1,"isError":false,"isOutPath":false,"rootPath":"7","slug":"demo","title":"小程序官方示例"}],"slug":"introduce"},"isv":{"name":"小程序三方业务","pages":[{"currentPath":"1","depth":1,"isError":false,"isOutPath":false,"rootPath":"1","slug":"intro","title":"小程序三方业务概览"},{"currentPath":"2","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"2","slug":"#","title":"模版开发模式业务接入指南"},{"currentPath":"2.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"2","slug":"powx7g","title":"模版开发模式接入流程"},{"currentPath":"2.2","depth":2,"isError":false,"isOutPath":false,"parent":true,"rootPath":"2","slug":"#","title":"Step-1 : 三方模版创建"},{"currentPath":"2.2.1","depth":3,"isError":false,"isOutPath":false,"rootPath":"2","slug":"fiavig","title":"1. 创建三方应用"},{"currentPath":"2.2.2","depth":3,"isError":false,"isOutPath":false,"rootPath":"2","slug":"hpi20u","title":"2. 创建三方模版"},{"currentPath":"2.3","depth":2,"isError":false,"isOutPath":false,"parent":true,"rootPath":"2","slug":"#","title":"Step-2 : 三方模版通过市场售卖并获取商户授权"},{"currentPath":"2.3.1","depth":3,"isError":false,"isOutPath":false,"rootPath":"2","slug":"nfrq2b","title":"1. 三方模版发布至服务市场"},{"currentPath":"2.3.2","depth":3,"isError":false,"isOutPath":false,"rootPath":"2","slug":"pu3ssu","title":"2. 商户订购三方模版"},{"currentPath":"2.3.3","depth":3,"isError":false,"isOutPath":false,"rootPath":"2","slug":"hdz5c2","title":"3. 服务市场订购及获得预授权"},{"currentPath":"2.4","depth":2,"isError":false,"isOutPath":false,"parent":true,"rootPath":"2","slug":"#","title":"Step-3 : 商户小程序应用实施"},{"currentPath":"2.4.1","depth":3,"isError":false,"isOutPath":false,"rootPath":"2","slug":"netbof","title":"1. 提交事务"},{"currentPath":"2.4.2","depth":3,"isError":false,"isOutPath":false,"rootPath":"2","slug":"lobq3n","title":"2. 代创建小程序"},{"currentPath":"2.4.3","depth":3,"isError":false,"isOutPath":false,"rootPath":"2","slug":"zdfy7u","title":"3. 代商户签约"},{"currentPath":"2.4.4","depth":3,"isError":false,"isOutPath":false,"rootPath":"2","slug":"uk41xn","title":"4. 提交事务"},{"currentPath":"2.4.5","depth":3,"isError":false,"isOutPath":false,"rootPath":"2","slug":"qab18a","title":"5. 取消事务"},{"currentPath":"2.5","depth":2,"isError":false,"isOutPath":false,"parent":true,"rootPath":"2","slug":"#","title":"Step-4 : 商户小程序版本实施"},{"currentPath":"2.5.1","depth":3,"isError":false,"isOutPath":false,"parent":true,"rootPath":"2","slug":"#","title":"1. 构建商户小程序"},{"currentPath":"2.5.1.1","depth":4,"isError":false,"isOutPath":false,"rootPath":"2","slug":"ortga1","title":"通过三方模版构建商户小程序"},{"currentPath":"2.5.1.2","depth":4,"isError":false,"isOutPath":false,"rootPath":"2","slug":"etlc5g","title":"查询商户小程序构建状态"},{"currentPath":"2.5.1.3","depth":4,"isError":false,"isOutPath":false,"rootPath":"2","slug":"ngyi63","title":"删除商户小程序版本"},{"currentPath":"2.5.2","depth":3,"isError":false,"isOutPath":false,"parent":true,"rootPath":"2","slug":"#","title":"2. 小程序提审"},{"currentPath":"2.5.2.1","depth":4,"isError":false,"isOutPath":false,"rootPath":"2","slug":"kow82t","title":"商户小程序提交审核"},{"currentPath":"2.5.2.2","depth":4,"isError":false,"isOutPath":false,"rootPath":"2","slug":"ru74fg","title":"小程序查询审核状态"},{"currentPath":"2.5.2.3","depth":4,"isError":false,"isOutPath":false,"rootPath":"2","slug":"pvvgty","title":"商户小程序撤回审核"},{"currentPath":"2.5.3","depth":3,"isError":false,"isOutPath":false,"parent":true,"rootPath":"2","slug":"#","title":"3. 小程序上架"},{"currentPath":"2.5.3.1","depth":4,"isError":false,"isOutPath":false,"rootPath":"2","slug":"ay07ql","title":"商户小程序灰度上架"},{"currentPath":"2.5.3.2","depth":4,"isError":false,"isOutPath":false,"rootPath":"2","slug":"et39np","title":"商户小程序灰度结束"},{"currentPath":"2.5.3.3","depth":4,"isError":false,"isOutPath":false,"rootPath":"2","slug":"acoodb","title":"商户小程序上架"},{"currentPath":"2.5.4","depth":3,"isError":false,"isOutPath":false,"parent":true,"rootPath":"2","slug":"#","title":"4. 小程序二维码生成"},{"currentPath":"2.5.4.1","depth":4,"isError":false,"isOutPath":false,"rootPath":"2","slug":"ni13pr","title":"商户小程序二维码生成"},{"currentPath":"2.5.5","depth":3,"isError":false,"isOutPath":false,"parent":true,"rootPath":"2","slug":"#","title":"5. 小程序下架"},{"currentPath":"2.5.5.1","depth":4,"isError":false,"isOutPath":false,"rootPath":"2","slug":"fir962","title":"商户小程序下架"},{"currentPath":"3","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"3","slug":"#","title":"授权开发模式业务接入指南"},{"currentPath":"3.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"3","slug":"mlt5a2","title":"授权开发业务接入流程"},{"currentPath":"3.2","depth":2,"isError":false,"isOutPath":false,"parent":true,"rootPath":"3","slug":"#","title":"STEP-1商户创建小程序"},{"currentPath":"3.2.1","depth":3,"isError":false,"isOutPath":false,"rootPath":"3","slug":"tzl9m5","title":"1. 商户入驻开放平台"},{"currentPath":"3.2.2","depth":3,"isError":false,"isOutPath":false,"rootPath":"3","slug":"uywfms","title":"2.创建一个小程序"},{"currentPath":"3.3","depth":2,"isError":false,"isOutPath":false,"parent":true,"rootPath":"3","slug":"#","title":"STEP-2 将ISV添加为开发者"},{"currentPath":"3.3.1","depth":3,"isError":false,"isOutPath":false,"rootPath":"3","slug":"vea3cc","title":"将ISV支付宝账户添加为小程序的开发者"},{"currentPath":"3.4","depth":2,"isError":false,"isOutPath":false,"parent":true,"rootPath":"3","slug":"#","title":"STEP-3 ISV通过IDE完成代开发"},{"currentPath":"3.4.1","depth":3,"isError":false,"isOutPath":false,"rootPath":"3","slug":"wp2fd3","title":"ISV通过IDE完成小程序代开发"},{"currentPath":"4","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"4","slug":"#","title":"小程序插件开发指南"},{"currentPath":"4.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"4","slug":"plugin-intro","title":"概述"},{"currentPath":"4.2","depth":2,"isError":false,"isOutPath":false,"rootPath":"4","slug":"plugin-register","title":"开发者入驻"},{"currentPath":"4.3","depth":2,"isError":false,"isOutPath":false,"rootPath":"4","slug":"create-app","title":"创建插件应用"},{"currentPath":"4.4","depth":2,"isError":false,"isOutPath":false,"rootPath":"4","slug":"develop","title":"插件开发"},{"currentPath":"4.5","depth":2,"isError":false,"isOutPath":false,"rootPath":"4","slug":"backend-dev","title":"插件后端开发"},{"currentPath":"4.6","depth":2,"isError":false,"isOutPath":false,"rootPath":"4","slug":"wwpytr","title":"插件发布"},{"currentPath":"4.7","depth":2,"isError":false,"isOutPath":false,"rootPath":"4","slug":"aqa9cn","title":"插件订购"},{"currentPath":"4.8","depth":2,"isError":false,"isOutPath":false,"rootPath":"4","slug":"wvff3z","title":"插件启用"},{"currentPath":"4.9","depth":2,"isError":false,"isOutPath":false,"rootPath":"4","slug":"ep5w8k","title":"插件使用"},{"currentPath":"4.10","depth":2,"isError":false,"isOutPath":false,"rootPath":"4","slug":"qkrhnd","title":"成功案例"},{"currentPath":"4.11","depth":2,"isError":false,"isOutPath":false,"parent":true,"rootPath":"4","slug":"#","title":"插件技术规范"},{"currentPath":"4.11.1","depth":3,"isError":false,"isOutPath":false,"rootPath":"4","slug":"api","title":"API"},{"currentPath":"4.11.2","depth":3,"isError":false,"isOutPath":false,"rootPath":"4","slug":"auth","title":"授权"},{"currentPath":"4.11.3","depth":3,"isError":false,"isOutPath":false,"rootPath":"4","slug":"container-params","title":"容器参数传递"},{"currentPath":"4.11.4","depth":3,"isError":false,"isOutPath":false,"rootPath":"4","slug":"plugin-json","title":"plugin.json"},{"currentPath":"4.11.5","depth":3,"isError":false,"isOutPath":false,"rootPath":"4","slug":"plugin-mock-json","title":"plugin-mock.json"},{"currentPath":"5","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"5","slug":"#","title":"FAQ"},{"currentPath":"5.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"5","slug":"in46m","title":"为什么没有三方应用创建权限？"}],"slug":"isv"},"jsapi":{"name":"JSAPI","pages":[{"currentPath":"1","depth":1,"isError":false,"isOutPath":false,"rootPath":"1","slug":"aaaabbbbcccc","title":"预发验收测试类目"},{"currentPath":"2","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"2","slug":"#","title":"API"},{"currentPath":"2.1","depth":2,"isError":false,"isOutPath":false,"parent":true,"rootPath":"2","slug":"#","title":"界面"},{"currentPath":"2.1.1","depth":3,"isError":false,"isOutPath":false,"rootPath":"2","slug":"navigate","title":"导航栏"},{"currentPath":"2.1.2","depth":3,"isError":false,"isOutPath":false,"rootPath":"2","slug":"11","title":"交互反馈"},{"currentPath":"2.2","depth":2,"isError":false,"isOutPath":false,"parent":true,"rootPath":"2","slug":"#","title":"对象"},{"currentPath":"2.2.1","depth":3,"isError":false,"isOutPath":false,"rootPath":"2","slug":"objects.yufayanzhenglingbulingjiu","title":"预发验证"},{"currentPath":"2.2.2","depth":3,"isError":false,"isOutPath":false,"rootPath":"2","slug":"objects.fuzaduixianger","title":"复杂对象2"},{"currentPath":"2.2.3","depth":3,"isError":false,"isOutPath":false,"rootPath":"2","slug":"objects.quanjuduixiang.ceshi","title":"全局对象_测试"},{"currentPath":"2.2.4","depth":3,"isError":false,"isOutPath":false,"rootPath":"2","slug":"objects.aaaa","title":"时劼全局对象测试"},{"currentPath":"2.2.5","depth":3,"isError":false,"isOutPath":false,"rootPath":"2","slug":"objects.shijiepubobj","title":"shijiePubObj"}],"slug":"jsapi"},"multi-platform":{"name":"多端支持","pages":[{"currentPath":"1","depth":1,"isError":false,"isOutPath":false,"rootPath":"1","slug":"overview","title":"概述"},{"currentPath":"2","depth":1,"isError":false,"isOutPath":false,"rootPath":"2","slug":"common","title":"各端通用组件和API"},{"currentPath":"3","depth":1,"isError":false,"isOutPath":false,"rootPath":"3","slug":"extension","title":"各端扩展组件和API"}],"slug":"multi-platform"},"operation":{"name":"运营","pages":[{"currentPath":"1","depth":1,"isError":false,"isOutPath":false,"parent":true,"rootPath":"1","slug":"dprvr1","title":"支付宝小程序运营规范"},{"currentPath":"1.1","depth":2,"isError":false,"isOutPath":false,"rootPath":"1","slug":"check","title":"小程序审核规范"},{"currentPath":"1.2","depth":2,"isError":false,"isOutPath":false,"rootPath":"1","slug":"name","title":"小程序应用名称规范"},{"currentPath":"1.3","depth":2,"isError":false,"isOutPath":false,"rootPath":"1","slug":"reject","title":"审核驳回常见案例"},{"currentPath":"1.4","depth":2,"isError":false,"isOutPath":false,"rootPath":"1","slug":"material","title":"特殊行业所需资质材料"}],"slug":"operation"},"practice":{"name":"最佳实践","pages":[{"currentPath":"1","depth":1,"isError":false,"isOutPath":false,"rootPath":"1","slug":"exception","title":"异常处理"},{"currentPath":"2","depth":1,"isError":false,"isOutPath":false,"rootPath":"2","slug":"bluetooth","title":"蓝牙"}],"slug":"practice"}};
+      </script>
+    </script>
+    <script>
+    (function() {
+      !function(t,e,a,r,c){t.TracertCmdCache=t.TracertCmdCache||[],t[c]=window[c]||
+        {_isRenderInit:!0,call:function(){t.TracertCmdCache.push(arguments)},
+        start:function(t){this.call('start',t)}},t[c].l=new Date;
+        var n=e.createElement(a),s=e.getElementsByTagName(a)[0];
+        n.async=!0,n.src=r,s.parentNode.insertBefore(n,s)}
+    (window,document,'script','https://tracert.alipay.com/tracert.js','Tracert');
+      Tracert.start({
+        spmAPos: 'a316',
+        spmBPos: 'b4005',
+      });
+    })();
+    </script>
+  </head>
+  <body>
+    
+      <header class="header">
+    <img class="bg" src="https://gw.alipayobjects.com/zos/rmsportal/aDMCEriYtYEFAmxKfOqK.png"/>
+    <div class="header-content">
+        <div class="header-logo">
+            <div class="header-logo-inner">
+                <a class="openhome-logo-container" href="https://open.alipay.com/platform/home.htm">
+                    <img class="openhome-logo"
+                         src="https://gw.alipayobjects.com/zos/rmsportal/XQghYjcSfTOYIxmKtHou.png">
+                </a>
+
+                <a href="https://mini.open.alipay.com/channel/miniIndex.htm">
+                    <img class="miniapp-logo" src="https://gw.alipayobjects.com/zos/rmsportal/LaOIkkcIeAdszkTWSvek.png" >
+                </a>
+            </div>
+        </div>
+        <div id="header-user" class="header-user">
+            <div>
+                <a id="linktologin" href="https://open.alipay.com/channel/managerRoute.htm?channelType=mini">
+                    <img class="avatar" src="https://gw.alipayobjects.com/zos/rmsportal/zXBjZcJnRDMOCxVqNzOE.png"
+                         alt="">
+                </a>
+            </div>
+            <div id="userInfoDom" class="userInfo">
+                <div class="userInfo-content">
+                    <div id="userName"></div>
+                    <div id="email"></div>
+                </div>
+                <div class="userInfo-foot">
+                    <div>
+                        <a target="_blank" href="https://open.alipay.com:443/platform/accountSetting.htm"
+                           seed="userProfileOutlogin-accountLink" smartracker="on">账号管理</a>
+                    </div>
+                    <div>
+                        <a href="https://auth.alipay.com/login/logout.htm?goto=https://open.alipay.com:443/platform/home.htm"
+                           seed="userProfileOutlogin-logoutLink" smartracker="on">退出</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-nav small">
+            <ul>
+              <li>
+                <a href="./introduce">介绍</a>
+              </li>
+              
+              <li>
+                <a href="./design">设计</a>
+              </li>
+              
+              <li>
+                <a href="./developer/getting-started">开发</a>
+              </li>
+        
+              <li>
+                <a href="./data">数据</a>
+              </li>
+        
+              <li>
+                <a href="./operation">运营</a>
+              </li>
+        
+              <li>
+                <a href="./isv">第三方服务</a>
+              </li>
+              
+              <li>
+                <a href="https://openclub.alipay.com/index.php?m=bbs&c=thread&fid=51">社区</a>
+              </li>
+            </ul>
+        </div>
+        <div class="header-search">
+            <input id="head-search" type="text" value="" placeholder="请输入关键词搜索"/>
+            <div id="searchbtn" class="head-search-logo"></div>
+        </div>
+    </div>
+</header>
+
+      <div class="custom-navs" id="custom-navs">
+  <div class="custom-nav-header" id="custom-nav-header">
+      <div class="custom-nav-operate">
+          <button class="icon icon-search"></button>
+          <span class="icon-divider"></span>
+          <button class="icon icon-menu"></button>
+      </div>
+  </div>
+  <div class="custom-nav-drop">
+    <button class="icon icon-close"></button>
+    <ul class="custom-nav-lists">
+      
+      <li class="custom-nav-li">
+        <a href="https://mini.open.alipay.com/channel/miniIndex.htm">
+          首页
+        </a>
+      </li>
+      
+      <li class="custom-nav-li">
+        <a href="./introduce">介绍</a>
+      </li>
+      
+      <li class="custom-nav-li">
+        <a href="./design">设计</a>
+      </li>
+      
+      <li class="custom-nav-li">
+        <a href="./developer/getting-started">开发</a>
+      </li>
+
+      <li class="custom-nav-li">
+        <a href="./data">数据</a>
+      </li>
+
+      <li class="custom-nav-li">
+        <a href="./operation">运营</a>
+      </li>
+
+      <li class="custom-nav-li">
+        <a href="./isv">第三方服务</a>
+      </li>
+      
+      <li class="custom-nav-li">
+        <a href="https://openclub.alipay.com/index.php?m=bbs&c=thread&fid=51">社区</a>
+      </li>
+      
+    </ul>
+    
+  </div>
+  <div class="custom-nav-search">
+      <div class="custom-search-form">
+          <div class="custom-input-area">
+              <form action="javascript: return true;">
+                  <button class="icon icon-small-search"></button>
+                  <input type="search" class="custom-input" placeholder="请输入关键词搜索"/>
+                  <button class="icon icon-small-close"></button>
+              </form>
+          </div>
+          <button class="custom-cancel" type="reset">
+              取消
+          </button>
+      </div>
+  </div>
+</div>
+    
+    
+      <div class="page-title" id="subsite-nav">
+  <div class="container">
+    
+    <h1 class="logo">
+      <img src="https://gw.alipayobjects.com/zos/rmsportal/wdrKbZvhtQOnoGuuofic.png" />
+      <span class="tit">开发文档</span>
+      <span class="dpd"></span>
+    </h1>
+    
+  </div>
+</div>
+    
+    
+    <div class="wrapper miniapp miniapp-wrapper subsite">
+  <div class="container">
+    <div class="main-wrapper">
+      <div class="sidebar-wrapper">
+        <div class="sidebar" id="subsite-catalog"></div>
+      </div>
+
+      <div class="main-container">
+        <div class="breadcrumb">
+          <div id="anchor" class="anchor-toc"></div>
+        </div>
+
+        <div class="markdown">
+          
+            
+<h1 id="title">
+  概述
+</h1>
+<h3 id="基础组件"><a class="anchor" href="#%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6"><span class="octicon octicon-link"></span></a> 基础组件</h3>
+<p>小程序框架为开发者提供了一系列基础组件，开发者可以通过组合这些基础组件进行业务开发。</p>
+<h3 id="属性类型"><a class="anchor" href="#%E5%B1%9E%E6%80%A7%E7%B1%BB%E5%9E%8B"><span class="octicon octicon-link"></span></a> 属性类型</h3>
+<p>组件提供了一系列的属性配置，每个属性值都有类型要求：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">类型</th>
+<th style="text-align:left;">描述</th>
+<th style="text-align:left;">注释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">Boolean</td>
+<td style="text-align:left;">布尔值</td>
+<td style="text-align:left;"></td>
+</tr>
+<tr>
+<td style="text-align:left;">Number</td>
+<td style="text-align:left;">数字</td>
+<td style="text-align:left;"></td>
+</tr>
+<tr>
+<td style="text-align:left;">String</td>
+<td style="text-align:left;">字符串</td>
+<td style="text-align:left;"></td>
+</tr>
+<tr>
+<td style="text-align:left;">Array</td>
+<td style="text-align:left;">数组</td>
+<td style="text-align:left;"></td>
+</tr>
+<tr>
+<td style="text-align:left;">Object</td>
+<td style="text-align:left;">对象</td>
+<td style="text-align:left;"></td>
+</tr>
+<tr>
+<td style="text-align:left;">EventHandler</td>
+<td style="text-align:left;">事件处理函数</td>
+<td style="text-align:left;">需在<a href="https://docs.alipay.com/mini/framework/page" target="_blank" rel="noopener">Page</a>中定义事件处理函数名对应的实现</td>
+</tr>
+<tr>
+<td style="text-align:left;">any</td>
+<td style="text-align:left;">任意类型</td>
+<td style="text-align:left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="组件共有属性"><a class="anchor" href="#%E7%BB%84%E4%BB%B6%E5%85%B1%E6%9C%89%E5%B1%9E%E6%80%A7"><span class="octicon octicon-link"></span></a> 组件共有属性</h3>
+<p>所有的组件包含以下属性：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">属性名</th>
+<th style="text-align:left;">类型</th>
+<th style="text-align:left;">描述</th>
+<th style="text-align:left;">注解</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">id</td>
+<td style="text-align:left;">String</td>
+<td style="text-align:left;">组件的唯一标识</td>
+<td style="text-align:left;"></td>
+</tr>
+<tr>
+<td style="text-align:left;">class</td>
+<td style="text-align:left;">String</td>
+<td style="text-align:left;">样式类</td>
+<td style="text-align:left;"></td>
+</tr>
+<tr>
+<td style="text-align:left;">style</td>
+<td style="text-align:left;">String</td>
+<td style="text-align:left;">内联样式</td>
+<td style="text-align:left;"></td>
+</tr>
+<tr>
+<td style="text-align:left;">data-*</td>
+<td style="text-align:left;">Any</td>
+<td style="text-align:left;">自定义属性</td>
+<td style="text-align:left;">当事件触发时，会将自定义属性传递给事件处理函数</td>
+</tr>
+<tr>
+<td style="text-align:left;">on* / catch*</td>
+<td style="text-align:left;">EventHandler</td>
+<td style="text-align:left;">事件绑定，遵循驼峰命名规范，例如<code>onTap</code>、<code>onClick</code></td>
+<td style="text-align:left;">参考<a href="https://docs.alipay.com/mini/framework/events" target="_blank" rel="noopener">事件</a></td>
+</tr>
+</tbody>
+</table>
+
+          
+        </div>
+
+        <div id="pagination-position" class="pagination-wrapper">
+            <div id="pagination" class="pagination"></div>
+        </div>
+
+        <div class="body-action-fixed">
+          <a class="feedback" href="https://opensupport.alipay.com/support/home.htm" target="_blank">咨询反馈</a>
+          <div id="scroll-top"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+    
+    
+    <div class="common-footer" id="footer">
+  <div class="common-footer-content">
+    <div class="common-footer-nav">
+      <ul>
+        <li>
+          <a href="https://www.antfin.com/">关于蚂蚁金服</a>
+        </li>
+        <li>
+          <a href="https://job.alibaba.com/index.php">诚征英才</a>
+        </li>
+        <li>
+          <a href="https://ab.alipay.com/i/lianxi.htm">联系我们</a>
+        </li>
+        <li>
+          <a href="https://open.alipay.com/platform/home.htm">开放平台</a>
+        </li>
+        <li>
+          <a href="https://global.alipay.com/">International  Business</a>
+        </li>
+        <li>
+          <a href="https://www.antfin.com/introduction.htm?locale=en_US">About Alipay</a>
+        </li>
+      </ul>
+    </div>
+    <div class="common-footer-copyright">
+      <span>Copyright @ 2018 蚂蚁金融服务集团</span>
+      <span>ICP证浙B2-2-100257</span>
+    </div>
+  </div>
+</div>
+
+
+<div id="zoom-img"></div>
+<script>
+var ISHOME =  false ;
+var SITE_SLUG = "mini";
+var SECTION = "component";
+var SLUG = "overview";
+</script>
+<script src="https://gw.alipayobjects.com/os/skylark-tools/XwyiWpjFTMcpnVneGoAj.js"></script>
+<script src="https://gw.alipayobjects.com/os/skylark-tools/ZlIrMcxcOIIohrEgNDKC.js"></script>
+<script src="https://gw.alipayobjects.com/os/skylark-tools/GMhUcaTGkcVawMlITurx.js"></script>
+<script src="https://gw.alipayobjects.com/os/skylark-tools/SihMyljbIfRVjDewosbW.js"></script>
+<script src="https://gw.alipayobjects.com/os/skylark-tools/pvDZeQTdIaDVzzPpjCbr.js"></script>
+
+<script src="https://s13.cnzz.com/z_stat.php?id=1263339510&web_id=1263339510"></script>
+
+  </body>
+</html>

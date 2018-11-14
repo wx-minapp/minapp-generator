@@ -56,7 +56,8 @@ function wrapCmd(key: string, cmd: ((res: any, iterator: any) => any)) {
     if (res._.length === 1) process.env.WRITE_DEBUG_HTML = '1'
 
     const content: string = await rp(key === 'api' ? C.URL.BASE_API : C.URL.BASE_TPL)
-    let regexp = /<li class="[^"]*" data-level="([^"]*)" data-path="([^"]*)" data-name="([^"]*)">/g
+    // li class="chapter" data-level="1.3.8.1" data-path=./open-data.html data-name="open-data"
+    let regexp = /<li class="[^"]*" data-level="([^"]*)" data-path="?([^" ]*)"? data-name="([^"]*)">/g
 
     // 解析微信文档的导航，获取所有节点
     matchAll(content, regexp, mat => new Node(mat[1], mat[2], mat[3]))

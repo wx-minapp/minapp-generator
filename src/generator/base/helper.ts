@@ -27,7 +27,6 @@ export function info(...args: any[]) {
 export function matchAll(content: string, regexp: RegExp, cb: (mat: RegExpMatchArray) => void) {
   let mat: RegExpMatchArray | null = regexp.exec(content)
   let result: string[][] = []
-
   while (mat) {
     cb(mat)
     mat = regexp.exec(content)

@@ -1,0 +1,3254 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <title>
+         
+            视图容器 - 
+        
+        开发
+    </title>
+    <link rel="dns-prefetch" href="//smartprogram.baidu.com">
+    <link rel="shortcut icon" href="https://www.baidu.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/docs/css/base.css">
+    <link rel="stylesheet" href="/docs/css/header.css">
+    <link rel="stylesheet" href="/docs/css/sidebar.css">
+    <link rel="stylesheet" href="/docs/css/article.css">
+    <link rel="stylesheet" href="/docs/css/code.css">
+    <link rel="stylesheet" href="/docs/css/custom.css">
+</head>
+<body>
+
+    <header>
+    <a href="javascript:void(0)" class="m-doc-nav-btn"></a>
+    <div class="m-mobile-doc-level1"><div class="m-mobile-level1-selected"><span>开发</span><img src="/docs/img/level1_arrow.png"/></div><ul><li ><a href="/docs/introduction/enter_application/">介绍</a></li><li ><a href="/docs/design/overview/introduction/">设计</a></li><li  class="m-doc-header-nav-selected" ><a href="/docs/develop/tutorial/codedir/">开发</a></li><li ><a href="/docs/data/concept/">数据</a></li><li ><a href="/docs/operations/specification/">运营</a></li></ul>
+        <div class="m-mobile-doc-header-list-mask"></div>
+    </div>
+    <div class="m-doc-logo-wrapper">
+        <a href="/" class="m-doc-logo">
+            <img src="/docs/img/logo.png"/>
+        </a>
+    </div>
+    <div class="m-doc-level1">
+        <ul><li ><a href="/docs/introduction/enter_application/">介绍</a></li><li ><a href="/docs/design/overview/introduction/">设计</a></li><li  class="m-doc-header-nav-selected" ><a href="/docs/develop/tutorial/codedir/">开发</a></li><li ><a href="/docs/data/concept/">数据</a></li><li ><a href="/docs/operations/specification/">运营</a></li></ul>
+        <div class="m-doc-crumbs-wrapper"><span></span><span></span><span></span></div>
+    </div>
+
+    <div class="top-search-box" id="top-search-box">
+    <form>
+    <div class="search-btn"></div>
+    <input autocomplete="off" type="text" id="local-search-input" name="q" results="0" placeholder="搜索" class="st-search-input st-default-search-input form-control"/>
+    <button type="reset" class="reset-search-btn"></button>  
+    </form>
+</div></header>
+    <div class="m-doc-sidebar-mask"></div>
+<div class="m-doc-sidebar-nav-wrapper">
+    <ul>
+        
+            <li  data-name="tutorial">
+                <div class="m-doc-nav-list" href="/docs/develop/tutorial/codedir">
+                    <img src="/docs/img/level1_arrow.png" />
+                    <span>简易教程</span>
+                </div>
+                <ul class="m-doc-nav-children">
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                                <div class="m-doc-h1-list">
+                                    <img src="/docs/img/level1_arrow.png" />
+                                    <div>第一个智能小程序</div>
+                                </div>
+                            
+                            
+                            <ul class="m-doc-h1-children" >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/tutorial/codedir/">智能小程序介绍</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/tutorial/index/">申请帐号</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/tutorial/index_first/">你的第一个智能小程序</a>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                                <div class="m-doc-h1-list">
+                                    <img src="/docs/img/level1_arrow.png" />
+                                    <div>全局配置</div>
+                                </div>
+                            
+                            
+                            <ul class="m-doc-h1-children" >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/tutorial/process_page/">配置界面、路径</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/tutorial/process_data/">配置全局数据</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/tutorial/process_life/">SWAN 生命周期</a>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                                <div class="m-doc-h1-list">
+                                    <img src="/docs/img/level1_arrow.png" />
+                                    <div>页面开发</div>
+                                </div>
+                            
+                            
+                            <ul class="m-doc-h1-children" >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/tutorial/dev_start/">智能小程序的启动</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/tutorial/dev_swan/">SWAN 视图</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/tutorial/dev_css/">CSS 与 JS</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/tutorial/page_conf/">页面配置</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/tutorial/dev_route/">页面路由</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/tutorial/dev_page/">Page</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/tutorial/dev_con/">组件</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/tutorial/dev_api/">API</a>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                                <div class="m-doc-h1-list">
+                                    <img src="/docs/img/level1_arrow.png" />
+                                    <div>SWAN 版本信息</div>
+                                </div>
+                            
+                            
+                            <ul class="m-doc-h1-children" >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/tutorial/version/">版本分布</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/tutorial/shine/">与客户端版本映射关系</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/tutorial/compatibility/">兼容性说明</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/tutorial/swanchangelog/">历史更新日志</a>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            <li  data-name="framework">
+                <div class="m-doc-nav-list" href="/docs/develop/framework/app_service_register">
+                    <img src="/docs/img/level1_arrow.png" />
+                    <span>框架</span>
+                </div>
+                <ul class="m-doc-nav-children">
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                                <div class="m-doc-h1-list">
+                                    <img src="/docs/img/level1_arrow.png" />
+                                    <div>逻辑层</div>
+                                </div>
+                            
+                            
+                            <ul class="m-doc-h1-children" >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/framework/app_service/">方法说明</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/framework/app_service_register/">注册程序</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/framework/app_service_register/#App/">App</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/framework/app_service_register/#getApp/">getApp</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/framework/app_service_page/">注册页面</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/framework/app_service_page/#Page/">Page</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/framework/app_service_page/#初始化数据/">初始化数据</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/framework/app_service_getcurrentpages/">页面路由</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/framework/app_service_getcurrentpages/#页面栈/">页面栈</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/framework/app_service_getcurrentpages/#getCurrentPages/">getCurrentPages</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/framework/app_service_getcurrentpages/#路由方式/">路由方式</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/framework/app_service_getcurrentpages/#文件作用域/">文件作用域</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/framework/app_service_getcurrentpages/#模块化/">模块化</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                                <div class="m-doc-h1-list">
+                                    <img src="/docs/img/level1_arrow.png" />
+                                    <div>视图层</div>
+                                </div>
+                            
+                            
+                            <ul class="m-doc-h1-children" >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/framework/view_data/">数据绑定</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/framework/view_for/">循环</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/framework/view_if/">条件</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/framework/view_template/">模板</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/framework/view_incident/">事件处理</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/framework/view_quote/">引用</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/framework/view_filter/">Filter过滤器</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/framework/view_css/">CSS</a>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                                <div class="m-doc-h1-list">
+                                    <img src="/docs/img/level1_arrow.png" />
+                                    <div>自定义组件</div>
+                                </div>
+                            
+                            
+                            <ul class="m-doc-h1-children" >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/framework/custom-component/">创建自定义组件</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/framework/custom-component_temp/">组件模板和样式</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/framework/custom-component_comp/">Component构造器</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/framework/custom-component_cont/">组件间通信与事件</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/framework/custom-component_behaviors/">behaviors</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/framework/custom-component_extend/">自定义组件扩展</a>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                                <div class="m-doc-h1-list">
+                                    <img src="/docs/img/level1_arrow.png" />
+                                    <div>基础性能</div>
+                                </div>
+                            
+                            
+                            <ul class="m-doc-h1-children" >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/framework/subpackages/">分包加载</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/framework/client-lib/">基础库</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/framework/operating-mechanism/">运行机制</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/framework/performance-analysis-tool/">性能分析工具</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/framework/performance-tips/">性能优化建议</a>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            <li  class="m-doc-nav-on"  data-name="component">
+                <div class="m-doc-nav-list" href="/docs/develop/component/view">
+                    <img src="/docs/img/level1_arrow.png" />
+                    <span>组件</span>
+                </div>
+                <ul class="m-doc-nav-children">
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                            
+                            <ul  class="m-doc-h1-children m-doc-h1-noh1"  >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/component/native/">原生组件说明</a>
+                                    
+                                </li>
+                                
+                                <li  class="m-doc-sidebar-selected" >
+                                    <a class="m-doc-h2-list" href="/docs/develop/component/view/">视图容器</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/component/view/#view/">view</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/component/view/#scroll-view/">scroll-view</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/component/view/#swiper/">swiper</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/component/view/#movable-area/">movable-area</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/component/view/#cover-view/">cover-view</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/component/view/#cover-image/">cover-image</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                            
+                            <ul  class="m-doc-h1-children m-doc-h1-noh1"  >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/component/base/">基础内容</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/component/base/#icon/">icon</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/component/base/#text/">text</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/component/base/#rich-text/">rich-text</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/component/base/#progress/">progress</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/component/base/#animation-view/">animation-view</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                            
+                            <ul  class="m-doc-h1-children m-doc-h1-noh1"  >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/component/formlist/">表单组件</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/component/formlist/#button/">button</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/component/formlist/#checkbox/">checkbox</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/component/formlist/#form/">form</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/component/formlist/#input/">input</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/component/formlist/#label/">label</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/component/formlist/#picker/">picker</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/component/formlist/#radio/">radio</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/component/formlist/#slider/">slider</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/component/formlist/#switch/">switch</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/component/formlist/#textarea/">textarea</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                            
+                            <ul  class="m-doc-h1-children m-doc-h1-noh1"  >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/component/nav/">导航</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/component/nav/#navigator/">navigator</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                            
+                            <ul  class="m-doc-h1-children m-doc-h1-noh1"  >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/component/media/">媒体组件</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/component/media/#audio/">audio</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/component/media/#image/">image</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/component/media/#video/">video</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/component/media/#camera/">camera</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/component/media/#live-player/">live-player</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                            
+                            <ul  class="m-doc-h1-children m-doc-h1-noh1"  >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/component/map/">地图</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/component/map/#map/">map</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                            
+                            <ul  class="m-doc-h1-children m-doc-h1-noh1"  >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/component/canvas/">画布</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/component/canvas/#canvas/">canvas</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                            
+                            <ul  class="m-doc-h1-children m-doc-h1-noh1"  >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/component/open/">开放能力</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/component/open/#open-data/">open-data</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/component/open/#web-view/">web-view</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            <li  data-name="api">
+                <div class="m-doc-nav-list" href="/docs/develop/api/net_request">
+                    <img src="/docs/img/level1_arrow.png" />
+                    <span>API</span>
+                </div>
+                <ul class="m-doc-nav-children">
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                                <div class="m-doc-h1-list">
+                                    <img src="/docs/img/level1_arrow.png" />
+                                    <div>网络</div>
+                                </div>
+                            
+                            
+                            <ul class="m-doc-h1-children" >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/net_rule/">使用注意事项</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/net_request/">请求</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/net_request/#request/">request</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/net_uploadfile/">上传、下载</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/net_uploadfile/#uploadFile/">uploadFile</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/net_uploadfile/#downloadFile/">downloadFile</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/net_websocket/">WebSocket</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/net_websocket/#connectSocket/">connectSocket</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/net_websocket/#onSocketOpen/">onSocketOpen</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/net_websocket/#onSocketError/">onSocketError</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/net_websocket/#sendSocketMessage/">sendSocketMessage</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/net_websocket/#onSocketMessage/">onSocketMessage</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/net_websocket/#closeSocket/">closeSocket</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/net_websocket/#onSocketClose/">onSocketClose</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/net_websocket/#SocketTask/">SocketTask</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                                <div class="m-doc-h1-list">
+                                    <img src="/docs/img/level1_arrow.png" />
+                                    <div>AI</div>
+                                </div>
+                            
+                            
+                            <ul class="m-doc-h1-children" >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/ai/">接入说明</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/ai_ocr/">文字识别</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/ai_ocr/#ocrIdCard/">ocrIdCard</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/ai_ocr/#ocrBankCard/">ocrBankCard</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/ai_ocr/#ocrDrivingLicense/">ocrDrivingLicense</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/ai_ocr/#ocrVehicleLicense/">ocrVehicleLicense</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/ai_text/">文本审核</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/ai_text/#textReview/">textReview</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/ai_audio/">语音合成</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/ai_audio/#textToAudio/">textToAudio</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/ai_audit/">图像审核</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/ai_audit/#imageAudit/">imageAudit</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/ai_classify/">图像识别</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/ai_classify/#advancedGeneralIdentify/">advancedGeneralIdentify</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/ai_classify/#objectDetectIdentify/">objectDetectIdentify</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/ai_classify/#carClassify/">carClassify</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/ai_classify/#dishClassify/">dishClassify</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/ai_classify/#logoClassify/">logoClassify</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/ai_classify/#animalClassify/">animalClassify</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/ai_classify/#plantClassify/">plantClassify</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/ai_voice/">语音识别</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/ai_voice/#getVoiceRecognizer/">getVoiceRecognizer</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                                <div class="m-doc-h1-list">
+                                    <img src="/docs/img/level1_arrow.png" />
+                                    <div>媒体</div>
+                                </div>
+                            
+                            
+                            <ul class="m-doc-h1-children" >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/media_image/">图片</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/media_image/#chooseImage/">chooseImage</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/media_image/#previewImage/">previewImage</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/media_image/#getImageInfo/">getImageInfo</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/media_image/#saveImageToPhotosAlbum/">saveImageToPhotosAlbum</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/media_recorder/">录音管理</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/media_recorder/#getRecorderManager/">getRecorderManager</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/media_backgroundaudiomanager/">背景音频管理播放</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/media_backgroundaudiomanager/#getBackgroundAudioManager/">getBackgroundAudioManager</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/media_createinneraudiocontext/">音频组件控制</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/media_createinneraudiocontext/#createInnerAudioContext/">createInnerAudioContext</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/media_video/">视频</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/media_video/#chooseVideo/">chooseVideo</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/media_video/#saveVideoToPhotosAlbum/">saveVideoToPhotosAlbum</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/media_videocontext/">视频组件控制</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/media_videocontext/#createVideoContext/">createVideoContext</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/media_liveplayercontext/">直播组件控制</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/media_liveplayercontext/#createLivePlayerContext/">createLivePlayerContext</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/media_cameracontext/">相机组件控制</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/media_cameracontext/#createCameraContext/">createCameraContext</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                                <div class="m-doc-h1-list">
+                                    <img src="/docs/img/level1_arrow.png" />
+                                    <div>文件</div>
+                                </div>
+                            
+                            
+                            <ul class="m-doc-h1-children" >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/file_save/">保存、获取文件</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/file_save/#saveFile/">saveFile</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/file_save/#getFileInfo/">getFileInfo</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/file_save/#getSavedFileList/">getSavedFileList</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/file_save/#getSavedFileInfo/">getSavedFileInfo</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/file_remove/">删除文件</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/file_remove/#removeSavedFile/">removeSavedFile</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/file_open/">打开新的文件页面</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/file_open/#openDocument/">openDocument</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                                <div class="m-doc-h1-list">
+                                    <img src="/docs/img/level1_arrow.png" />
+                                    <div>数据存储</div>
+                                </div>
+                            
+                            
+                            <ul class="m-doc-h1-children" >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/storage_save/">存储数据</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/storage_save/#setStorage/">setStorage</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/storage_save/#setStorageSync/">setStorageSync</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/storage_save/#getStorage/">getStorage</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/storage_save/#getStorageSync/">getStorageSync</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/storage_save/#getStorageInfo/">getStorageInfo</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/storage_save/#getStorageInfoSync/">getStorageInfoSync</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/storage_remove/">存储清理</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/storage_remove/#removeStorage/">removeStorage</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/storage_remove/#removeStorageSync/">removeStorageSync</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/storage_remove/#clearStorage/">clearStorage</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/storage_remove/#clearStorageSync/">clearStorageSync</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                                <div class="m-doc-h1-list">
+                                    <img src="/docs/img/level1_arrow.png" />
+                                    <div>位置</div>
+                                </div>
+                            
+                            
+                            <ul class="m-doc-h1-children" >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/location_get/">获取位置</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/location_get/#getLocation/">getLocation</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/location_get/#chooseLocation/">chooseLocation</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/location_open/">查看位置</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/location_open/#openLocation/">openLocation</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/location_map/">地图组件控制</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/location_map/#createMapContext/">createMapContext</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                                <div class="m-doc-h1-list">
+                                    <img src="/docs/img/level1_arrow.png" />
+                                    <div>界面</div>
+                                </div>
+                            
+                            
+                            <ul class="m-doc-h1-children" >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/show_canvas/">绘图</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#坐标系/">坐标系</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#createCanvasContext/">createCanvasContext</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasToTempFilePath-OBJECT-this/">canvasToTempFilePath(OBJECT, this)</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-setFillStyle/">canvasContext.setFillStyle</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-setStrokeStyle/">canvasContext.setStrokeStyle</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-setShadow/">canvasContext.setShadow</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-createLinearGradient/">canvasContext.createLinearGradient</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-createCircularGradient/">canvasContext.createCircularGradient</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-addColorStop/">canvasContext.addColorStop</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-setLineWidth/">canvasContext.setLineWidth</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-setLineCap/">canvasContext.setLineCap</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-setLineJoin/">canvasContext.setLineJoin</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-setLineDash/">canvasContext.setLineDash</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-setMiterLimit/">canvasContext.setMiterLimit</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-rect/">canvasContext.rect</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-fillRect/">canvasContext.fillRect</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-strokeRect/">canvasContext.strokeRect</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-clearRect/">canvasContext.clearRect</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-fill/">canvasContext.fill</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-stroke/">canvasContext.stroke</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-beginPath/">canvasContext.beginPath</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-closePath/">canvasContext.closePath</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-moveTo/">canvasContext.moveTo</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-lineTo/">canvasContext.lineTo</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-arc/">canvasContext.arc</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-scale/">canvasContext.scale</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-rotate/">canvasContext.rotate</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-translate/">canvasContext.translate</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-clip/">canvasContext.clip</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-setFontSize/">canvasContext.setFontSize</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-fillText/">canvasContext.fillText</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-setTextAlign/">canvasContext.setTextAlign</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-setTextBaseline/">canvasContext.setTextBaseline</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-drawImage/">canvasContext.drawImage</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-setGlobalAlpha/">canvasContext.setGlobalAlpha</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-measureText/">canvasContext.measureText</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-arcTo/">canvasContext.arcTo</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-strokeText/">canvasContext.strokeText</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-setLineDashOffset/">canvasContext.setLineDashOffset</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-createPattern/">canvasContext.createPattern</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-bezierCurveTo/">canvasContext.bezierCurveTo</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-quadraticCurveTo/">canvasContext.quadraticCurveTo</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-save/">canvasContext.save</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-restore/">canvasContext.restore</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-draw/">canvasContext.draw</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-font/">canvasContext.font</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_canvas/#canvasContext-setTransform/">canvasContext.setTransform</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/show_toast/">交互反馈</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_toast/#showToast/">showToast</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_toast/#showLoading/">showLoading</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_toast/#hideToast/">hideToast</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_toast/#hideLoading/">hideLoading</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_toast/#showModal/">showModal</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_toast/#showActionSheet/">showActionSheet</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/show_navigationbar/">导航栏</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_navigationbar/#setNavigationBarTitle/">setNavigationBarTitle</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_navigationbar/#showNavigationBarLoading/">showNavigationBarLoading</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_navigationbar/#hideNavigationBarLoading/">hideNavigationBarLoading</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_navigationbar/#setNavigationBarColor/">setNavigationBarColor</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/show_tabbar/">设置tabBar</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_tabbar/#setTabBarBadge/">setTabBarBadge</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_tabbar/#removeTabBarBadge/">removeTabBarBadge</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_tabbar/#showTabBarRedDot/">showTabBarRedDot</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_tabbar/#hideTabBarRedDot/">hideTabBarRedDot</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_tabbar/#setTabBarStyle/">setTabBarStyle</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_tabbar/#setTabBarItem/">setTabBarItem</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_tabbar/#showTabBar/">showTabBar</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_tabbar/#hideTabBar/">hideTabBar</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/show_tab/">导航</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_tab/#navigateTo/">navigateTo</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_tab/#redirectTo/">redirectTo</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_tab/#switchTab/">switchTab</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_tab/#navigateBack/">navigateBack</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_tab/#reLaunch/">reLaunch</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/show_createanimation/">动画</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_createanimation/#createAnimation/">createAnimation</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_createanimation/#animation/">animation</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/show_pagescrollto/">位置</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_pagescrollto/#pageScrollTo/">pageScrollTo</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/show_pull/">下拉刷新</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_pull/#onPullDownRefresh/">onPullDownRefresh</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_pull/#startPullDownRefresh/">startPullDownRefresh</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_pull/#stopPullDownRefresh/">stopPullDownRefresh</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/show_query/">节点信息</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_query/#createIntersectionObserver-this-options/">createIntersectionObserver</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_query/#IntersectionObserver/">IntersectionObserver</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_query/#IntersectionObserver-relativeTo-selector-margins/">IntersectionObserver.relativeTo</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_query/#IntersectionObserver-relativeToViewport-margins/">IntersectionObserver.relativeToViewport</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_query/#IntersectionObserver-observe-targetSelector-callback/">IntersectionObserver.observe</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_query/#IntersectionObserver-disconnect/">IntersectionObserver.disconnect</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_query/#createSelectorQuery/">createSelectorQuery</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_query/#selectorQuery/">selectorQuery</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_query/#selectorQuery-in-component/">selectorQuery.in(component)</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_query/#selectorQuery-select-selector/">selectorQuery.select(selector)</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_query/#selectorQuery-selectAll-selector/">selectorQuery.selectAll(selector)</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_query/#selectorQuery-selectViewport/">selectorQuery.selectViewport()</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_query/#nodesRef-boundingClientRect-callback/">nodesRef.boundingClientRect([callback])</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_query/#nodesRef-scrollOffset-callback/">nodesRef.scrollOffset([callback])</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_query/#nodesRef-fields-fields-callback/">nodesRef.fields(fields,[callback])</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/show_query/#selectorQuery-exec-callback/">selectorQuery.exec([callback])</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                                <div class="m-doc-h1-list">
+                                    <img src="/docs/img/level1_arrow.png" />
+                                    <div>设备</div>
+                                </div>
+                            
+                            
+                            <ul class="m-doc-h1-children" >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/device_sys/">系统信息</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/device_sys/#getSystemInfo/">getSystemInfo</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/device_sys/#getSystemInfoSync/">getSystemInfoSync</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/device_sys/#canIUse/">canIUse</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/device_onmemory/">内存</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/device_onmemory/#onMemoryWarning/">onMemoryWarning</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/device_network/">网络状态</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/device_network/#getNetworkType/">getNetworkType</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/device_network/#onNetworkStatusChange/">onNetworkStatusChange</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/device_accelerometer/">加速度计</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/device_accelerometer/#onAccelerometerChange/">onAccelerometerChange</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/device_accelerometer/#startAccelerometer/">startAccelerometer</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/device_accelerometer/#stopAccelerometer/">stopAccelerometer</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/device_compass/">罗盘</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/device_compass/#onCompassChange/">onCompassChange</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/device_compass/#startCompass/">startCompass</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/device_compass/#stopCompass/">stopCompass</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/device_scan/">扫码</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/device_scan/#scanCode/">scanCode</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/device_screen/">屏幕亮度</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/device_screen/#setScreenBrightness/">setScreenBrightness</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/device_screen/#getScreenBrightness/">getScreenBrightness</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/device_screen/#setKeepScreenOn/">setKeepScreenOn</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/device_capture/">用户截屏事件</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/device_capture/#onUserCaptureScreen/">onUserCaptureScreen</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/device_vibrate/">振动</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/device_vibrate/#vibrateLong/">vibrateLong</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/device_vibrate/#vibrateShort/">vibrateShort</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/device_phonecontact/">手机联系人</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/device_phonecontact/#addPhoneContact/">addPhoneContact</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/device_call/">拨打电话</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/device_call/#makePhoneCall/">makePhoneCall</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/device_clipboard/">剪贴板</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/device_clipboard/#setClipboardData/">setClipboardData</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/device_clipboard/#getClipboardData/">getClipboardData</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                                <div class="m-doc-h1-list">
+                                    <img src="/docs/img/level1_arrow.png" />
+                                    <div>第三方平台</div>
+                                </div>
+                            
+                            
+                            <ul class="m-doc-h1-children" >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/getextconfig/">获取第三方平台数据</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/getextconfig/#getExtConfig/">getExtConfig</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/getextconfig/#getExtConfigSync/">getExtConfigSync</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                                <div class="m-doc-h1-list">
+                                    <img src="/docs/img/level1_arrow.png" />
+                                    <div>开放接口</div>
+                                </div>
+                            
+                            
+                            <ul class="m-doc-h1-children" >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/open_log/">登录</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/open_log/#授权流程说明/">授权流程说明</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/open_log/#login/">login</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/open_log/#Session-Key/">Session Key</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/open_log/#checkSession/">checkSession</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/open_log/#isLoginSync/">isLoginSync</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/open_log/#用户数据的签名验证和加解密/">用户数据的签名验证和加解密</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/open_authorize/">授权</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/open_authorize/#authorize/">authorize</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/open_userinfo/">用户信息</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/open_userinfo/#getSwanId/">getSwanId</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/open_userinfo/#getUserInfo/">getUserInfo</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/open_setting/">设置</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/open_setting/#openSetting/">openSetting</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/open_setting/#getSetting/">getSetting</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/open_share/">分享</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/open_share/#onShareAppMessage/">onShareAppMessage</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/open_share/#openShare/">openShare</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/open_chooseaddress/">选择收货地址</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/open_chooseaddress/#chooseAddress/">chooseAddress</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/open_payment/">百度收银台支付</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/open_payment/#requestPolymerPayment/">requestPolymerPayment</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/open_chooseinvoicetitle/">获取发票抬头</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/open_chooseinvoicetitle/#chooseInvoiceTitle/">chooseInvoiceTitle</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/open_smartprogram/">打开小程序</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/open_smartprogram/#navigateToSmartProgram/">navigateToSmartProgram</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/open_smartprogram/#navigateBackSmartProgram/">navigateBackSmartProgram</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/open_infomation/">消息模板</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/open_infomation/#getTemplateLibraryList/">getTemplateLibraryList</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/open_infomation/#getTemplateLibraryById/">getTemplateLibraryById</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/open_infomation/#addTemplate/">addTemplate</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/open_infomation/#getTemplateList/">getTemplateList</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/open_infomation/#deleteTemplate/">deleteTemplate</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/open_infomation/#sendTemplateMessage/">sendTemplateMessage</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/seo/">配置seo</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/seo/#setMetaDescription/">setMetaDescription</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/seo/#setMetaKeywords/">setMetaKeywords</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/seo/#setDocumentTitle/">setDocumentTitle</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/open_preloadsubpackage/">分包预下载</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/open_preloadsubpackage/#loadSubPackage/">loadSubPackage</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/open_feed/">信息流资源</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/open_feed/#submitresource/">submitresource</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/open_feed/#deleteresource/">deleteresource</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/open_feed/#submitsitemap/">submitsitemap</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/open_feed/#deletesitemap/">deletesitemap</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                            
+                            <ul  class="m-doc-h1-children m-doc-h1-noh1"  >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/get/">更新</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/get/#getUpdateManager/">getUpdateManager</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                            
+                            <ul  class="m-doc-h1-children m-doc-h1-noh1"  >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/debug/">调试</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/debug/#setEnableDebug/">setEnableDebug</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                            
+                            <ul  class="m-doc-h1-children m-doc-h1-noh1"  >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/api/data/">数据分析</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/api/data/#reportAnalytics/">reportAnalytics</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            <li  data-name="devtools">
+                <div class="m-doc-nav-list" href="/docs/develop/devtools/show_sur">
+                    <img src="/docs/img/level1_arrow.png" />
+                    <span>工具</span>
+                </div>
+                <ul class="m-doc-nav-children">
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                                <div class="m-doc-h1-list">
+                                    <img src="/docs/img/level1_arrow.png" />
+                                    <div>界面</div>
+                                </div>
+                            
+                            
+                            <ul class="m-doc-h1-children" >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/devtools/show_sur/">界面概述</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/devtools/show_dev/">智能小程序开发调试主页</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/devtools/show_short/">快捷键</a>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                                <div class="m-doc-h1-list">
+                                    <img src="/docs/img/level1_arrow.png" />
+                                    <div>调试</div>
+                                </div>
+                            
+                            
+                            <ul class="m-doc-h1-children" >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/devtools/smartappdebug_function/">常用功能</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/devtools/smartappdebug_function/#模拟器/">模拟器</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/devtools/smartappdebug_function/#编译/">编译</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/devtools/smartappdebug_function/#前后台切换/">前后台切换</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/devtools/smartappdebug_function/#调试器/">调试器</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/devtools/smartappdebug_tool/">调试工具</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/devtools/smartappdebug_tool/#Swan-panel/">Swan panel</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/devtools/smartappdebug_tool/#Sources-panel/">Sources panel</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/devtools/smartappdebug_tool/#Network-panel/">Network panel</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/devtools/smartappdebug_tool/#Console-panel/">Console panel</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/devtools/smartappdebug_tool/#Storage-panel/">Storage panel</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/devtools/smartappdebug_tool/#App-data-panel/">App data panel</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/devtools/smartappdebug_tool/#Sensors-panel/">Sensors panel</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/devtools/smartappdebug_pre/">预览发布</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/debug/remoterelease/">真机调试</a>
+                                    
+                                    <ul class="m-doc-h2-children">
+                                        
+                                            <li >
+                                                <a href="/docs/develop/debug/remoterelease/#使用开发者工具进行真机调试/">使用开发者工具进行真机调试</a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="/docs/develop/debug/remoterelease/#使用控制台进行真机调试/">使用控制台进行真机调试</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/debug/remotedebugging/">远程调试</a>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                                <div class="m-doc-h1-list">
+                                    <img src="/docs/img/level1_arrow.png" />
+                                    <div>配置文件及差异</div>
+                                </div>
+                            
+                            
+                            <ul class="m-doc-h1-children" >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/devtools/projectconfig/">项目配置文件</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/devtools/diff/">模拟器 API 与真机的实现差异</a>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                                <div class="m-doc-h1-list">
+                                    <img src="/docs/img/level1_arrow.png" />
+                                    <div>工具历史更新日志</div>
+                                </div>
+                            
+                            
+                            <ul class="m-doc-h1-children" >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/devtools/uplog_tool/">开发者工具历史更新日志</a>
+                                    
+                                </li>
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/devtools/uplog_compile/">编译工具历史更新日志</a>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            <li  data-name="server">
+                <div class="m-doc-nav-list" href="/docs/develop/server/oauth_intr">
+                    <img src="/docs/img/level1_arrow.png" />
+                    <span>开放服务</span>
+                </div>
+                <ul class="m-doc-nav-children">
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                                <div class="m-doc-h1-list">
+                                    <img src="/docs/img/level1_arrow.png" />
+                                    <div>开发者服务相关接口</div>
+                                </div>
+                            
+                            
+                            <ul class="m-doc-h1-children" >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/server/power_exp/">开发者服务权限说明</a>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            <li  data-name="third">
+                <div class="m-doc-nav-list" href="/docs/develop/server/oauth_intr">
+                    <img src="/docs/img/level1_arrow.png" />
+                    <span>第三方接入</span>
+                </div>
+                <ul class="m-doc-nav-children">
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                            
+                            <ul  class="m-doc-h1-children m-doc-h1-noh1"  >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/third/pro/">授权流程</a>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                            
+                            <ul  class="m-doc-h1-children m-doc-h1-noh1"  >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/third/module/">模板管理</a>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                            
+                            <ul  class="m-doc-h1-children m-doc-h1-noh1"  >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/third/apppage/">小程序包管理</a>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                            
+                            <ul  class="m-doc-h1-children m-doc-h1-noh1"  >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/third/info/">基础信息设置</a>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                            
+                            <ul  class="m-doc-h1-children m-doc-h1-noh1"  >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/third/upload/">图片上传</a>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                            
+                            <ul  class="m-doc-h1-children m-doc-h1-noh1"  >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/third/login/">TP代授权小程序登录</a>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                            
+                            <ul  class="m-doc-h1-children m-doc-h1-noh1"  >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/third/address/">修改服务器地址</a>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                            
+                            <ul  class="m-doc-h1-children m-doc-h1-noh1"  >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/third/error/">通用错误码对照表</a>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            <li  data-name="flow">
+                <div class="m-doc-nav-list" href="/docs/develop/flow">
+                    <img src="/docs/img/level1_arrow.png" />
+                    <span>搜索流量接入</span>
+                </div>
+                <ul class="m-doc-nav-children">
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                            
+                            <ul  class="m-doc-h1-children m-doc-h1-noh1"  >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/flow/rank/">接入自然搜索</a>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            <li  data-name="web">
+                <div class="m-doc-nav-list" href="/docs/develop/web">
+                    <img src="/docs/img/level1_arrow.png" />
+                    <span>Web 化配置</span>
+                </div>
+                <ul class="m-doc-nav-children">
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                            
+                            <ul  class="m-doc-h1-children m-doc-h1-noh1"  >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/web/start/">配置开启 Web化</a>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                        <li class="m-doc-sidebar-on">
+                            
+                            
+                            <ul  class="m-doc-h1-children m-doc-h1-noh1"  >
+                                
+                                <li >
+                                    <a class="m-doc-h2-list" href="/docs/develop/web/detail/">代理域名配置详解</a>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                    
+                </ul>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="m-doc-content-layout">
+    <div class="m-doc-content-wrap">
+        <div id="article-main-content">
+            <article id="post-develop/component/view" class="article article-type-post" itemscope itemprop="blogPost">
+                  <h1>视图容器</h1>
+                  <div class="article-inner">
+                    <div class="article-entry" itemprop="articleBody">
+                      
+                        <h2 id="view"><a href="#view" class="headerlink" title="view"></a>view</h2><p><strong>解释：</strong>视图容器。</p>
+<p><strong>属性说明：</strong></p>
+<table>
+<thead>
+<tr>
+<th>属性名</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hover-class</td>
+<td>String</td>
+<td>none</td>
+<td>指定按下去的样式类。当  hover-class=”none”  时，没有点击态效果</td>
+</tr>
+<tr>
+<td>hover-stop-propagation</td>
+<td>Boolean</td>
+<td>false</td>
+<td>指定是否阻止本节点的祖先节点出现点击态</td>
+</tr>
+<tr>
+<td>hover-start-time</td>
+<td>Number</td>
+<td>50</td>
+<td>按住后多久出现点击态，单位毫秒</td>
+</tr>
+<tr>
+<td>hover-stay-time</td>
+<td>Number</td>
+<td>400</td>
+<td>手指松开后点击态保留时间，单位毫秒</td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong><br><a href="swanide://fragment/024d24b7832b587bcd18ce43441318d61540395635" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"single-text-area"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"view-more"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">text</span>&gt;</span>点击加载更多<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>说明：</strong><br>1、 如果需要使用滚动视图，请使用 scroll-view；<br>2、 从基础库版本1.12.0开始支持事件捕获、冒泡。</p>
+<h2 id="scroll-view"><a href="#scroll-view" class="headerlink" title="scroll-view"></a>scroll-view</h2><p><strong>解释：</strong>可滚动视图区域。</p>
+<p><strong>属性说明：</strong></p>
+<table>
+<thead>
+<tr>
+<th>属性名</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scroll-x</td>
+<td>Boolean</td>
+<td>false</td>
+<td>允许横向滚动</td>
+</tr>
+<tr>
+<td>scroll-y</td>
+<td>Boolean</td>
+<td>false</td>
+<td>允许纵向滚动</td>
+</tr>
+<tr>
+<td>upper-threshold</td>
+<td>Number</td>
+<td>50</td>
+<td>距顶部/左边多远时（单位 px），触发 scrolltoupper 事件</td>
+</tr>
+<tr>
+<td>lower-threshold</td>
+<td>Number</td>
+<td>50</td>
+<td>距底部/右边多远时（单位 px），触发 scrolltolower 事件</td>
+</tr>
+<tr>
+<td>scroll-top</td>
+<td>Number</td>
+<td>-</td>
+<td>设置竖向滚动条位置。要动态设置滚动条位置，用法<code>scroll-top=&quot;{= scrollTop =}&quot;</code></td>
+</tr>
+<tr>
+<td>scroll-left</td>
+<td>Number</td>
+<td>-</td>
+<td>设置横向滚动条位置。要动态设置滚动条位置，用法<code>scroll-left=&quot;{= scrollLeft =}&quot;</code></td>
+</tr>
+<tr>
+<td>scroll-into-view</td>
+<td>String</td>
+<td>-</td>
+<td>值应为某子元素 id（id 不能以数字开头）,设置滚动方向后，按方向滚动到该元素，动态设置用法<code>scroll-into-view=”{= scrollIntoView =}”</code>。</td>
+</tr>
+<tr>
+<td>scroll-with-animation</td>
+<td>Boolean</td>
+<td>false</td>
+<td>在设置滚动条位置时使用动画过渡</td>
+</tr>
+<tr>
+<td>bindscrolltoupper</td>
+<td>EventHandle</td>
+<td>-</td>
+<td>滚动到顶部/左边，会触发 scrolltoupper 事件</td>
+</tr>
+<tr>
+<td>bindscrolltolower</td>
+<td>EventHandle</td>
+<td>-</td>
+<td>滚动到底部/右边，会触发 scrolltolower 事件</td>
+</tr>
+<tr>
+<td>bindscroll</td>
+<td>EventHandle</td>
+<td>-</td>
+<td>滚动时触发， event.detail = {scrollLeft, scrollTop, scrollHeight, scrollWidth, deltaX, deltaY}</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意：</strong>使用竖向滚动时，需要给 <code>&lt;scroll-view/&gt;</code> 一个固定高度，通过 CSS 设置 height。</p>
+<p><strong>示例：</strong><br><a href="swanide://fragment/c25704bc739ef70da95b8c7b7b929aae1540395856" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">scroll-view</span> <span class="attr">scroll-y</span> <span class="attr">style</span>=<span class="string">"height: 300px;"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">bind:scrolltoupper</span>=<span class="string">"upper"</span> <span class="attr">bind:scrolltolower</span>=<span class="string">"lower"</span> <span class="attr">scroll-into-view</span>=<span class="string">"four"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">upper-threshold</span>=<span class="string">"10"</span>  <span class="attr">lower-threshold</span>=<span class="string">"10"</span> <span class="attr">scroll-top</span>=<span class="string">"150"</span> <span class="attr">bind:scroll</span>=<span class="string">"myscroll"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">id</span>=<span class="string">"one"</span> <span class="attr">class</span>=<span class="string">"bg-red"</span>&gt;</span>view1<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">id</span>=<span class="string">"two"</span> <span class="attr">class</span>=<span class="string">"bg-green"</span>&gt;</span>view2<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">id</span>=<span class="string">"three"</span> <span class="attr">class</span>=<span class="string">"bg-yellow"</span>&gt;</span>view3<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">id</span>=<span class="string">"four"</span> <span class="attr">class</span>=<span class="string">"bg-blue"</span>&gt;</span>view4<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">scroll-view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.bg-red</span>, <span class="selector-class">.bg-yellow</span>, <span class="selector-class">.bg-blue</span>, <span class="selector-class">.bg-green</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.bg-red</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#FFB6C1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.bg-yellow</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#FFD700</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.bg-blue</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#87CEFA</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.bg-green</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#98FB98</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Page(&#123;</span><br><span class="line">    upper: <span class="function"><span class="params">e</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'upper'</span>, e);</span><br><span class="line">    &#125;,</span><br><span class="line">    lower: <span class="function"><span class="params">e</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'lower'</span>, e);</span><br><span class="line">    &#125;,</span><br><span class="line">    myscroll: <span class="function"><span class="params">e</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'scroll'</span>, e);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p><strong>说明：</strong></p>
+<ul>
+<li>请勿在 scroll-view 中使用 textarea、map、canvas、video 组件；</li>
+<li>scroll-into-view 的优先级高于 scroll-top、scroll-left；</li>
+<li>在滚动 scroll-view 时会阻止页面回弹，所以在 scroll-view 中滚动，是无法触发 onPullDownRefresh；</li>
+<li>若要使用下拉刷新，请使用页面的滚动，而不是 scroll-view。</li>
+</ul>
+<h2 id="swiper"><a href="#swiper" class="headerlink" title="swiper"></a>swiper</h2><p><strong>解释：</strong>滑块视图容器。</p>
+<p><strong>属性说明：</strong></p>
+<table>
+<thead>
+<tr>
+<th>属性名</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
+<th>最低版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>indicator-dots</td>
+<td>Boolean</td>
+<td>false</td>
+<td>是否显示面板指示点</td>
+<td></td>
+</tr>
+<tr>
+<td>indicator-color</td>
+<td>Color</td>
+<td>rgba(0, 0, 0, .3)</td>
+<td>指示点颜色</td>
+<td></td>
+</tr>
+<tr>
+<td>indicator-active-color</td>
+<td>Color</td>
+<td>#333</td>
+<td>当前选中的指示点颜色件</td>
+<td></td>
+</tr>
+<tr>
+<td>autoplay</td>
+<td>Boolean</td>
+<td>false</td>
+<td>是否自动切换</td>
+<td></td>
+</tr>
+<tr>
+<td>current</td>
+<td>Number</td>
+<td>0</td>
+<td>当前所在页面的 index</td>
+<td></td>
+</tr>
+<tr>
+<td>current-item-id</td>
+<td>String</td>
+<td>“”</td>
+<td>当前所在滑块的 item-id ，不能与 current 被同时指定</td>
+<td>10.11</td>
+</tr>
+<tr>
+<td>interval</td>
+<td>Number</td>
+<td>5000</td>
+<td>自动切换时间间隔</td>
+<td></td>
+</tr>
+<tr>
+<td>duration</td>
+<td>Number</td>
+<td>500</td>
+<td>滑动动画时长</td>
+<td></td>
+</tr>
+<tr>
+<td>circular</td>
+<td>Boolean</td>
+<td>false</td>
+<td>是否采用衔接滑动</td>
+<td></td>
+</tr>
+<tr>
+<td>vertical</td>
+<td>Boolean</td>
+<td>false</td>
+<td>滑动方向是否为纵向</td>
+<td></td>
+</tr>
+<tr>
+<td>previous-margin</td>
+<td>String</td>
+<td>“0px”</td>
+<td>前边距，可用于露出前一项的一小部分</td>
+<td>10.11</td>
+</tr>
+<tr>
+<td>next-margin</td>
+<td>String</td>
+<td>“0px”</td>
+<td>后边距，可用于露出后一项的一小部分</td>
+<td>10.11</td>
+</tr>
+<tr>
+<td>display-multiple-items</td>
+<td>Number</td>
+<td>1</td>
+<td>同时显示的滑块数量</td>
+<td>10.11</td>
+</tr>
+<tr>
+<td>bindchange</td>
+<td>EventHandle</td>
+<td></td>
+<td>current 改变时会触发 change 事件，event.detail = {current: current, source: source}</td>
+<td></td>
+</tr>
+<tr>
+<td>bindanimationfinish</td>
+<td>EventHandle</td>
+<td></td>
+<td>动画结束时会触发 animationfinish 事件，event.detail 同上</td>
+<td>10.11</td>
+</tr>
+</tbody>
+</table>
+<p><strong>说明：</strong><br>其中只可放置<code>&lt;swiper-item/&gt;</code>组件，否则会导致未定义的行为。</p>
+<h3 id="swiper-item"><a href="#swiper-item" class="headerlink" title="swiper-item"></a>swiper-item</h3><p><strong>注意：</strong>仅可放置在<code>&lt;swiper/&gt;</code>组件中，宽高自动设置为100%。</p>
+<p><strong>属性说明：</strong></p>
+<table>
+<thead>
+<tr>
+<th>属性名</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
+<th>最低版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>item-id</td>
+<td>String</td>
+<td>“”</td>
+<td>该swiper-item的标识符</td>
+<td>10.11</td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong><br><a href="swanide://fragment/7213a7a66d2e02cf5a59ad07d810761b1540395545" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">swiper</span> <span class="attr">indicator-dots</span>=<span class="string">"true"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">autoplay</span>=<span class="string">"true"</span> <span class="attr">interval</span>=<span class="string">"3000"</span> <span class="attr">duration</span>=<span class="string">"500"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">block</span> <span class="attr">s-for</span>=<span class="string">"imgUrl in imgs"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">swiper-item</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">image</span> <span class="attr">src</span>=<span class="string">"&#123;&#123;imgUrl&#125;&#125;"</span> <span class="attr">class</span>=<span class="string">"slide-image"</span> <span class="attr">width</span>=<span class="string">"355"</span> <span class="attr">height</span>=<span class="string">"150"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">swiper-item</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">block</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">swiper</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Page(&#123;</span><br><span class="line">    data: &#123;</span><br><span class="line">        imgs: [</span><br><span class="line">            <span class="string">"https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=955704975,2507359007&amp;fm=173&amp;s=32A2DC4D4E12344D4899DCB80300C013&amp;w=218&amp;h=146&amp;img.JPEG"</span>,</span><br><span class="line">            <span class="string">"https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=984374101,2617012451&amp;fm=173&amp;s=20A24CB176BA0D882C042D700300C092&amp;w=218&amp;h=146&amp;img.JPEG"</span>,</span><br><span class="line">            <span class="string">"https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=1663594687,1286054050&amp;fm=173&amp;s=EAA608C484D2006B5680719A0300E0C1&amp;w=218&amp;h=146&amp;img.JPEG"</span></span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p><strong>说明：</strong></p>
+<p>如果在 bindchange 的事件回调函数中使用 setData 改变 current 值，则有可能导致 setData 被不停地调用，因而通常情况下请在改变 current 值前检测 source 字段来判断是否是由于用户触摸引起。</p>
+<h2 id="movable-area"><a href="#movable-area" class="headerlink" title="movable-area"></a>movable-area</h2><p><strong>解释：</strong><code>movable-view</code> 的可移动区域。</p>
+<blockquote>
+<p><code>movable-area</code> 必须设置width和height属性，不设置默认为10px。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>属性名</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scale-area</td>
+<td>Boolean</td>
+<td>false</td>
+<td>当里面的movable-view设置为支持双指缩放时，设置此值可将缩放手势生效区域修改为整个movable-area 。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="movable-view"><a href="#movable-view" class="headerlink" title="movable-view"></a>movable-view</h3><p><strong>解释：</strong>可移动的视图容器，在页面中可以拖拽滑动。</p>
+<p><strong>属性说明：</strong></p>
+<table>
+<thead>
+<tr>
+<th>属性名</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>direction</td>
+<td>String</td>
+<td>none</td>
+<td>movable-view 的移动方向，属性值有 all 、 vertical 、 horizontal 、 none</td>
+</tr>
+<tr>
+<td>inertia</td>
+<td>Boolean</td>
+<td>false</td>
+<td>movable-view 是否带有惯性</td>
+</tr>
+<tr>
+<td>out-of-bounds</td>
+<td>Boolean</td>
+<td>false</td>
+<td>超过可移动区域后，movable-view 是否还可以移动。</td>
+</tr>
+<tr>
+<td>x</td>
+<td>Number</td>
+<td>-</td>
+<td>定义 x 轴方向的偏移，如果 x 的值不在可移动范围内，会自动移动到可移动范围；改变 x 的值会触发动画。</td>
+</tr>
+<tr>
+<td>y</td>
+<td>Number</td>
+<td>-</td>
+<td>定义 y 轴方向的偏移，如果 y 的值不在可移动范围内，会自动移动到可移动范围；改变 y 的值会触发动画。</td>
+</tr>
+<tr>
+<td>damping</td>
+<td>Number</td>
+<td>20</td>
+<td>阻尼系数，用于控制 x 或 y 改变时的动画和过界回弹的动画，值越大移动越快。</td>
+</tr>
+<tr>
+<td>friction</td>
+<td>Number</td>
+<td>2</td>
+<td>摩擦系数，用于控制惯性滑动的动画，值越大摩擦力越大，滑动越快停止；必须大于 0，否则会被设置成默认值。</td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>Boolean</td>
+<td>false</td>
+<td>是否禁用</td>
+</tr>
+<tr>
+<td>scale</td>
+<td>Boolean</td>
+<td>false</td>
+<td>是否支持双指缩放，默认缩放手势生效区域是在movable-view内。</td>
+</tr>
+<tr>
+<td>scale-min</td>
+<td>Number</td>
+<td>0.5</td>
+<td>定义缩放倍数最小值</td>
+</tr>
+<tr>
+<td>scale-max</td>
+<td>Number</td>
+<td>10</td>
+<td>定义缩放倍数最大值</td>
+</tr>
+<tr>
+<td>scale-value</td>
+<td>Number</td>
+<td>1</td>
+<td>定义缩放倍数，取值范围为 0.5 - 10  。</td>
+</tr>
+<tr>
+<td>animation</td>
+<td>Boolean</td>
+<td>true</td>
+<td>是否使用动画</td>
+</tr>
+<tr>
+<td>bindchange</td>
+<td>EventHandle</td>
+<td></td>
+<td>拖动过程中触发的事件，event.detail = {x: x, y: y, source: source}，其中source表示产生移动的原因，值可为touch（拖动）、out-of-bounds（超出移动范围后的回弹）、inertia（惯性）和空字符串（setData）。</td>
+</tr>
+<tr>
+<td>bindscale</td>
+<td>EventHandle</td>
+<td></td>
+<td>缩放过程中触发的事件，event.detail = {x: x, y: y, scale: scale}</td>
+</tr>
+</tbody>
+</table>
+<p>除了基本事件外，movable-view提供了两个特殊事件。</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>触发条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>htouchmove</td>
+<td>手指初次触摸后发生横向移动，如果catch此事件，则意味着touchmove事件也被catch</td>
+</tr>
+<tr>
+<td>vtouchmove</td>
+<td>手指初次触摸后发生纵向移动，如果catch此事件，则意味着touchmove事件也被catch</td>
+</tr>
+</tbody>
+</table>
+<p><strong>说明：</strong></p>
+<ul>
+<li>movable-view 必须设置 width 和 height 属性，不设置默认为 10px；</li>
+<li>movable-view 默认为绝对定位，top 和 left 属性为 0px；</li>
+<li>当movable-view小于movable-area时，movable-view的移动范围是在movable-area内；</li>
+<li>当movable-view大于movable-area时，movable-view的移动范围必须包含movable-area（x 轴方向和 y 轴方向分开考虑）；</li>
+<li>movable-view必须在<movable-area>组件中，并且必须是直接子节点，否则不能移动。</movable-area></li>
+</ul>
+<p><strong>示例：</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"movable-view"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">movable-area</span> <span class="attr">style</span>=<span class="string">"height: 300px;width: 300px;background: green;"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">movable-view</span> <span class="attr">style</span>=<span class="string">"height: 40px; width: 40px; background: black;"</span> <span class="attr">x</span>=<span class="string">"30"</span> <span class="attr">y</span>=<span class="string">"30"</span> <span class="attr">direction</span>=<span class="string">"all"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">movable-view</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">movable-area</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="cover-view"><a href="#cover-view" class="headerlink" title="cover-view"></a>cover-view</h2><p><strong>解释： </strong>覆盖在原生组件之上的文本视图，可覆盖的原生组件包括 video 、 canvas 、 camera，只支持嵌套 cover-view 、 cover-image 。</p>
+<h2 id="cover-image"><a href="#cover-image" class="headerlink" title="cover-image"></a>cover-image</h2><p><strong>解释： </strong>覆盖在原生组件之上的图片视图，可覆盖的原生组件同 cover-view ，支持嵌套在 cover-view 里。</p>
+<p><strong>属性说明： </strong></p>
+<table>
+<thead>
+<tr>
+<th>属性名</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>src</td>
+<td>String</td>
+<td></td>
+<td>图标路径，支持临时路径、网络地址。暂不支持 base64 格式。</td>
+</tr>
+<tr>
+<td>bindload</td>
+<td>EventHandle</td>
+<td>-</td>
+<td>图片加载成功时触发</td>
+</tr>
+<tr>
+<td>binderror</td>
+<td>EventHandle</td>
+<td>-</td>
+<td>图片加载失败时触发</td>
+</tr>
+</tbody>
+</table>
+<p><strong>说明：</strong><br><!-- 1、cover-view 支持 overflow: scroll，但不支持动态更新 overflow；
+2、最外层 cover-view 支持 position: fixed； --><br>1、支持 css transition 动画，transition-property 只支持 transform (translateX, translateY) 与 opacity；<br>2、文本建议都套上 cover-view 标签，避免排版错误；<br>3、只支持基本的定位、布局、文本样式。不支持设置单边的 border、background-image、shadow、overflow: visible 等；<br>4、建议子节点不要溢出父节点；<br>5、默认设置的样式有：white-space: nowrap; line-height: 1.2; display: block ；<br>6、建议不要频繁改变 s-if 表达式的值控制显隐，否则会导致 cover-view 显示异常；<br>7、IOS端暂不支持一个页面有多个video时嵌套cover-view；<br>8、cover-view 和 cover-image 从基础库版本1.12.0开始支持事件捕获、冒泡。<br><!-- 9、todu: 事件模型遵循冒泡模型，但不会冒泡到原生组件。 --><br><!-- 10、基础库 1.9.0 起支持插在 view 等标签下。在此之前只可嵌套在原生组件map、video、canvas、camera内，避免嵌套在其他组件内。 --></p>
+<p><strong>示例：</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">id</span>=<span class="string">"myVideo"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">src</span>=<span class="string">"https://vd3.bdstatic.com/mda-ia8e6q3g23py8qdh/hd/mda-ia8e6q3g23py8qdh.mp4?playlist=%5B%22hd%22%5D&amp;auth_key=1521549485-0-0-d5d042ba3555b2d23909d16a82916ebc&amp;bcevod_channel=searchbox_feed&amp;pd=share"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">controls</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">cover-view</span> <span class="attr">class</span>=<span class="string">"controls"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">cover-image</span> <span class="attr">class</span>=<span class="string">"play"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">bindtap</span>=<span class="string">"play"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">src</span>=<span class="string">"https://smartprogram.baidu.com/docs/img/logo.png"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">cover-image</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">cover-view</span> <span class="attr">class</span>=<span class="string">"pause"</span> <span class="attr">bindtap</span>=<span class="string">"pause"</span>&gt;</span>暂停<span class="tag">&lt;/<span class="name">cover-view</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">cover-view</span> <span class="attr">class</span>=<span class="string">"time"</span>&gt;</span>00:00<span class="tag">&lt;/<span class="name">cover-view</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">cover-view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">video</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.controls</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.play</span>, <span class="selector-class">.pause</span>, <span class="selector-class">.time</span> &#123;</span><br><span class="line">    <span class="attribute">flex</span>: <span class="number">1</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(0, 0, 0, .5);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.pause</span>, <span class="selector-class">.time</span> &#123;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">color</span>: white;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">cover-image</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Page(&#123;</span><br><span class="line">    onReady() &#123;</span><br><span class="line">        <span class="keyword">this</span>.videoCtx = swan.createVideoContext(<span class="string">'myVideo'</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">    play() &#123;</span><br><span class="line">        <span class="keyword">this</span>.videoCtx.play()</span><br><span class="line">    &#125;,</span><br><span class="line">    pause() &#123;</span><br><span class="line">        <span class="keyword">this</span>.videoCtx.pause()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+                      
+                    </div>
+                  </div>
+                  <div class="m-doc-bottomPage-wrapper clearfix">
+                    
+                      <a href="/docs/develop/component/native/" class="m-doc-bottomPage-left">原生组件说明</a>
+                    
+                    
+                      <a href="/docs/develop/component/base/" class="m-doc-bottomPage-right">基础内容</a>
+                    
+                  </div>
+            </article>
+            <aside class="toc-wrap">
+            <div class="toc-list-wrap">
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#view"><span class="toc-text">view</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#scroll-view"><span class="toc-text">scroll-view</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#swiper"><span class="toc-text">swiper</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#swiper-item"><span class="toc-text">swiper-item</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#movable-area"><span class="toc-text">movable-area</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#movable-view"><span class="toc-text">movable-view</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cover-view"><span class="toc-text">cover-view</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cover-image"><span class="toc-text">cover-image</span></a></li></ol>
+            </div>
+          </aside>
+        </div>
+        <article id="article-search-result" class="article-search-result"></article>
+    </div>
+    
+    <div class="m-doc-menu-wrapper">
+        <a href="javascript:void(0)" class="m-doc-menu-toc"></a>
+        <a href="javascript:void(0)" class="m-doc-menu-top"></a>
+    </div>
+</div>
+
+    <script type="text/javascript">
+        window.localData = {
+            'headerName': 'develop',
+            'localData': '{"tutorial":true,"framework":true,"component":true,"api":true,"devtools":true,"server":true,"third":true,"flow":true,"web":true}',
+            'sidebarIgnore': '/develop/server/upstream'
+        }; 
+    </script>
+    <script src="//s.bdstatic.com/common/openjs/openBox.js?_v=2016071219"></script>
+    <script src="/docs/js/zepto.min.js"></script>
+    <script src="/docs/js/fx.js"></script>
+    <script src="/docs/js/lib.js"></script>
+    <script src="/docs/js/superstart.js"></script>
+    <script src="/docs/js/search.js"></script>
+    <script src="/docs/js/clipboard.min.js"></script>
+
+   
+      <script type="text/javascript">
+         var search_path = "search.xml";
+         if (search_path.length == 0) {
+            search_path = "search.xml";
+         }
+         var path = "/docs/" + search_path;
+         searchFunc(path, 'local-search-input', 'article-search-result');
+      </script>
+   
+
+</body>
+</html>
