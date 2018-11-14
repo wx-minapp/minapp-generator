@@ -5,6 +5,17 @@ import * as fs from 'fs-extra'
 import * as path from 'path'
 
 /**
+ * 将 Set 转化成数组
+ */
+export function set2array<T>(set: Set<T>) {
+  const arr: T[] = []
+  for (const it of set.values()) {
+    arr.push(it)
+  }
+  return arr
+}
+
+/**
  * 匹配所有出现的情况， regexp 需要带 g 的标识
  */
 export function matchAll(content: string, regexp: RegExp) {

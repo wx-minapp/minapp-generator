@@ -24,9 +24,18 @@ export class Meta {
   /** 和上次数据对比，检查是否有更新，如果有更新则输出提示信息 */
   checkNumberUpdate(path: string, currentValue: number, updateMessage: string, defaultLastValue = 0) {
     let m = this.value(path, currentValue, defaultLastValue)
-    if (m.current !== m.prev && m.prev !== defaultLastValue) {
+    if (m.current !== m.prev) {
       const diff = m.current - m.prev
       updateInfo(updateMessage.replace('%n', diff > 0 ? '+' + diff : diff + ''))
+    }
+  }
+
+  checkDataUpdate(path: string, currentValue: any, updateMessage: string, defaultLastValue?: any) {
+    const m = this.value(path, currentValue, defaultLastValue)
+    const current = JSON.stringify(m.current)
+    const prev = JSON.stringify(m.prev)
+    if (current !== prev) {
+      updateInfo(updateMessage.replace('%s', `${prev} => ${current}`))
     }
   }
 }

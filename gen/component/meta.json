@@ -1,11 +1,118 @@
 {
-  "ali": {
-    "tocSize": 26
-  },
   "wx": {
-    "tocSize": 35
-  },
-  "swan": {
-    "tocSize": 8
+    "toc": {
+      "pageCount": 35
+    },
+    "components": {
+      "view": [
+        "view"
+      ],
+      "scroll-view": [
+        "scroll-view"
+      ],
+      "swiper": [
+        "swiper",
+        "swiper-item"
+      ],
+      "movable-view": [
+        "movable-area",
+        "movable-view"
+      ],
+      "cover-view": [
+        "cover-view",
+        "cover-image"
+      ],
+      "icon": [
+        "icon"
+      ],
+      "text": [
+        "text"
+      ],
+      "rich-text": [
+        "rich-text"
+      ],
+      "progress": [
+        "progress"
+      ],
+      "button": [
+        "button"
+      ],
+      "checkbox": [
+        "checkbox-group",
+        "checkbox"
+      ],
+      "form": [
+        "form"
+      ],
+      "input": [
+        "input"
+      ],
+      "label": [
+        "label"
+      ],
+      "picker": [
+        "picker"
+      ],
+      "picker-view": [
+        "picker-view",
+        "picker-view-column"
+      ],
+      "radio": [
+        "radio-group",
+        "radio"
+      ],
+      "slider": [
+        "slider"
+      ],
+      "switch": [
+        "switch"
+      ],
+      "textarea": [
+        "textarea"
+      ],
+      "navigator": [
+        "navigator"
+      ],
+      "functional-page-navigator": [
+        "functional-page-navigator"
+      ],
+      "audio": [
+        "audio"
+      ],
+      "image": [
+        "image"
+      ],
+      "video": [
+        "video"
+      ],
+      "camera": [
+        "camera"
+      ],
+      "live-player": [
+        "live-player"
+      ],
+      "live-pusher": [
+        "live-pusher"
+      ],
+      "map": [
+        "map"
+      ],
+      "canvas": [
+        "canvas"
+      ],
+      "open-data": [
+        "open-data"
+      ],
+      "web-view": [
+        "web-view"
+      ],
+      "ad": [
+        "ad"
+      ],
+      "official-account": [
+        "official-account"
+      ],
+      "native-component": []
+    }
   }
 }

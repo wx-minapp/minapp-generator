@@ -18,4 +18,7 @@ export abstract class Config {
 
   /** 用于存储生成的文件的根目录 */
   genDir = path.join(ROOT, 'gen', 'component')
+
+  /** 用于存储额外资源的根目录 */
+  resDir = path.join(ROOT, 'res')
 }

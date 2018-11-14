@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>pageName</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body, ul, li, p {
+      padding: 0;
+      margin: 0;
+    }
+    ul {
+      list-style: none;
+    }
+    section {
+      display: flex;
+    }
+    aside {
+      width: 250px;
+      height: 120vh;
+      border-right: 1px solid #999;
+      overflow-y: scroll;
+      font-size: 15px;
+    }
+    aside li a {
+      display: block;
+      line-height: 30px;
+      padding: 0 10px;
+    }
+    aside ul {
+      padding: 20px 0 40px;
+    }
+
+    html, body, section, aside, main, iframe {
+      height: 100%;
+    }
+    main {
+      flex: 1;
+      overflow: hidden;
+    }
+    iframe {
+      border: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <aside>
+      <ul>
+        <!-- <li><a href="componentName.html" target="main">componentName</a></li> -->
+      </ul>
+    </aside>
+    <main>
+      <iframe id="main" name="main"></iframe>
+    </main>
+  </section>
+</body>
+</html>

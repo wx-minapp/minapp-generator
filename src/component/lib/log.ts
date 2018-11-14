@@ -8,6 +8,10 @@ function info(type: string, message: string) {
   xlog(`%c ${type} %c %c${message}`, 'bg.h.cyan.fg.bold.black', 'reset', 'cyan')
 }
 
+export function head(message: string) {
+  xlog(`\n%c${message}`, 'bg.white.fg.black')
+}
+
 
 /** 函数参数有问题（不合规范） */
 export function argumentWarn(message: string) {
@@ -24,10 +28,7 @@ export function updateInfo(message: string) {
   info('Update Info', message)
 }
 
-
-// for self test
-if (!module.parent) {
-  argumentWarn('函数 xxx 的参数 yyy 有问题，应该为 foo bar')
-  unexpectWarn('函数 xxx 应该返回 ... 但它返回了 ...')
-  console.log('另起一行')
+/** 基本信息 */
+export function basicInfo(message: string) {
+  info('Basic Info', message)
 }
