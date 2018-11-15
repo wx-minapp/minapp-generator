@@ -31,6 +31,26 @@ export function matchAll(content: string, regexp: RegExp) {
   return res
 }
 
+/**
+ * 根据一组 CheerioElement，分别将它们分组到一个 div 中
+ */
+export function groupHeads($: CheerioStatic, heads: CheerioElement[]) {
+  const $groups = heads.map(h => $('<div></div>'))
+  const len = heads.length
+
+  for (let i = 0; i < len; i++) {
+    let head = heads[i]
+    let el = head
+    while (el && (i + 1 >= len || el !== heads[i + 1])) {
+      const tmp = el
+      el = el.nextSibling
+      $groups[i].append($(tmp))
+    }
+  }
+
+  return $groups
+}
+
 
 /**
  * 获取指定的 url 的内容
@@ -38,7 +58,7 @@ export function matchAll(content: string, regexp: RegExp) {
 export async function getUrlContent(
   url: string,
   // 默认缓存一天
-  {cacheFilePath, cacheExpireMS = 86400000, ignoreCache, executeJs}: {cacheFilePath?: string, cacheExpireMS?: number, ignoreCache?: boolean, executeJs?: boolean} = {}
+  {cacheFilePath, cacheExpireMS = 86400000 * 10, ignoreCache, executeJs}: {cacheFilePath?: string, cacheExpireMS?: number, ignoreCache?: boolean, executeJs?: boolean} = {}
 ): Promise<string> {
   try {
     if (cacheFilePath) {
@@ -54,7 +74,7 @@ export async function getUrlContent(
       return await rawGetUrlContent(url, executeJs)
     }
   } catch (e) {
-    unexpectWarn(`获取链接 ${url} 的内容失败`)
+    unexpectWarn(`获取链接 ${url} 的内容失败，原因: ${e.message}`)
     return ''
   }
 }
@@ -66,7 +86,7 @@ async function rawGetUrlContent(url: string, executeJs?: boolean) {
     await page.goto(url, {waitUntil: 'networkidle2'})
     const html = await page.evaluate(() => {
       // @ts-ignore
-      return document.documentElement.innerHTML
+      return document.documentElement.outerHTML
     })
 
     await browser.close()

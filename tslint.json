@@ -20,6 +20,7 @@
     "no-unused-expression": true,
     "no-var-keyword": true,
     "prefer-for-of": false,
+    "no-namespace": false,
 
     "no-console": [false],
     "prefer-const": [false],
