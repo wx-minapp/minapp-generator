@@ -34,23 +34,49 @@ export function matchAll(content: string, regexp: RegExp) {
 /**
  * 根据一组 CheerioElement，分别将它们分组到一个 div 中
  */
-export function groupHeads($: CheerioStatic, heads: CheerioElement[]) {
+export function groupHeads($: CheerioStatic, heads: CheerioElement[], {removeHead}: {removeHead?: boolean} = {}) {
   const $groups = heads.map(h => $('<div></div>'))
   const len = heads.length
 
   for (let i = 0; i < len; i++) {
     let head = heads[i]
+    let $head = $(head)
     let el = head
     while (el && (i + 1 >= len || el !== heads[i + 1])) {
       const tmp = el
       el = el.nextSibling
-      $groups[i].append($(tmp))
+      if (removeHead && tmp === head) {
+        $groups[i].attr('data-group-type', head.tagName)
+        $groups[i].attr('data-group-id', $head.attr('id'))
+        $groups[i].attr('data-group-title', $head.text().trim())
+        $groups[i].addClass('group')
+        $head.remove()
+      } else {
+        $groups[i].append($(tmp))
+      }
     }
   }
 
   return $groups
 }
 
+export function outerHTML($: CheerioStatic, el: CheerioElement) {
+  let $el = $(el)
+  let $parent = $el.parent()
+  let $prev = $el.prev()
+
+  let html = $('<div></div>').append($el).html()
+
+  $prev.length ? $parent.appendTo($prev) : $parent.append($el)
+  return html
+}
+
+/**
+ * 一个字符串中的字数（一个单词看作一个字）
+ */
+export function countWords(str: string) {
+  return str.replace(/\w+/g, 'a').length
+}
 
 /**
  * 获取指定的 url 的内容

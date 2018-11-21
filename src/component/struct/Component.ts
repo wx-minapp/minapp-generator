@@ -1,5 +1,7 @@
 import {Example} from './Example'
 import {ComponentAttr} from './ComponentAttr'
+import {Link} from './Link'
+import {Extra} from './Extra'
 
 export class Component {
   /** 组件名称 */
@@ -11,26 +13,17 @@ export class Component {
   /** 兼容的小程序版本号 */
   since?: string
 
-  // 下面两个字段的信息转移到 desc 中
-  /** 需要用户预先授权 */
-  // authorize?: ComponentLink
   /** 相关 api */
-  // relateApis: ComponentLink[] = []
+  relateApis: Link[] = []
 
-  /** 描述信息 */
+  /** 描述信息 (markdown) */
   desc: string[] = []
+
+  /** 额外的字段（对 desc 的补充，其中 content 是 markdown） */
+  extras: Extra[] = []
 
   /** 组件支持的属性 */
   attrs: ComponentAttr[] = []
-
-  /** 注意事项 */
-  notices: string[] = []
-
-  /** 提醒 */
-  tips: string[] = []
-
-  /** 已知 bug */
-  bugs: string[] = []
 
   /** 示例代码 */
   examples: Example[] = []

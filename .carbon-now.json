@@ -1,0 +1,22 @@
+{
+  "latest-preset": {
+    "t": "cobalt",
+    "bg": "rgba(0, 0, 0, 0)",
+    "wt": "sharp",
+    "wc": false,
+    "fm": "Fira Code",
+    "fs": "16px",
+    "ln": false,
+    "ds": false,
+    "dsyoff": "20px",
+    "dsblur": "68px",
+    "wa": true,
+    "lh": "130%",
+    "pv": "0px",
+    "ph": "0px",
+    "si": false,
+    "wm": false,
+    "es": "1x",
+    "type": "png"
+  }
+}

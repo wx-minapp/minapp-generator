@@ -3,14 +3,15 @@ import * as path from 'path'
 import * as fs from 'fs-extra'
 import * as cheerio from 'cheerio'
 import * as _ from 'lodash'
+import * as createDebugger from 'debug'
 import {series} from 'mora-common/util/async'
 import {Config} from './Config'
 import {getUrlContent, matchAll, set2array} from '../lib/utils'
 import {unexpectWarn, head} from '../lib/log'
 import {Meta} from '../lib/Meta'
-import {Component} from '../lib/Component'
+import {Component} from '../struct/Component'
 
-const debug = require('debug')('minapp:parser')
+const debug = createDebugger('minapp:parser')
 
 export namespace Parser {
   export interface Options {
@@ -151,8 +152,13 @@ export abstract class Parser {
   }
 
   /** 生成单个组件的预览页面 */
-  generateComponentPreview(component: Component, content: string | null) {
-    fs.writeFileSync(this.genFile('.preview', component.name + '.html'), content || '')
+  generateComponentPreview(component: Component, content: string | null, {prefix, suffix}: {prefix?: string, suffix?: string} = {}) {
+    let s = (str?: string | null) => str || ''
+
+    fs.writeFileSync(
+      this.genFile('.preview', component.name + '.html'),
+      `${s(prefix)}${s(content)}${s(prefix)}`
+    )
   }
 
   /** 根据 res/component-index-tpl.html 生成 .preview/index.html 文件 */

@@ -48,7 +48,7 @@
 <body>
   <section>
     <aside>
-      <ul>
+      <ul class="nav">
         <!-- <li><a href="componentName.html" target="main">componentName</a></li> -->
       </ul>
     </aside>
@@ -56,5 +56,22 @@
       <iframe id="main" name="main"></iframe>
     </main>
   </section>
+  <script>
+    let iframe = document.getElementById('main')
+    let load = (url) => iframe.setAttribute('src', url)
+
+    let hash = location.hash.substr(1)
+    if (hash) load(hash)
+
+    document.querySelector('.nav').addEventListener('click', e => {
+      let el = e.target
+      if (el.tagName === 'A') {
+        let href = el.getAttribute('href')
+        location.hash = href
+        load(href)
+      }
+      e.preventDefault()
+    })
+  </script>
 </body>
 </html>

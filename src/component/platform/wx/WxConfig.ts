@@ -5,4 +5,8 @@ export default class WxConfig extends Config {
 
   // li class="chapter" data-level="1.3.8.1" data-path=./open-data.html data-name="open-data"
   componentLinkRegExp = /<li class="[^"]*" data-level="[^"]*" data-path="?([^" ]*)"? data-name="[^"]*">/g
+
+  ignoredComponentLinks = [
+    'https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html'
+  ]
 }
